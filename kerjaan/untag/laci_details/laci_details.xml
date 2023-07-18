@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="content">
+    <name>Laci Details</name>
+    <creationDate>2023-07-07</creationDate>
+    <author>Zen</author>
+    <authorEmail>muhzaini30@gmail.com</authorEmail>
+    <authorUrl>https://zenzen.web.id</authorUrl>
+    <license>MIT License</license>
+    <version>1.0</version>
+    <description>Converts [laci] tags to HTML details element.</description>
+    <files>
+        <filename plugin="laci_details">laci_details.php</filename>
+    </files>
+</extension>

@@ -1,0 +1,20 @@
+/* pada bagian https://hukum.untag-smd.ac.id/index.php/berita */
+
+.item-page > img {
+  display: none;
+}
+
+.img-intro-left img {
+  float: none !important;
+  width: 100% !important;
+}
+
+.item-page pre {
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical; /* font-size: 14px; */
+  background: transparent;
+  border: none;
+  word-break: break-word;
+}
