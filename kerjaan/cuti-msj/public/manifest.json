@@ -1,0 +1,12 @@
+{
+  "name": "Cuti MSJ",
+  "description": "Sistem manajemen cuti pada PT MSJ",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "./logo-msj.png"
+  }
+}
