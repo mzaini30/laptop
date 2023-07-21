@@ -44,11 +44,13 @@
   let judul_blog_zen_zen = "";
   let judul_aplikasi_android = "";
   let judul_website_mabaiz = "";
+  let judul_artikel_eksternal = "";
 
   async function init() {
     judul_blog_zen_zen = await ambil_datanya("Blog Zen Zen");
     judul_aplikasi_android = await ambil_datanya("Aplikasi Android");
     judul_website_mabaiz = await ambil_datanya("Website Mabaiz");
+    judul_artikel_eksternal = await ambil_datanya("Artikel Eksternal");
   }
   init();
 </script>
@@ -57,4 +59,5 @@
   <Card judul="Blog Zen Zen" isi={judul_blog_zen_zen} />
   <Card judul="Aplikasi Android" isi={judul_aplikasi_android} />
   <Card judul="Website Mabaiz" isi={judul_website_mabaiz} />
+  <Card judul="Artikel Eksternal" isi={judul_artikel_eksternal} />
 </div>
