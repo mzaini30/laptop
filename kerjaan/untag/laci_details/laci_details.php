@@ -28,4 +28,85 @@ class plgContentLaci_Details extends JPlugin
             '<div>' . $content . '</div>' . "\n" .
             '</details>';
     }
+    private function replaceLaciTag2($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-2">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag3($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-3">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag4($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-4">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag5($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-5">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag6($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-6">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag7($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-7">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag8($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-8">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag9($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-9">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
+    private function replaceLaciTag10($matches)
+    {
+        $title = $matches[1];
+        $content = $matches[2];
+        return '<details class="laci laci-10">' . "\n" .
+            '<summary>' . $title . '</summary>' . "\n" .
+            '<div>' . $content . '</div>' . "\n" .
+            '</details>';
+    }
 }
