@@ -52,7 +52,7 @@
 
 {#if data && data_tambahan && data_cuti_tahunan && data_ketua_divisi}
   <table
-    class="[&_td]:(w-auto) [&_.garis]:border-b  [&_div.garis]:inline-block table-auto w-full [&_svg]:inline-block [&_svg]:-mt-1"
+    class="[&_td]:(w-auto) [&_.garis]:border-b  [&_div.garis]:inline-block table-auto w-full [&_svg]:inline-block [&_svg]:-mt-1 after:[&_.tanpa-garis]:hidden"
   >
     <tbody class="">
       <tr>
@@ -77,7 +77,7 @@
         <td class="garis">{data.nama}</td>
         <td />
         <td  colspan="2" class="garis">
-          <span>No. Id <pre> .</pre>: </span>
+          <span class="tanpa-garis">No. Id <pre> .</pre>: </span>
           <span class="">{data.npk}</span>
         </td>
         <!-- <td>: {data.npk}</td> -->
@@ -130,8 +130,8 @@
         <td>Mulai tanggal</td>
         <td>:</td>
         <td colspan="4"
-          ><span class="font-bold">{olah_tanggal(data.tanggal_mulai)}</span> s/d
-          <span class="font-bold">{olah_tanggal(data.tanggal_akhir)}</span></td
+          ><span class="font-bold garis">{olah_tanggal(data.tanggal_mulai)}</span> s/d
+          <span class="font-bold garis">{olah_tanggal(data.tanggal_akhir)}</span></td
         >
       </tr>
       <tr>
@@ -139,25 +139,25 @@
       </tr>
       <tr>
         <td colspan="6"
-          >- Masuk kembali tanggal : <span class="font-bold"
+          >- Masuk kembali tanggal : <span class="font-bold garis"
             >{olah_tanggal(data.tanggal_kembali)}</span
           ></td
         >
       </tr>
       <tr>
         <td colspan="3">- Agar lapor ke HRDS setelah selesai cuti</td>
-        <td colspan="3">Samarinda, {olah_tanggal(new Date(), true)}</td>
+        <td colspan="3"><span class="garis">Samarinda</span>, <span class="garis">{olah_tanggal(new Date(), true)}</span></td>
       </tr>
       <tr>
         <td colspan="3">- Tanggal lapor : </td>
         <td colspan="3">Pemohon,</td>
       </tr>
       <tr>
-        <td colspan="6">Perjalanan : {data.perjalanan || ""} hari</td>
+        <td colspan="6">Perjalanan : {data.perjalanan || "............."} hari</td>
       </tr>
       <tr>
         <td colspan="3" />
-        <td colspan="3" class="font-bold text-center pt-20">( {data.nama} )</td>
+        <td colspan="3" class="font-bold text-center pt-20 underline">( {data.nama} )</td>
       </tr>
       <tr>
         <td colspan="3" />
@@ -171,8 +171,8 @@
         <td colspan="2"><Kotak /> Dipercepat</td>
       </tr>
       <tr class="text-center">
-        <td colspan="3" class="font-bold pt-20">( {admin} )</td>
-        <td colspan="3" class="font-bold pt-20">( {data.disetujui} )</td>
+        <td colspan="3" class="font-bold pt-20 underline">( {admin} )</td>
+        <td colspan="3" class="font-bold pt-20 underline">( {data.disetujui} )</td>
       </tr>
       <tr class="text-center">
         <td colspan="3">Admin</td>
@@ -183,8 +183,8 @@
         <td colspan="3">Diketahui,</td>
       </tr>
       <tr class="text-center">
-        <td colspan="3" class="font-bold pt-20">( {hrd} )</td>
-        <td colspan="3" class="font-bold pt-20">( {data.mengetahui} )</td>
+        <td colspan="3" class="font-bold pt-20 underline">( {hrd} )</td>
+        <td colspan="3" class="font-bold pt-20 underline">( {data.mengetahui} )</td>
       </tr>
       <tr class="text-center">
         <td colspan="3">HRDS</td>
