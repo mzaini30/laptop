@@ -4,6 +4,7 @@
   import romawi from "../../../fungsi/convert ke romawi";
   import olah_tanggal from "../../../fungsi/olah tanggal";
   import Kotak from "../../../icon/kotak.svelte";
+  import Lebar from "../../../komponen/lebar.svelte"
 
   export let params;
 
@@ -52,7 +53,7 @@
 
 {#if data && data_tambahan && data_cuti_tahunan && data_ketua_divisi}
   <table
-    class="[&_td]:(w-auto) [&_.garis]:border-b  [&_div.garis]:inline-block table-auto w-full [&_svg]:inline-block [&_svg]:-mt-1 after:[&_.tanpa-garis]:hidden"
+    class="[&_td]:(w-auto) [&_.garis]:(border-b relative)  [&_div.garis]:inline-block table-auto w-full [&_svg]:inline-block [&_svg]:-mt-1 after:[&_.tanpa-garis]:(inline-block w-full h-2 bg-white content-[''] absolute -bottom-2 left-0)"
   >
     <tbody class="">
       <tr>
@@ -77,7 +78,9 @@
         <td class="garis">{data.nama}</td>
         <td />
         <td  colspan="2" class="garis">
+          <span class="relative">
           <span class="tanpa-garis">No. Id <pre> .</pre>: </span>
+        </span>
           <span class="">{data.npk}</span>
         </td>
         <!-- <td>: {data.npk}</td> -->
@@ -87,7 +90,10 @@
         <td>:</td>
         <td class="garis">{data.jabatan}</td>
         <td />
-        <td class="garis" colspan="2">POH <pre>.....</pre>: {data.poh}</td>
+        <td class="garis" colspan="2">
+          <span class="relative"><span class="tanpa-garis">POH <pre>.....</pre>:</span></span> {data.poh}
+          
+        </td>
         <!-- <td>: {data.poh}</td> -->
       </tr>
       <tr>
@@ -97,7 +103,10 @@
           >{data.departemen}/{data_tambahan.subDepartemen}/{data_tambahan.seksi}</td
         >
         <td />
-        <td colspan="2" class="garis">Status <pre> .</pre>: {data.status}</td>
+        <td colspan="2" class="garis">
+          <span class="relative"><span class="tanpa-garis">Status <pre> .</pre>:</span></span>
+          
+           {data.status}</td>
         <!-- <td>: {data.status}</td> -->
       </tr>
       <tr>
@@ -105,7 +114,10 @@
         <td>:</td>
         <td class="garis">{data.alamat_cuti || ""}</td>
         <td />
-        <td colspan="2" class="garis">Telp. <pre>  ...</pre>: {data.telpon || ""}</td>
+        <td colspan="2" class="garis">
+          <span class="relative"><span class="tanpa-garis">Telp. <pre>  ...</pre>:</span></span>
+          
+           {data.telpon || ""}</td>
         <!-- <td>: {data.telpon || ""}</td> -->
       </tr>
       <tr>
@@ -157,7 +169,7 @@
       </tr>
       <tr>
         <td colspan="3" />
-        <td colspan="3" class="font-bold text-center pt-20 underline">( {data.nama} )</td>
+        <td colspan="3" class="font-bold text-center pt-20 underline">(<Lebar/>{data.nama}<Lebar/>)</td>
       </tr>
       <tr>
         <td colspan="3" />
@@ -171,8 +183,8 @@
         <td colspan="2"><Kotak /> Dipercepat</td>
       </tr>
       <tr class="text-center">
-        <td colspan="3" class="font-bold pt-20 underline">( {admin} )</td>
-        <td colspan="3" class="font-bold pt-20 underline">( {data.disetujui} )</td>
+        <td colspan="3" class="font-bold pt-20 underline">(<Lebar></Lebar>{admin}<Lebar/>)</td>
+        <td colspan="3" class="font-bold pt-20 underline">(<Lebar/>{data.disetujui}<Lebar/>)</td>
       </tr>
       <tr class="text-center">
         <td colspan="3">Admin</td>
@@ -183,8 +195,8 @@
         <td colspan="3">Diketahui,</td>
       </tr>
       <tr class="text-center">
-        <td colspan="3" class="font-bold pt-20 underline">( {hrd} )</td>
-        <td colspan="3" class="font-bold pt-20 underline">( {data.mengetahui} )</td>
+        <td colspan="3" class="font-bold pt-20 underline">(<Lebar/>{hrd}<Lebar/>)</td>
+        <td colspan="3" class="font-bold pt-20 underline">(<Lebar/>{data.mengetahui}<Lebar/>)</td>
       </tr>
       <tr class="text-center">
         <td colspan="3">HRDS</td>
