@@ -13,9 +13,6 @@ let plugins = [
     // ...
     transformers: [transformerVariantGroup()],
   }),
-  million.vite({
-    auto: true,
-  }),
 ];
 
 // https://vitejs.dev/config/
