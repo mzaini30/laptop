@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import linkTelegram from "../components/link-telegram.vue";
+
 const data = ref([]);
 if (localStorage.kartu_rencana) {
   data.value = JSON.parse(localStorage.kartu_rencana).sort((a, b) =>
@@ -7,6 +9,7 @@ if (localStorage.kartu_rencana) {
   );
 }
 </script>
+
 <template>
   <div class="p-3">
     <div class="mb-3">
