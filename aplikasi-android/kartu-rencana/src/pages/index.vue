@@ -1,0 +1,26 @@
+<script setup>
+import { ref } from "vue";
+const data = ref([]);
+if (localStorage.kartu_rencana) {
+  data.value = JSON.parse(localStorage.kartu_rencana).sort((a, b) =>
+    a.title > b.title ? 1 : -1
+  );
+}
+</script>
+<template>
+  <div class="p-3">
+    <div class="mb-3">
+      <router-link :to="`/${Math.random()}`" class="btn btn-success"
+        >Create</router-link
+      >
+    </div>
+    <div class="list-group">
+      <router-link
+        :to="`/${x.id}`"
+        v-for="x in data"
+        class="list-group-item list-group-item-action"
+        >{{ x.title }}
+      </router-link>
+    </div>
+  </div>
+</template>
