@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import linkTelegram from "../components/link-telegram.vue";
+import LinkTelegram from "../components/link-telegram.vue";
 
 const data = ref([]);
 if (localStorage.kartu_rencana) {
@@ -25,5 +25,6 @@ if (localStorage.kartu_rencana) {
         >{{ x.title }}
       </router-link>
     </div>
+    <LinkTelegram></LinkTelegram>
   </div>
 </template>
