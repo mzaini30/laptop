@@ -1,0 +1,26 @@
+created: 20230817034354702
+modified: 20230817035823705
+published_date: 20230817115823704
+tags: Published
+title: Gunakan Stop Loss dan Take Profit
+type: text/vnd.tiddlywiki
+
+Berikut ini adalah contoh tampilan di TradingView:
+
+[img[tampilan di trading view image.png]]
+
+Untuk menentukan Stop Loss dan Take Profit, gunakan tool yang ini:
+
+[img[tool untuk stop loss dan take profit image.png]]
+
+Lalu, tinggal klik aja di chart:
+
+[img[menetapkan stop loss dan take profit image.png]]
+
+Untuk area merah, dipaskan dengan indikator ATR Stop Loss. Kemudian, area hijau digeser ke atas sehingga ''Rasio Risiko/Perolehan'' bernilai 2 atau lebih.
+
+!! Mengapa Harus Menggunakan Stop Loss dan Take Profit?
+
+Stop Loss berfungsi untuk mencegah kerugian lebih lanjut saat harga ternyata terus turun.
+
+Take Profit berfungsi untuk mengambil keuntungan sebelum harga berbelok turun ke bawah.

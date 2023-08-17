@@ -1,0 +1,28 @@
+created: 20230817040759066
+modified: 20230817041313080
+published_date: 2023081712131379
+tags: Published
+title: Memilih Timeframe
+type: text/vnd.tiddlywiki
+
+Perhatikan chart berikut:
+
+[img[tampilan di trading view image.png]]
+
+Chart di atas terdiri dari beberapa candle. Satu candle mewakili satu timeframe.
+
+Jika kita menggunakan timeframe 1 hari, maka 1 candle adalah 1 hari.
+
+Timeframe letaknya di bagian atas TradingView:
+
+[img[bagian atas trading view image.png]]
+
+Yang di sebelah kanannya simbol plus.
+
+Untuk menggantinya, klik aja:
+
+[img[mengganti timeframe image.png]]
+
+Jika ingin trading setiap hari, pilih timeframe 1 jam.
+
+Jika ingin trading setiap gajian (sebulan sekali), pilih timeframe 1 hari.
