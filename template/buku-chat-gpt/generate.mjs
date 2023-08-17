@@ -1,4 +1,5 @@
 import { writeFileSync } from "fs";
+import { slug as generate_slug } from "kumpulan-tools";
 
 let list = `
 1. Lomba Tari Tradisional Daerah
@@ -15,7 +16,7 @@ let olah_list = lines.map((line) => {
   if (match) {
     let nomor = parseInt(match[1]);
     let judul = match[2].trim();
-    let slug = judul.toLowerCase().replace(/\s+/g, "-"); // Membuat slug
+    let slug = generate_slug(judul); //.toLowerCase().replace(/\s+/g, "-"); // Membuat slug
 
     return { judul, slug };
   }
