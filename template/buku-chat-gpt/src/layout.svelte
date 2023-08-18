@@ -1,5 +1,9 @@
 <script>
   export let judul;
+
+  scrollTo({
+    top: 0,
+  });
 </script>
 
 <div class="p-3 min-h-screen bg-blue-200">
