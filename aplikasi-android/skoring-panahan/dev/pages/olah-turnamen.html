@@ -1,0 +1,176 @@
+@layout(default)
+
+@section(judul)
+	Olah Turnamen
+@endsection
+
+@section(body)
+	<div class="olah-turnamen" v-cloak @mounted='ambilJudul(); ambilPemain(); ambilListnya(); terimaListnya()'>
+		<h1>{{judul}}</h1>
+
+		<form @submit.prevent='tambahkanPemain' class="anggota-baru-turnamen">
+			<p>Tambahkan Peserta</p>
+			<input :value='baru' @keyup='baru = $event.target.value' placeholder="Tulis di sini" type="text" required>
+		</form>
+
+		<div class="anggota-turnamen">
+			<p v-for='x in pemain'>{{x}}</p>
+		</div>
+
+		<a :href="'tambah-data-turnamen.html?judul=' + judul" class="tambahkan-skor">Tambahkan Skor &rarr;</a>
+
+		<!-- listnya -->
+		<div class="tampilkan-listnya">
+			<div v-for='x in listnya.sort((a, b) => b.total - a.total)'>
+				<h2 class="pt-5">
+					<span class="uppercase">{{x.nama}}</span>
+					<span class="font-mono">(Akurasi {{
+						Math.ceil(
+							x.skor.flat().reduce(function (a, b, c){
+								return a + (b - a) / (c + 1)
+							}) * 10
+						)
+					}}%)</span> 
+				</h2> 
+
+				<div v-for='y in x.skor' class="grid grid-cols-7">
+					<div v-for='z in y' class="cell">
+						<span v-if='z == 0'>M</span>
+						<span v-if='z != 0'>{{z}}</span>
+					</div>
+          <div class="cell !bg-green-500 !text-green-100">{{y.length > 0 ? y.reduce((a, b) => +a + +b) : 0}}</div>
+				</div>
+
+				<div class="grid grid-cols-7">
+					<div class="cell col-span-6">Jumlah</div>
+					<div class="cell !bg-blue-500 !text-blue-100">{{ x.total }}</div> 
+				</div>
+
+			</div>
+
+			<p class="hapus" @click='hapusTurnamen'>Hapus Turnamen</p>
+			<!-- 
+			yang dihapus:
+			localStorage.listnya_100_meter
+			localStorage.dataTurnamen -> '["5 meter 2021/11/20","5 meter bersama","100 meter lagi","30 meter baru","100 meter","main bola","kucing"]'
+			 -->
+
+		</div>
+	</div>
+
+	<script>
+		const judul = new URLSearchParams(location.search).get('judul')
+
+		PetiteVue.createApp({
+			judul: '',
+			pemain: [], 
+			listnya: [],
+			baru: '',
+			ambilJudul(){
+				this.judul = judul
+			},
+			terimaListnya(){
+				if (localStorage[`tambahkan_${slug(judul)}`]) {
+
+					const dataBaru = JSON.parse(localStorage[`tambahkan_${slug(judul)}`])
+					
+					for (let x of dataBaru){
+						const skornya = x.skor.split(', ').filter(x => x).map(x => +x).sort((a, b) => b - a).slice(0, 6)
+						const total = skornya.length > 0 ? skornya.reduce((a, b) => a + b) : 0
+
+						const listnyaTersimpan = localStorage[`listnya_${slug(judul)}`]
+
+						if (listnyaTersimpan && listnyaTersimpan.includes(`"nama":"${x.nama}"`)) {
+							// kalau nama ada di listnyaTersimpan
+							for (let y of this.listnya){
+								if (y.nama == x.nama){
+									y.skor = [[...skornya], ...y.skor]
+									y.total += total
+								}
+							}
+						} else {
+							this.listnya = [...this.listnya, {
+								nama: x.nama,
+								skor: [
+									[...skornya]
+								],
+								total
+							}]
+						}
+					}
+
+					localStorage[`listnya_${slug(judul)}`] = JSON.stringify(this.listnya)
+					localStorage.removeItem(`tambahkan_${slug(judul)}`)
+				}
+			},
+			ambilListnya(){
+				if (localStorage[`listnya_${slug(judul)}`]) {
+					this.listnya = JSON.parse(localStorage[`listnya_${slug(judul)}`])
+				}
+			},
+			tambahkanPemain(){
+				if (this.pemain.includes(this.baru)) {
+					this.baru = ''
+				} else {
+					this.pemain = [this.baru, ...this.pemain].sort()
+					localStorage[`pemain_${slug(judul)}`] = JSON.stringify(this.pemain)
+
+					this.baru = ''
+				}
+			},
+			ambilPemain(){
+				if (localStorage[`pemain_${slug(judul)}`]) {
+					this.pemain = JSON.parse(localStorage[`pemain_${slug(judul)}`])
+				}
+			},
+			hapusTurnamen(){
+				Swal.fire('Hapus Turnamen ini?').then(x => {
+					if (x.isConfirmed) {
+						let dataTurnamen = JSON.parse(localStorage.dataTurnamen)
+						dataTurnamen = dataTurnamen.filter(y => y.trim() != judul)
+						localStorage.dataTurnamen = JSON.stringify(dataTurnamen)
+
+						localStorage.removeItem(`listnya_${slug(judul)}`) 
+
+						history.back()
+					}
+				})
+			}
+		}).mount('.olah-turnamen')
+	</script>
+
+	<style lang="windi">
+		.olah-turnamen {
+			@apply font-serif
+		}
+		.olah-turnamen h1 {
+			@apply px-3 text-center py-5 uppercase text-2xl
+		}
+
+		.tampilkan-listnya {
+			@apply p-5 pt-0 -mt-5
+		}
+
+		.anggota-turnamen {
+			@apply p-3 border-b-black border pb-1
+		}
+		.anggota-turnamen p {
+			@apply border border-black rounded-sm inline-block px-3 mr-2 mb-2 last:mr-0
+		}
+
+		.anggota-baru-turnamen {
+			@apply bg-black px-3 py-4
+		}
+		.anggota-baru-turnamen p {
+			@apply text-white
+		}
+
+		.tambahkan-skor {
+			@apply uppercase font-bold border border-black border-2 p-3 block m-5 text-center
+		}
+
+		.hapus {
+			@apply pt-5 text-red-500 cursor-pointer text-center
+		}
+	</style>
+@endsection

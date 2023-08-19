@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@attach(judul)</title>
+	<link rel="stylesheet" href="windi.css">
+	<script src="slug.js"></script>
+	<script src="petite-vue.js"></script>
+	<script src="swal.js"></script> 
+</head>
+<body>
+	@attach(body)
+
+	<style lang="windi">
+		[v-cloak] {
+			@apply hidden
+		}
+		* {
+			@apply !focus:outline-none;
+		}
+	</style>
+</body>
+</html>
