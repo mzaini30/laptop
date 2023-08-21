@@ -1,0 +1,4 @@
+---
+judul: Kegunaan Type Alias.
+---
+

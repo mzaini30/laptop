@@ -17,6 +17,9 @@ dependencies:
   degit:
     specifier: ^2.8.4
     version: 2.8.4
+  kumpulan-tools:
+    specifier: ^1.0.0
+    version: 1.0.0
   postcss-load-config:
     specifier: ^4.0.1
     version: 4.0.1(postcss@8.4.21)
@@ -1181,6 +1184,10 @@ packages:
 
   /kolorist@1.7.0:
     resolution: {integrity: sha512-ymToLHqL02udwVdbkowNpzjFd6UzozMtshPQKVi5k1EjKRqKqBrOnE9QbLEb0/pV76SAiIT13hdL8R6suc+f3g==}
+    dev: false
+
+  /kumpulan-tools@1.0.0:
+    resolution: {integrity: sha512-8RzuLboxhTjMBjp7TbnqOnDYmV4ZATGZof37ccgREsEcg0O6ywc+nC9yyKhRKpx8jyo3+gVWusfAdN287IxoaA==}
     dev: false
 
   /lilconfig@2.0.6:
