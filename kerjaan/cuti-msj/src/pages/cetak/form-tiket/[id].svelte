@@ -3,7 +3,14 @@
 </script>
 
 <div>
-  <div class="kiri" />
+  <div class="kiri">
+    <p>PT. MAHAKAM SUMBER JAYA</p>
+    <p>Dengan hormat,</p>
+    <p>Sehubungan dengan pelaksanaan cuti saya pada</p>
+    <p>tanggal 3-Jan-23 s/d 7-Jan-23</p>
+    <p>mengajukan permohonan tiket perjalanan cuti periode</p>
+    <p>dengan tujuan Yogyakarta</p>
+  </div>
   <div class="kanan">
     <div class="bagian-logo">
       <img src={logo} alt="" />
