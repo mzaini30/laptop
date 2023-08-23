@@ -25,21 +25,30 @@
 
 <div class="p-2">
   <div class="">
-    <input
-      dir="rtl"
-      class="w-full border border-blue-500 p-2 px-3 rounded"
-      type="text"
-      data-role="input"
-      placeholder="اكتب هنا"
-      bind:value={teks}
-    />
+    <div class={teks ? "" : "mt-[20vh] rounded text-center"}>
+      {#if !teks}
+        <div class="pb-3 text-[30px] font-bold">خط</div>
+      {/if}
+
+      <input
+        dir="rtl"
+        class="w-full border border-blue-500 p-2 px-3 rounded {teks
+          ? ''
+          : 'text-center'}"
+        type="text"
+        data-role="input"
+        placeholder="اكتب هنا"
+        bind:value={teks}
+      />
+    </div>
 
     {#if teks}
       <div class="grid grid-cols-1 gap-3">
         <!-- <img src={iklan} class="block mt-3" alt="" /> -->
         <a
           class="bg-blue-500 text-white p-3 rounded text-center mt-3"
-          href={iklan_terpilih.link}>{iklan_terpilih.judul}</a
+          href="https://chat.whatsapp.com/DfmZzWvm5Kr6JLBdPW1Jhs"
+          >Join Komunitas</a
         >
         {#each namaFont as item}
           <div class="first:mt-3 border-2 border-gray-300 p-4">
