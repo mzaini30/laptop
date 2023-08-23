@@ -4,10 +4,10 @@ const fs = require("fs").promises;
 async function mergePDFs() {
   // Daftar file PDF yang akan digabungkan
   const pdfFiles = [
-    "./sampul.pdf",
+    "./murojaah setelah isya.pdf",
+    "./murojaah setelah isya.pdf",
     "./murojaah setelah isya.pdf",
     "./murojaah sabtu.pdf",
-    "./kosong.pdf",
   ]; // Gantilah dengan nama file Anda
 
   // Buat dokumen PDF kosong
