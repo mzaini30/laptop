@@ -10,6 +10,28 @@
     <p>tanggal 3-Jan-23 s/d 7-Jan-23</p>
     <p>mengajukan permohonan tiket perjalanan cuti periode</p>
     <p>dengan tujuan Yogyakarta</p>
+    <p><span class="icon">Ø</span> Point of hire : Yogyakarta</p>
+    <p><span class="icon">Ø</span> Date of hire : 01 November 2000</p>
+    <p><span class="icon">Ø</span> Adapun tiket akan saya minta dalam bentuk</p>
+    <p>uang tunai</p>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Hubungan</th>
+          <th>Biaya Tiket</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td />
+          <td />
+          <td />
+          <td />
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="kanan">
     <div class="bagian-logo">
