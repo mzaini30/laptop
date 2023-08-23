@@ -2,8 +2,8 @@
   import logo from "../../../gambar/logo-msj.png";
 </script>
 
-<div>
-  <div class="kiri">
+<div class="grid grid-cols-115">
+  <div class="kiri col-span-65">
     <p>PT. MAHAKAM SUMBER JAYA</p>
     <p>Dengan hormat,</p>
     <p>Sehubungan dengan pelaksanaan cuti saya pada</p>
@@ -25,15 +25,44 @@
       </thead>
       <tbody>
         <tr>
+          <td>1.</td>
+          <td>Siswanto</td>
+          <td>Karyawan ybs.</td>
+          <td>Rp 1.720.000</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>Yulia</td>
+          <td>Istri</td>
+          <td>Rp 1.000.000</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td>Hendra</td>
+          <td>Anak ke 1</td>
+          <td>Rp 1.000.000</td>
+        </tr>
+        <tr>
+          <td>4.</td>
+          <td>Rico</td>
+          <td>Anak ke 2</td>
+          <td>Rp 1.000.000</td>
+        </tr>
+        <tr>
           <td />
           <td />
           <td />
-          <td />
+          <td>Rp 10.000.000</td>
         </tr>
       </tbody>
     </table>
+    <p>Demikian disampaikan, atas perhatiannya saya</p>
+    <p>ucapkan terima kasih.</p>
+    <p>Hormat saya,</p>
+    <p>Siswanto</p>
+    <p>Karyawan ybs.</p>
   </div>
-  <div class="kanan">
+  <div class="kanan col-span-50">
     <div class="bagian-logo">
       <img src={logo} alt="" />
       <p>COAL MINING</p>
