@@ -4,3 +4,13 @@
     href="https://chat.whatsapp.com/DfmZzWvm5Kr6JLBdPW1Jhs">Join Komunitas</a
   >
 </div>
+
+<div class="grid mt-3 grid-cols-2">
+  {#each Array(23) as x, n}
+    <img
+      class="w-full object-cover aspect-square"
+      src="/gambar/{n + 1}.JPG"
+      alt=""
+    />
+  {/each}
+</div>
