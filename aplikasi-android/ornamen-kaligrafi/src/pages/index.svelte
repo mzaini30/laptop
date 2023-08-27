@@ -10,7 +10,7 @@
     <a href="#/{n + 1}">
       <img
         class="w-full object-cover aspect-square"
-        src="/gambar/{n + 1}.JPG"
+        src="gambar/{n + 1}.JPG"
         alt=""
       />
     </a>
