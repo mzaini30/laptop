@@ -7,10 +7,12 @@
 
 <div class="grid mt-3 grid-cols-2">
   {#each Array(23) as x, n}
-    <img
-      class="w-full object-cover aspect-square"
-      src="/gambar/{n + 1}.JPG"
-      alt=""
-    />
+    <a href="#/{n + 1}">
+      <img
+        class="w-full object-cover aspect-square"
+        src="/gambar/{n + 1}.JPG"
+        alt=""
+      />
+    </a>
   {/each}
 </div>
