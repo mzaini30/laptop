@@ -1,0 +1,9 @@
+.kotak {
+  @apply bg-gray-500 text-white text-center p-2 mb-3;
+}
+.kasih-tengah td {
+  @apply text-center;
+}
+.judul {
+  @apply text-center font-bold;
+}

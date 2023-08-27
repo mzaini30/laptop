@@ -1,0 +1,10 @@
+.table {
+  @apply w-full;
+}
+.table td,
+.table th {
+  @apply p-3 border;
+}
+.table tbody tr {
+  @apply cursor-pointer hover:bg-gray-100;
+}

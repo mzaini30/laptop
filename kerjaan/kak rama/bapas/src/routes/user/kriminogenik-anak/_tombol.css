@@ -1,0 +1,3 @@
+.tombol {
+  @apply px-5 py-1 rounded shadow bg-green-500 text-white hover:cursor-pointer inline-block;
+}
