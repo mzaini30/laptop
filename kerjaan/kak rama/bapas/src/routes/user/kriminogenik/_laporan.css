@@ -1,0 +1,22 @@
+.laporan {
+  font-family: Arial;
+  font-size: 11pt;
+}
+.laporan * {
+  line-height: 2;
+}
+.laporan table {
+  margin-bottom: 15px;
+  @apply w-full;
+}
+.laporan td,
+.laporan th {
+  @apply border-black border p-2;
+}
+.tanpa-border td {
+  @apply border-none;
+}
+
+.laporan th {
+  @apply text-center font-bold;
+}
