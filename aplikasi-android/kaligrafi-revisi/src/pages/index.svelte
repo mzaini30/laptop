@@ -43,13 +43,16 @@
     </div>
 
     {#if teks}
-      <div class="grid grid-cols-1 gap-3">
+      <div class="grid grid-cols-1 pt-3 gap-3">
         <!-- <img src={iklan} class="block mt-3" alt="" /> -->
-        <a
+        <a href={iklan_terpilih.link} class="">
+          <img src={iklan_terpilih.gambar} alt="" />
+        </a>
+        <!-- <a
           class="bg-blue-500 text-white p-3 rounded text-center mt-3"
           href="https://chat.whatsapp.com/DfmZzWvm5Kr6JLBdPW1Jhs"
           >Join Komunitas</a
-        >
+        > -->
         {#each namaFont as item}
           <div class="first:mt-3 border-2 border-gray-300 p-4">
             <div class="text-center text-gray-700 mb-3">
