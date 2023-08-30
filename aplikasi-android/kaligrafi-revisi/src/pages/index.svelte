@@ -43,16 +43,16 @@
     </div>
 
     {#if teks}
-      <div class="grid grid-cols-1 pt-3 gap-3">
+      <div class="grid grid-cols-1 gap-3">
         <!-- <img src={iklan} class="block mt-3" alt="" /> -->
-        <a href={iklan_terpilih.link} class="">
+        <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
-        </a>
-        <!-- <a
+        </a> -->
+        <a
           class="bg-blue-500 text-white p-3 rounded text-center mt-3"
-          href="https://chat.whatsapp.com/DfmZzWvm5Kr6JLBdPW1Jhs"
-          >Join Komunitas</a
-        > -->
+          href="https://api.whatsapp.com/send?phone=6281545143654&text=Saya%20menggunakan%20aplikasi%20Kaligrafi%0ASaya%20ingin%20berlangganan%20info%20terbaru%20tentang%20kaligrafi"
+          >Berlangganan</a
+        >
         {#each namaFont as item}
           <div class="first:mt-3 border-2 border-gray-300 p-4">
             <div class="text-center text-gray-700 mb-3">
