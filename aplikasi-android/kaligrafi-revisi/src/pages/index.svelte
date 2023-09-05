@@ -48,11 +48,11 @@
         <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
         </a> -->
-        <a
+        <!-- <a
           class="bg-blue-500 text-white p-3 rounded text-center mt-3"
           href="https://api.whatsapp.com/send?phone=6281545143654&text=Saya%20menggunakan%20aplikasi%20Kaligrafi%0ASaya%20ingin%20berlangganan%20info%20terbaru%20tentang%20kaligrafi"
           >Berlangganan</a
-        >
+        > -->
         {#each namaFont as item}
           <div class="first:mt-3 border-2 border-gray-300 p-4">
             <div class="text-center text-gray-700 mb-3">
@@ -69,6 +69,11 @@
             </div>
           </div>
         {/each}
+        <a
+          href="https://support-zen.vercel.app"
+          class="rounded-[50px] mb-5 bg-orange-500 p-3 w-[50%] mx-auto block text-center text-white"
+          >Support Me</a
+        >
       </div>
     {/if}
 
