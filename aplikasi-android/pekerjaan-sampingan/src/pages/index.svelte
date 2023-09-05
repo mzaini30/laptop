@@ -20,11 +20,11 @@
 
 <div class="p-3 min-h-screen bg-orange-100">
   <p class="bg-white text-xl text-center rounded p-3 mb-3">{judul}</p>
-  <a
+  <!-- <a
     class="block text-(center white sm) mb-3 bg-green-500 p-3 rounded"
     href="https://play.google.com/store/apps/dev?id=5401138465689796048"
     >Aplikasi Lainnya</a
-  >
+  > -->
   {#each list_postingan as x}
     <a
       class="block border border-t-0 p-3 bg-white first:border-t"
