@@ -12,9 +12,12 @@ if (localStorage.kartu_rencana) {
 
 <template>
   <div class="p-3">
-    <div class="mb-3">
+    <div class="mb-3 kumpulan-tombol">
       <router-link :to="`/${Math.random()}`" class="btn btn-success"
         >Create</router-link
+      >
+      <router-link to="/semua-data" class="btn btn-success"
+        >Semua Data</router-link
       >
     </div>
     <div class="list-group">
@@ -25,6 +28,15 @@ if (localStorage.kartu_rencana) {
         >{{ x.title }}
       </router-link>
     </div>
-    <LinkTelegram></LinkTelegram>
+    <!-- <LinkTelegram></LinkTelegram> -->
   </div>
 </template>
+
+<style scoped>
+.mb-3.kumpulan-tombol {
+  display: flex;
+  /* align-content: space-between; */
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+</style>
