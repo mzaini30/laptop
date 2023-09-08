@@ -48,11 +48,11 @@
         <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
         </a> -->
-        <!-- <a
+        <a
           class="bg-blue-500 text-white p-3 rounded text-center mt-3"
-          href="https://api.whatsapp.com/send?phone=6281545143654&text=Saya%20menggunakan%20aplikasi%20Kaligrafi%0ASaya%20ingin%20berlangganan%20info%20terbaru%20tentang%20kaligrafi"
-          >Berlangganan</a
-        > -->
+          href="https://play.google.com/store/apps/dev?id=5401138465689796048"
+          >Other Apps</a
+        > 
         {#each namaFont as item}
           <div class="first:mt-3 border-2 border-gray-300 p-4">
             <div class="text-center text-gray-700 mb-3">
