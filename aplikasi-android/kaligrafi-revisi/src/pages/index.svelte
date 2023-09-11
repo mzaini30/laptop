@@ -26,6 +26,7 @@
 <div class="p-2">
   <div class="">
     <div class={teks ? "" : "mt-[20vh] rounded text-center"}>
+      <!-- <div > -->
       {#if !teks}
         <div class="pb-3 text-[30px] font-bold">خط</div>
       {/if}
@@ -48,13 +49,13 @@
         <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
         </a> -->
-        <a
+        <!-- <a
           class="bg-blue-500 text-white p-3 rounded text-center mt-3"
           href="https://play.google.com/store/apps/dev?id=5401138465689796048"
           >Other Apps</a
-        > 
+        >  -->
         {#each namaFont as item}
-          <div class="first:mt-3 border-2 border-gray-300 p-4">
+          <div class="first:mt-3 bg-white border-2 border-gray-300 p-4">
             <div class="text-center text-gray-700 mb-3">
               <div>{item}</div>
               <!-- <button>download</button> -->
@@ -69,11 +70,11 @@
             </div>
           </div>
         {/each}
-        <a
+        <!-- <a
           href="https://support-zen.vercel.app"
           class="rounded-[50px] mb-5 bg-orange-500 p-3 w-[50%] mx-auto block text-center text-white"
           >Support Me</a
-        >
+        > -->
       </div>
     {/if}
 
@@ -90,7 +91,7 @@
       > -->
 
     {#if teks}
-      <div class="[&>*]:(fixed bottom-2)">
+      <div class="[&>*]:fixed [&>*]:bottom-2">
         <select
           name=""
           id=""
