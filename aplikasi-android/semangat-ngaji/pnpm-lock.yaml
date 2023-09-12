@@ -17,6 +17,9 @@ dependencies:
   daisyui:
     specifier: ^3.6.4
     version: 3.6.4
+  only-toast:
+    specifier: ^1.1.0
+    version: 1.1.0
   postcss:
     specifier: ^8.4.29
     version: 8.4.29
@@ -1536,6 +1539,12 @@ packages:
       mimic-fn: 2.1.0
     dev: false
 
+  /only-toast@1.1.0:
+    resolution: {integrity: sha512-2mGTkOh881t++6K1v5FDHRvvOtdLSilWptDmD3frNgeghbvpIkYN+4YM3VMkAfLja25WLgpxEmKD4m5mXzcLAg==}
+    dependencies:
+      sweetalert2: 11.7.27
+    dev: false
+
   /p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
     engines: {node: '>=10'}
@@ -1861,6 +1870,10 @@ packages:
   /svelte@3.50.1:
     resolution: {integrity: sha512-bS4odcsdj5D5jEg6riZuMg5NKelzPtmsCbD9RG+8umU03TeNkdWnP6pqbCm0s8UQNBkqk29w/Bdubn3C+HWSwA==}
     engines: {node: '>= 8'}
+
+  /sweetalert2@11.7.27:
+    resolution: {integrity: sha512-QbRXGQn1sb7HEhzA/K2xtWIwQHh/qkSbb1w6jYcTql2xy17876lTREEt1D4X6Q0x2wHtfUjKJ+Cb8IVkRoq7DQ==}
+    dev: false
 
   /systemjs@6.12.6:
     resolution: {integrity: sha512-SawLiWya8/uNR4p12OggSYZ35tP4U4QTpfV57DdZEOPr6+J6zlLSeeEpMmzYTEoBAsMhctdEE+SWJUDYX4EaKw==}
