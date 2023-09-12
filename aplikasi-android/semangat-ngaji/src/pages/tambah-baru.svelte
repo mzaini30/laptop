@@ -11,7 +11,7 @@
   }
 
   let tanggalan = new Date();
-  //   tanggalan = new Date("2023-09-19");
+  //   tanggalan = new Date("2023-09-15");
   let tanggal = tanggalan.getDate();
 
   if (localStorage.halaman_terakhir) {
@@ -24,11 +24,14 @@
       toast("Halaman tidak valid");
       halaman_terbaru = "";
     } else {
-      if (semua_data.length > 0 && semua_data[0].tanggal == tanggal) {
-        semua_data[0].banyaknya += selisih;
+      if (
+        semua_data.length > 0 &&
+        semua_data[semua_data.length - 1].tanggal == tanggal
+      ) {
+        semua_data[semua_data.length - 1].banyaknya += selisih;
       } else {
         if (semua_data.length > 0) {
-          let cek_tanggal_terakhir = semua_data[0].tanggal;
+          let cek_tanggal_terakhir = semua_data[semua_data.length - 1].tanggal;
           let sisipan_tanggal = [];
           if (
             tanggal - cek_tanggal_terakhir > 1 &&
@@ -40,21 +43,21 @@
             let selisih_tanggal = tanggal - cek_tanggal_terakhir;
             for (let n = 1; n < selisih_tanggal; n++) {
               sisipan_tanggal = [
+                ...sisipan_tanggal,
                 {
                   tanggal: +cek_tanggal_terakhir + +n,
                   banyaknya: 0,
                 },
-                ...sisipan_tanggal,
               ];
             }
           }
           semua_data = [
+            ...semua_data,
+            ...sisipan_tanggal,
             {
               tanggal,
               banyaknya: selisih,
             },
-            ...sisipan_tanggal,
-            ...semua_data,
           ];
         } else {
           semua_data = [

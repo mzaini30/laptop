@@ -1,4 +1,5 @@
 <script>
+  import Chartnya from "../komponen/chart.svelte";
   import { push } from "svelte-spa-router";
 
   let halaman_terakhir = 1;
@@ -13,6 +14,7 @@
 </script>
 
 <div class="p-3">
+  <Chartnya></Chartnya>
   <div class="card card-compact w-full bg-base-100 shadow-xl">
     <div class="card-body">
       <h2 class="card-title">Halaman Terakhir</h2>
