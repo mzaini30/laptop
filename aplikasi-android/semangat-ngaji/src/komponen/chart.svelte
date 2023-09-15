@@ -79,6 +79,41 @@
     semua_data = JSON.parse(localStorage.semua_data);
   }
 
+  
+  let tanggalan = new Date();
+  let tanggal = tanggalan.getDate();
+
+  if (semua_data.length > 0) {
+    // console.log(semua_data.length)
+    let cek_tanggal_terakhir = semua_data[semua_data.length - 1].tanggal;
+    let sisipan_tanggal = [];
+    if (
+      tanggal - cek_tanggal_terakhir > 0 &&
+      cek_tanggal_terakhir != 28 &&
+      cek_tanggal_terakhir != 29 &&
+      cek_tanggal_terakhir != 30 &&
+      cek_tanggal_terakhir != 31
+    ) {
+      // console.log("mulai")
+      let selisih_tanggal = tanggal - cek_tanggal_terakhir;
+      // console.log(selisih_tanggal)
+      for (let n = 0; n < selisih_tanggal; n++) {
+        sisipan_tanggal = [
+          ...sisipan_tanggal,
+          {
+            tanggal: +cek_tanggal_terakhir + +n + 1,
+            banyaknya: 0,
+          },
+        ];
+      }
+    }
+    semua_data = [
+      ...semua_data,
+      ...sisipan_tanggal
+    ];
+    console.log(sisipan_tanggal)
+  }
+
   let datanya = calculateMovingAverages(semua_data).slice(-7);
   console.log(datanya);
 

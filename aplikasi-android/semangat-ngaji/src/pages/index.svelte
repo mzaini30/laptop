@@ -11,6 +11,7 @@
   if (localStorage.semua_data) {
     semua_data = JSON.parse(localStorage.semua_data);
   }
+
 </script>
 
 <div class="p-3">
