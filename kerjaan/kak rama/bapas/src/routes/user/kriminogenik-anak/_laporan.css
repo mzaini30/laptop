@@ -1,0 +1,22 @@
+.laporan-anak .ada-table {
+  @apply p-0 border-0;
+}
+
+.laporan-anak p {
+  @apply font-bold;
+}
+
+.laporan-anak img {
+  @apply block mx-auto w-40;
+}
+
+.table-tengah-kah {
+  @apply text-center;
+}
+
+.laporan-anak th {
+  @apply bg-gray-200;
+}
+.laporan-anak .biodata td:nth-child(even) {
+  @apply font-normal;
+}

@@ -20,6 +20,17 @@
     }
   }
   cek_banyaknya();
+
+  let is_tiket = "Tidak ada tiket";
+  $: if (id_cuti_terpilih) {
+    async function cek_tiket() {
+      let data = await localforage.getItem("input data cuti");
+      if (data) {
+        is_tiket = data.filter((x) => x.id == id_cuti_terpilih)[0].tiket;
+      }
+    }
+    cek_tiket();
+  }
 </script>
 
 <svelte:head>
@@ -39,6 +50,7 @@
     <Kosong />
     {#each data_diambil as x}
       <option value={x.id}>{x.nomor} - {x.npk} - {x.nama}</option>
+      <!--  - {x.tiket} -->
     {/each}
   </select>
 {/if}
@@ -48,6 +60,14 @@
       on:klik={() => push(`/cetak/form-cuti/${id_cuti_terpilih}`)}
       teks="Cetak Form Cuti"
     />
+    {#if is_tiket == "Tiket"}
+      <span class="[&>*]:(!bg-white !border !border-black !text-black)">
+        <Tombol
+          on:klik={() => push(`/cetak/form-tiket/${id_cuti_terpilih}`)}
+          teks="Cetak Tiket"
+        />
+      </span>
+    {/if}
     <!-- <Tombol
       on:klik={() => push(`/cetak/form-tiket/${id_cuti_terpilih}`)}
       teks="Cetak Form Tiket"

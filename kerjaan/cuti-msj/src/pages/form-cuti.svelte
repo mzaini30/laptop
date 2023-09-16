@@ -7,9 +7,11 @@
   import Tombol from "../komponen/tombol.svelte";
   import selisih_hari from "../fungsi/selisih hari";
   import pilihan_tiket from "../data/pilihan tiket.yml";
+  import pilihan_tujuan from "../data/pilihan-tujuan.yml";
   import toast from "only-toast";
 
   let alamat_cuti;
+  let tujuan;
   let bagian;
   let departemen;
   let disetujui;
@@ -37,6 +39,16 @@
   let level;
   let tiket;
   let alasan;
+
+  let tampil_tujuan = false;
+
+  $: if (tiket) {
+    if (tiket == "Tiket") {
+      tampil_tujuan = true;
+    } else {
+      tampil_tujuan = false;
+    }
+  }
 
   // console.log(sisa_cuti_tahunan)
   if (!sisa_cuti_tahunan) {
@@ -205,6 +217,7 @@
       tanggal_akhir: sampai_tanggal,
       tanggal_kembali: masuk_kembali_tanggal,
       tiket,
+      tujuan,
       alasan,
       disetujui,
       mengetahui,
@@ -258,8 +271,7 @@
   <Input bind:value={alamat_cuti} />
   <Label tulisan="Tanggal Mulai Kerja" />
   <Input bind:value={tanggal_mulai_kerja} />
-  <Label tulisan="POH" />
-  <Input bind:value={poh} />
+
   <Label tulisan="Status" />
   <Input bind:value={status} />
   <Label tulisan="Telpon" />
@@ -280,6 +292,16 @@
       <option>{x}</option>
     {/each}
   </select>
+  {#if tampil_tujuan}
+    <Label tulisan="Tujuan" />
+    <select class="input" bind:value={tujuan} name="" id="">
+      {#each pilihan_tujuan as x}
+        <option>{x}</option>
+      {/each}
+    </select>
+  {/if}
+  <Label tulisan="POH" />
+  <Input bind:value={poh} />
   <!-- <Input  /> -->
   <Label tulisan="Selama (berapa hari?)" />
   <Input bind:value={selama} />

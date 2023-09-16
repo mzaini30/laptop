@@ -1,0 +1,16 @@
+{
+  "name": "Bapas",
+  "short_name": "Bapas",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "lang": "id",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/bapas-kotak.png",
+      "sizes": "390x390",
+      "type": "image/png"
+    }
+  ]
+}

@@ -3,13 +3,14 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import legacy from "@vitejs/plugin-legacy";
 import pages from "vite-plugin-pages-svelte";
 import pluginYaml from "vite-plugin-yaml2";
-import unoCss from "unocss/vite"
+import unoCss from "unocss/vite";
+import transformerVariantGroup from "@unocss/transformer-variant-group";
 
 let plugins = [
   svelte(),
   pages(),
   pluginYaml(),
-  unoCss()
+  unoCss({ transformers: [transformerVariantGroup()] }),
 ];
 
 // https://vitejs.dev/config/
