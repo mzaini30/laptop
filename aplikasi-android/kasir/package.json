@@ -19,8 +19,11 @@
   "dependencies": {
     "@unocss/reset": "^0.50.1",
     "@vitejs/plugin-legacy": "^2.1.0",
+    "andro": "^2.2.9",
     "autoprefixer": "^10.4.15",
     "daisyui": "^3.6.4",
+    "degit": "^2.8.4",
+    "only-toast": "^1.1.0",
     "postcss": "^8.4.29",
     "postcss-load-config": "^4.0.1",
     "prettier-plugin-svelte": "^3.0.0",

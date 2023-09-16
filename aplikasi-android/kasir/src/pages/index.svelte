@@ -1,4 +1,6 @@
 <script>
+  import toast from "only-toast";
+
   let hasil_pencarian = [];
   let teks_cari = "";
 
@@ -61,6 +63,49 @@
     }
     localStorage.list_pembelian = JSON.stringify(list_pembelian);
   }
+
+  let tanggalan = new Date();
+  let list_bulan = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+  let tanggal = `${tanggalan.getDate()} ${
+    list_bulan[tanggalan.getMonth()]
+  } ${tanggalan.getFullYear()}`;
+  let bulan = `${list_bulan[tanggalan.getMonth()]} ${tanggalan.getFullYear()}`;
+  let tahun = tanggalan.getFullYear();
+
+  let data_tersimpan = [];
+  if (localStorage.data_tersimpan) {
+    data_tersimpan = JSON.parse(localStorage.data_tersimpan); // id, keuntungan, tanggal, bulan, tahun
+  }
+
+  function simpan() {
+    data_tersimpan = [
+      {
+        id: crypto.randomUUID(),
+        keuntungan: total,
+        tanggal,
+        bulan,
+        tahun,
+      },
+      ...data_tersimpan,
+    ];
+    localStorage.data_tersimpan = JSON.stringify(data_tersimpan);
+    localStorage.removeItem("list_pembelian");
+    list_pembelian = [];
+    toast("Transaksi tersimpan");
+  }
 </script>
 
 <input
@@ -69,7 +114,7 @@
   placeholder="Nama barang"
   class="input input-bordered block w-full"
 />
-<div class="grid grid-cols-2 gap-2">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
   <div>
     <div class="form-control mt-2 w-full">
       <label class="label">
@@ -120,4 +165,4 @@
     </div>
   </div>
 </div>
-<button class="btn fixed bottom-3 right-3">Simpan</button>
+<button class="btn fixed bottom-3 right-3" on:click={simpan}>Simpan</button>

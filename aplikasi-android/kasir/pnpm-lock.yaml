@@ -11,12 +11,21 @@ dependencies:
   '@vitejs/plugin-legacy':
     specifier: ^2.1.0
     version: 2.1.0(terser@5.15.0)(vite@3.1.2)
+  andro:
+    specifier: ^2.2.9
+    version: 2.2.9
   autoprefixer:
     specifier: ^10.4.15
     version: 10.4.15(postcss@8.4.29)
   daisyui:
     specifier: ^3.6.4
     version: 3.6.4
+  degit:
+    specifier: ^2.8.4
+    version: 2.8.4
+  only-toast:
+    specifier: ^1.1.0
+    version: 1.1.0
   postcss:
     specifier: ^8.4.29
     version: 8.4.29
@@ -467,6 +476,11 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  /andro@2.2.9:
+    resolution: {integrity: sha512-Izy70IzwCihqzXUirybDC2KPpq/rGNC/TECuFSWotRfqXfSiXgaQvOAM6XS7R4G+GWtZPWUzMXpeWR4l6ixpeg==}
+    hasBin: true
+    dev: false
+
   /any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
     dev: false
@@ -706,6 +720,12 @@ packages:
 
   /defu@6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
+    dev: false
+
+  /degit@2.8.4:
+    resolution: {integrity: sha512-vqYuzmSA5I50J882jd+AbAhQtgK6bdKUJIex1JNfEUPENCgYsxugzKVZlFyMwV4i06MmnV47/Iqi5Io86zf3Ng==}
+    engines: {node: '>=8.0.0'}
+    hasBin: true
     dev: false
 
   /destr@1.2.2:
@@ -1536,6 +1556,12 @@ packages:
       mimic-fn: 2.1.0
     dev: false
 
+  /only-toast@1.1.0:
+    resolution: {integrity: sha512-2mGTkOh881t++6K1v5FDHRvvOtdLSilWptDmD3frNgeghbvpIkYN+4YM3VMkAfLja25WLgpxEmKD4m5mXzcLAg==}
+    dependencies:
+      sweetalert2: 11.7.28
+    dev: false
+
   /p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
     engines: {node: '>=10'}
@@ -1861,6 +1887,10 @@ packages:
   /svelte@3.50.1:
     resolution: {integrity: sha512-bS4odcsdj5D5jEg6riZuMg5NKelzPtmsCbD9RG+8umU03TeNkdWnP6pqbCm0s8UQNBkqk29w/Bdubn3C+HWSwA==}
     engines: {node: '>= 8'}
+
+  /sweetalert2@11.7.28:
+    resolution: {integrity: sha512-9895DVuYTDlV4Hx4IJablFKMdSqzwpy0PKycztbO4cXnOeVMmw55weOq4gcZAh3/tAyunCKjApFDrlSAcswwcA==}
+    dev: false
 
   /systemjs@6.12.6:
     resolution: {integrity: sha512-SawLiWya8/uNR4p12OggSYZ35tP4U4QTpfV57DdZEOPr6+J6zlLSeeEpMmzYTEoBAsMhctdEE+SWJUDYX4EaKw==}

@@ -12,14 +12,14 @@
 </script>
 
 <div class="p-3 grid grid-cols-6 gap-2">
-  <div class="col-span-1">
+  <div class="col-span-6 sm:col-span-1">
     <ul class="menu bg-base-200 w-full rounded-box">
       <li><a href="#/">Beranda</a></li>
       <li><a href="#/list-harga">List Harga</a></li>
       <li><a href="#/rekap">Rekap</a></li>
     </ul>
   </div>
-  <div class="col-span-5">
+  <div class="col-span-6 sm:col-span-5">
     <Router {routes} />
   </div>
 </div>
