@@ -34,6 +34,14 @@
     localStorage.semua_data = JSON.stringify(data_baru_terkumpul);
     push("/list-harga");
   }
+
+  function hapus() {
+    semua_data = JSON.parse(localStorage.semua_data);
+
+    semua_data = semua_data.filter((x) => x.id_barang != params.id_barang);
+    localStorage.semua_data = JSON.stringify(semua_data);
+    push("/list-harga");
+  }
 </script>
 
 <p class="text-xl">Ubah Data</p>
@@ -74,5 +82,8 @@
       class="input input-bordered block w-full"
     />
   </div>
-  <button class="btn mt-3">Update</button>
+  <div class="mt-3 flex justify-between">
+    <button class="btn">Update</button>
+    <button class="btn btn-error" on:click|preventDefault={hapus}>Hapus</button>
+  </div>
 </form>

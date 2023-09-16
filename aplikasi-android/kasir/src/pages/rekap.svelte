@@ -102,7 +102,7 @@
     <tbody>
       {#each tampilkan as x, n}
         <tr>
-          <th>1</th>
+          <th>{+n + 1}</th>
           <td>{x.kumpulan}</td>
           <td>{(+x.keuntungan).toLocaleString()}</td>
         </tr>
