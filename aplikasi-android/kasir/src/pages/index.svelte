@@ -2,6 +2,19 @@
   let hasil_pencarian = [];
   let teks_cari = "";
 
+  let total = 0;
+
+  function dapatkan_total() {
+    let jumlahnya = 0;
+    for (let x of list_pembelian) {
+      jumlahnya += x.harga_jual * x.banyak;
+    }
+    total = jumlahnya;
+  }
+  $: if (list_pembelian) {
+    dapatkan_total();
+  }
+
   let semua_data = [];
   if (localStorage.semua_data) {
     semua_data = JSON.parse(localStorage.semua_data);
@@ -41,7 +54,10 @@
         harga_jual,
         banyak: +dapatkan_banyak + 1,
       };
-      // ini belum selesai
+      let data_terfilter = [...list_pembelian].filter(
+        (x) => x.nama_barang != nama_barang,
+      );
+      list_pembelian = [...data_terfilter, data_baru];
     }
     localStorage.list_pembelian = JSON.stringify(list_pembelian);
   }
@@ -85,16 +101,16 @@
   <div>
     <p class="[&>*]:text-xl btn mt-2 flex justify-between">
       <span>Total</span>
-      <span>3,000,000</span>
+      <span>{total.toLocaleString()}</span>
     </p>
     <div class="form-control w-full">
       <label class="label">
         <span class="label-text">List Pembelian</span>
       </label>
       <ul class="menu bg-base-200 w-full rounded-box">
-        {#each list_pembelian as x}
+        {#each list_pembelian.sort( (a, b) => (a.nama_barang > b.nama_barang ? 1 : -1), ) as x}
           <li>
-            <a class="" href="#/edit-keranjang/1">
+            <a class="" href="#/edit-keranjang/{x.id_transaksi}">
               <span>{x.nama_barang} ({x.banyak})</span>
               <span class="badge">{(+x.harga_jual).toLocaleString()}</span>
             </a>
