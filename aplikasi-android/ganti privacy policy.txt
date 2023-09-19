@@ -14,14 +14,13 @@ COFFEESCRIPT RUNNER ✔️
 Cek Halaman Quran ✔️
 Create CV ✔️
 Crypto Signal ✔️
-DADU
-DIAGNOSA PSIKOLOGIS
-DZIKIR PAGI PETANG
-Doa
-EFISIEN
-Effect Tool ML - Skin Injector
-FOKUS
-Get YouTag Tags
+DADU ✔️
+DIAGNOSA PSIKOLOGIS ✔️
+DZIKIR PAGI PETANG ✔️
+Doa ✔️
+EFISIEN ✔️
+FOKUS ✔️
+Get YouTag Tags ✔️
 HAFALAN QURAN
 HARGA EMAS
 HURUF JEPANG
@@ -75,7 +74,6 @@ TES PSIKOPAT
 TIPOGRAFI
 TUKAR DINAR DIRHAM
 Tanya Syariah
-Termux Path
 Timbangan Pasar
 Tulisan Semangat
 UNDANGAN ONLINE
