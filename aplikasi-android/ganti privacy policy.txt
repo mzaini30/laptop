@@ -12,8 +12,8 @@ CATATAN ✔️
 CATATAN PENGHAFAL QURAN ✔️
 COFFEESCRIPT RUNNER ✔️
 Cek Halaman Quran ✔️
-Create CV
-Crypto Signal
+Create CV ✔️
+Crypto Signal ✔️
 DADU
 DIAGNOSA PSIKOLOGIS
 DZIKIR PAGI PETANG
