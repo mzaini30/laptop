@@ -26,10 +26,10 @@
           id: crypto.randomUUID(),
           judul: input_baru,
           slug: slug(input_baru),
+          data: [], // tanggal, banyaknya
         },
       ];
       localStorage.listnya = JSON.stringify(listnya);
-      localStorage[slug(input_baru)] = JSON.stringify([]);
       input_baru = "";
     } else {
       input_baru = "";

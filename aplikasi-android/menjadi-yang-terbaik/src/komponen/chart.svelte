@@ -1,4 +1,6 @@
 <script>
+  export let semua_data = [];
+
   import { onMount } from "svelte";
   import { Line } from "svelte-chartjs";
   import {
@@ -74,17 +76,16 @@
     return sum / subarray.length;
   }
 
-  let semua_data = [];
-  if (localStorage.semua_data) {
-    semua_data = JSON.parse(localStorage.semua_data);
-  }
+  // let semua_data = [];
+  // if (localStorage.semua_data) {
+  //   semua_data = JSON.parse(localStorage.semua_data);
+  // }
 
-  
   let tanggalan = new Date();
+  // tanggalan = new Date("2023-09-29");
   let tanggal = tanggalan.getDate();
 
   if (semua_data.length > 0) {
-    // console.log(semua_data.length)
     let cek_tanggal_terakhir = semua_data[semua_data.length - 1].tanggal;
     let sisipan_tanggal = [];
     if (
@@ -107,11 +108,7 @@
         ];
       }
     }
-    semua_data = [
-      ...semua_data,
-      ...sisipan_tanggal
-    ];
-    console.log(sisipan_tanggal)
+    semua_data = [...semua_data, ...sisipan_tanggal];
   }
 
   let datanya = calculateMovingAverages(semua_data).slice(-7);
