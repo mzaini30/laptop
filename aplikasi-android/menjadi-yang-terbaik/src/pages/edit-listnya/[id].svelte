@@ -1,7 +1,7 @@
 <script>
   export let params = {};
 
-  import { push } from "svelte-spa-router";
+  import { push, replace } from "svelte-spa-router";
 
   let teks = "";
 
@@ -26,7 +26,7 @@
     semua_data = semua_data.filter((x) => x.id != params.id);
     teks = "";
     localStorage.listnya = JSON.stringify(semua_data);
-    push("/edit-list");
+    replace("/edit-list");
   }
 </script>
 

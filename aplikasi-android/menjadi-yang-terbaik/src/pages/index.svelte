@@ -18,19 +18,18 @@
   // }
 </script>
 
-<div class="p-3">
-  <button class="btn" on:click={() => push("/edit-list")}>Edit List</button>
-  {#each listnya as x}
-    <Chartnya></Chartnya>
-    <div class="card card-compact w-full bg-base-100 shadow-xl">
+<div class="p-3 grid grid-cols-1 gap-3">
+  <div>
+    <button class="btn" on:click={() => push("/edit-list")}>Edit List</button>
+  </div>
+  {#each listnya.sort((a, b) => (a.judul > b.judul ? 1 : -1)) as x}
+    <div class="bg-neutral">
+      <Chartnya></Chartnya>
+    </div>
+    <div class="card card-compact w-full bg-neutral shadow-xl">
       <div class="card-body">
-        <h2 class="card-title">Halaman Terakhir</h2>
-        <!-- <p>{halaman_terakhir}</p> -->
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary" on:click={() => push("/tambah-baru")}
-            >Update</button
-          >
-        </div>
+        <h2 class="card-title">{x.judul}</h2>
+        <p></p>
       </div>
     </div>
   {/each}
