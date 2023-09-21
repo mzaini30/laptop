@@ -41,5 +41,5 @@ export default function () {
       artinya: "putri",
     },
   ];
-  return data;
+  return [...data];
 }
