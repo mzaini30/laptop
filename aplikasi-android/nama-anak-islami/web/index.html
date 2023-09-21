@@ -21,10 +21,17 @@
     <script src="https://cdn.tailwindcss.com/3.3.3"></script>
     <script type="module">
       import Alpine from "alpinejs";
-      Alpine.start();
-      // import { createApp } from "petite-vue";
       import data from "./data.js";
       import { acak } from "kumpulan-tools";
+
+      Alpine.data("alpine", () => ({
+        data: data(),
+      }));
+
+      Alpine.start();
+      // import { createApp } from "petite-vue";
+
+      // console.log(data());
 
       // createApp({
       //   data: data(),
@@ -35,12 +42,8 @@
     </script>
   </head>
   <body>
-    <div
-      x-data="{
-      nama: 'Zen'
-    }"
-    >
-      <p>Hai <span x-text="nama"></span></p>
+    <div x-data="alpine">
+      <div x-text="JSON.stringify(data)"></div>
     </div>
     <!-- <div class="p-4 grid grid-cols-1 gap-3">
       <p>{{data.length}} nama anak tersedia 😊🥰</p>
