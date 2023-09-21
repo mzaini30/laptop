@@ -13,43 +13,47 @@
     <script type="importmap">
       {
         "imports": {
-          "@unocss/runtime": "https://ga.jspm.io/npm:@unocss/runtime@0.56.0/dist/index.mjs",
-          "kumpulan-tools": "https://ga.jspm.io/npm:kumpulan-tools@1.0.0/index.js",
-          "petite-vue": "https://ga.jspm.io/npm:petite-vue@0.4.1/dist/petite-vue.es.js"
-        },
-        "scopes": {
-          "https://ga.jspm.io/": {
-            "@unocss/core": "https://ga.jspm.io/npm:@unocss/core@0.56.0/dist/index.mjs"
-          }
+          "alpinejs": "https://ga.jspm.io/npm:alpinejs@3.13.0/dist/module.esm.js",
+          "kumpulan-tools": "https://ga.jspm.io/npm:kumpulan-tools@1.0.0/index.js"
         }
       }
     </script>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
     <script type="module">
-      import { createApp } from "petite-vue";
+      import Alpine from "alpinejs";
       import data from "./data.js";
       import { acak } from "kumpulan-tools";
-      import uno from "@unocss/runtime";
 
-      uno();
+      Alpine.data("alpine", () => ({
+        data: data(),
+      }));
 
-      createApp({
-        data,
-        acak(x) {
-          return acak(x);
-        },
-      }).mount();
+      Alpine.start();
+      // import { createApp } from "petite-vue";
+
+      // console.log(data());
+
+      // createApp({
+      //   data: data(),
+      //   acak(x) {
+      //     return acak(x);
+      //   },
+      // }).mount();
     </script>
   </head>
   <body>
-    <div v-scope>
-      <div class="p-4">
-        <div class="card" v-for="x in acak(data())">
-          <div class="card-body">
-            <p><strong>{{x.nama}}</strong></p>
-            <p>{{x.artinya}}</p>
-          </div>
-        </div>
+    <div x-data="alpine">
+      <div x-text="JSON.stringify(data)"></div>
+    </div>
+    <!-- <div class="p-4 grid grid-cols-1 gap-3">
+      <p>{{data.length}} nama anak tersedia 😊🥰</p>
+      <div class="p-3 rounded border" v-for="x in acak(data)">
+        <p><strong>{{x.nama}}</strong></p>
+        <p>{{x.artinya}}</p>
       </div>
     </div>
+    <button @click="acak(data)" class="fixed bottom-3 right-3 text-4xl">
+      🎲
+    </button> -->
   </body>
 </html>
