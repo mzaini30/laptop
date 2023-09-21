@@ -24,36 +24,34 @@
       import data from "./data.js";
       import { acak } from "kumpulan-tools";
 
-      Alpine.data("alpine", () => ({
-        data: data(),
-      }));
+      Alpine.data("alpine", function () {
+        return {
+          data: data(),
+          acak: function (x) {
+            return acak(x);
+          },
+        };
+      });
 
       Alpine.start();
-      // import { createApp } from "petite-vue";
-
-      // console.log(data());
-
-      // createApp({
-      //   data: data(),
-      //   acak(x) {
-      //     return acak(x);
-      //   },
-      // }).mount();
     </script>
   </head>
   <body>
     <div x-data="alpine">
-      <div x-text="JSON.stringify(data)"></div>
-    </div>
-    <!-- <div class="p-4 grid grid-cols-1 gap-3">
-      <p>{{data.length}} nama anak tersedia 😊🥰</p>
-      <div class="p-3 rounded border" v-for="x in acak(data)">
-        <p><strong>{{x.nama}}</strong></p>
-        <p>{{x.artinya}}</p>
+      <div class="p-4 grid grid-cols-1 gap-3">
+        <p><span x-text="data.length"></span> nama anak tersedia 😊🥰</p>
+        <template x-for="x in acak(data)">
+          <div class="p-3 rounded border">
+            <p>
+              <strong><span x-text="x.nama"></span></strong>
+            </p>
+            <p x-text="x.artinya"></p>
+          </div>
+        </template>
       </div>
+      <button @click="acak(data)" class="fixed bottom-3 right-3 text-4xl">
+        🎲
+      </button>
     </div>
-    <button @click="acak(data)" class="fixed bottom-3 right-3 text-4xl">
-      🎲
-    </button> -->
   </body>
 </html>
