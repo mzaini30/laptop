@@ -246,5 +246,5 @@ export default function () {
     },
   ];
 
-  return [...data, ...data2, ...data3];
+  return [].concat(data, data2, data3);
 }
