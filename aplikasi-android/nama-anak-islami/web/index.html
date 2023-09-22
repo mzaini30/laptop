@@ -26,12 +26,15 @@
       }
     </script>
     <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
     <script type="module">
       import "es5-shim";
       import "es6-shim";
       import data from "./data.js";
       import { acak } from "kumpulan-tools";
       import { createApp } from "petite-vue";
+
+      new window.VConsole();
 
       createApp({
         data: data(),
