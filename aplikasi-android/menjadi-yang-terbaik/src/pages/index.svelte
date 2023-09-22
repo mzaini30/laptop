@@ -93,10 +93,10 @@
   </div>
   {#key reset}
     {#each [...JSON.parse(localStorage.listnya)].sort( (a, b) => (a.judul > b.judul ? 1 : -1), ) as x (x.id)}
-      <div class="bg-neutral">
+      <div class="bg-base-100">
         <Chartnya semua_data={x.data}></Chartnya>
       </div>
-      <div class="card card-compact w-full bg-neutral shadow-xl">
+      <div class="card card-compact w-full bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-center block">{x.judul}</h2>
           <div class="flex justify-between">
