@@ -1,6 +1,7 @@
 <script>
   import "../bahan/font.css";
   import namaFont from "../bahan/nama-font";
+  import { push } from "svelte-spa-router";
   //   import iklan from "../gambar/your-ad-here.jpg";
   // import dom_to_image from "dom-to-image";
   // import { slug } from "kumpulan-tools";
@@ -45,6 +46,22 @@
 
     {#if teks}
       <div class="grid grid-cols-1 gap-3">
+        <div class="mt-3 flex gap-2">
+          <button
+            class="btn"
+            on:click={() =>
+              (location.href =
+                "https://play.google.com/store/apps/details?id=com.trihandayani.kaligrafi")}
+            >Review App</button
+          >
+          <button
+            class="btn"
+            on:click={() =>
+              (location.href =
+                "https://play.google.com/store/apps/dev?id=5401138465689796048")}
+            >Other Apps</button
+          >
+        </div>
         <!-- <img src={iklan} class="block mt-3" alt="" /> -->
         <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
