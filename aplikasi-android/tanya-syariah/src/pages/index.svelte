@@ -20,6 +20,17 @@
   dapatkanTulisan();
 </script>
 
+<div class="p-2 mb-3">
+  <a
+    href="https://play.google.com/store/apps/details?id=com.daarutthayyibah.tanyasyariah"
+    class="border p-2 border-black rounded mr-2">Review App</a
+  >
+  <a
+    href="https://play.google.com/store/apps/dev?id=5401138465689796048"
+    class="border p-2 border-black rounded">Other Apps</a
+  >
+</div>
+
 {#if data}
   <div class="p-2 pt-0 grid grid-cols-1 gap-2">
     {#each data as x}
