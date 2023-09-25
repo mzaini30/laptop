@@ -43,6 +43,10 @@
           harga_beli,
           harga_jual,
           banyak: 1,
+          tanggal,
+          bulan,
+          tahun,
+          keuntungan: harga_jual - harga_beli,
         },
       ];
     } else {
@@ -55,6 +59,10 @@
         harga_beli,
         harga_jual,
         banyak: +dapatkan_banyak + 1,
+        tanggal,
+        bulan,
+        tahun,
+        keuntungan: (harga_jual - harga_beli) * (+dapatkan_banyak + 1),
       };
       let data_terfilter = [...list_pembelian].filter(
         (x) => x.nama_barang != nama_barang,
@@ -92,13 +100,14 @@
 
   function simpan() {
     data_tersimpan = [
-      {
-        id: crypto.randomUUID(),
-        keuntungan: total,
-        tanggal,
-        bulan,
-        tahun,
-      },
+      // {
+      //   id: crypto.randomUUID(),
+      //   keuntungan: total,
+      //   tanggal,
+      //   bulan,
+      //   tahun,
+      // },
+      ...list_pembelian,
       ...data_tersimpan,
     ];
     localStorage.data_tersimpan = JSON.stringify(data_tersimpan);
@@ -107,6 +116,8 @@
     toast("Transaksi tersimpan");
   }
 </script>
+
+<!-- {JSON.stringify(list_pembelian)} -->
 
 <input
   type="search"
