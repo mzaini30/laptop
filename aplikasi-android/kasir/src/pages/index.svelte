@@ -1,10 +1,23 @@
 <script>
   import toast from "only-toast";
+  import flatpickr from "flatpickr";
+  import { onMount } from "svelte";
+  import "flatpickr/dist/flatpickr.min.css";
+
+  let dateInput;
+  let tanggal_baru;
+
+  onMount(() => {
+    flatpickr(dateInput, {
+      dateFormat: "Y-m-d", // Sesuaikan dengan format yang Anda inginkan
+    });
+  });
 
   let hasil_pencarian = [];
   let teks_cari = "";
 
   let total = 0;
+  let input_tanggal;
 
   function dapatkan_total() {
     let jumlahnya = 0;
@@ -115,9 +128,36 @@
     list_pembelian = [];
     toast("Transaksi tersimpan");
   }
+
+  function reset() {
+    list_pembelian = [];
+    localStorage.removeItem("list_pembelian");
+  }
+
+  $: if (tanggal_baru) {
+    mengubah_tanggal();
+  }
+
+  function mengubah_tanggal() {
+    tanggalan = new Date(tanggal_baru);
+
+    tanggal = `${tanggalan.getDate()} ${
+      list_bulan[tanggalan.getMonth()]
+    } ${tanggalan.getFullYear()}`;
+    bulan = `${list_bulan[tanggalan.getMonth()]} ${tanggalan.getFullYear()}`;
+    tahun = tanggalan.getFullYear();
+
+    for (let n in list_pembelian) {
+      list_pembelian[n].tanggal = tanggal;
+      list_pembelian[n].bulan = bulan;
+      list_pembelian[n].tahun = tahun;
+    }
+    localStorage.list_pembelian = JSON.stringify(list_pembelian);
+  }
 </script>
 
-<!-- {JSON.stringify(list_pembelian)} -->
+<!-- {tanggal_baru}
+{JSON.stringify(list_pembelian)} -->
 
 <input
   type="search"
@@ -164,6 +204,21 @@
     <div class="form-control w-full">
       <label class="label">
         <span class="label-text">List Penjualan</span>
+        <input
+          type="date"
+          bind:this={dateInput}
+          bind:value={tanggal_baru}
+          class="w-0 h-0 overflow-hidden"
+          name=""
+          id=""
+        />
+        <span
+          class="label-text cursor-pointer"
+          on:click={() => dateInput.click()}>{tanggal} ( Ubah )</span
+        >
+        <span class="label-text cursor-pointer" on:click|preventDefault={reset}
+          >( Reset )</span
+        >
       </label>
       <div class="overflow-auto h-[calc(100vh-170px)]">
         <ul class="menu bg-base-200 w-full">
@@ -180,6 +235,6 @@
     </div>
   </div>
 </div>
-<button class="btn btn-success fixed bottom-3 right-3" on:click={simpan}
-  >Simpan</button
->
+<div class="fixed bottom-3 right-3">
+  <button class="btn btn-success" on:click={simpan}>Simpan</button>
+</div>
