@@ -24,7 +24,7 @@
 
 <p>{datanya.nama_barang}</p>
 <p>Harga: {(+datanya.harga_jual).toLocaleString()}</p>
-<p>Banyak Pembelian:</p>
+<p>Banyak Penjualan:</p>
 <form action="" on:submit|preventDefault={update}>
   <input type="tel" bind:value={banyak} required class="input input-bordered" />
   <button class="btn">Update Banyak</button>

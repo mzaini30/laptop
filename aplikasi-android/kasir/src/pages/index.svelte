@@ -131,27 +131,29 @@
       <label class="label">
         <span class="label-text">Hasil Pencarian</span>
       </label>
-      <ul class="menu bg-base-200 w-full rounded-box">
-        {#each semua_data.filter((y) => y.nama_barang
-            .toLowerCase()
-            .includes(teks_cari.toLowerCase())) as x}
-          <li>
-            <a
-              class=""
-              href="#/"
-              on:click|preventDefault={() =>
-                tambahkan_ke_list_pembelian(
-                  x.nama_barang,
-                  x.harga_beli,
-                  x.harga_jual,
-                )}
-            >
-              <span>{x.nama_barang}</span>
-              <span class="badge">{(+x.harga_jual).toLocaleString()} ➡️</span>
-            </a>
-          </li>
-        {/each}
-      </ul>
+      <div class="overflow-auto h-[calc(100vh-120px)]">
+        <ul class="menu bg-base-200 w-full">
+          {#each semua_data.filter((y) => y.nama_barang
+              .toLowerCase()
+              .includes(teks_cari.toLowerCase())) as x}
+            <li>
+              <a
+                class=""
+                href="#/"
+                on:click|preventDefault={() =>
+                  tambahkan_ke_list_pembelian(
+                    x.nama_barang,
+                    x.harga_beli,
+                    x.harga_jual,
+                  )}
+              >
+                <span>{x.nama_barang}</span>
+                <span class="badge">{(+x.harga_jual).toLocaleString()} ➡️</span>
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </div>
     </div>
   </div>
   <div>
@@ -161,19 +163,23 @@
     </p>
     <div class="form-control w-full">
       <label class="label">
-        <span class="label-text">List Pembelian</span>
+        <span class="label-text">List Penjualan</span>
       </label>
-      <ul class="menu bg-base-200 w-full rounded-box">
-        {#each list_pembelian.sort( (a, b) => (a.nama_barang > b.nama_barang ? 1 : -1), ) as x}
-          <li>
-            <a class="" href="#/edit-keranjang/{x.id_transaksi}">
-              <span>{x.nama_barang} ({x.banyak})</span>
-              <span class="badge">{(+x.harga_jual).toLocaleString()}</span>
-            </a>
-          </li>
-        {/each}
-      </ul>
+      <div class="overflow-auto h-[calc(100vh-170px)]">
+        <ul class="menu bg-base-200 w-full">
+          {#each list_pembelian.sort( (a, b) => (a.nama_barang > b.nama_barang ? 1 : -1), ) as x}
+            <li>
+              <a class="" href="#/edit-keranjang/{x.id_transaksi}">
+                <span>{x.nama_barang} ({x.banyak})</span>
+                <span class="badge">{(+x.harga_jual).toLocaleString()}</span>
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </div>
     </div>
   </div>
 </div>
-<button class="btn fixed bottom-3 right-3" on:click={simpan}>Simpan</button>
+<button class="btn btn-success fixed bottom-3 right-3" on:click={simpan}
+  >Simpan</button
+>
