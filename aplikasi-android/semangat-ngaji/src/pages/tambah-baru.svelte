@@ -103,7 +103,7 @@
   <form action="" on:submit|preventDefault={tambahkan_baru}>
     <div class="card card-compact w-full bg-base-100 shadow-xl">
       <div class="card-body">
-        <div class="form-control w-full max-w-xs">
+        <div class="form-control w-full">
           <label class="label">
             <span class="label-text">Halaman Terbaru</span>
           </label>
@@ -112,7 +112,7 @@
             bind:value={halaman_terbaru}
             required
             placeholder="Sebelumnya: Halaman {halaman_terakhir}"
-            class="input input-bordered w-full max-w-xs"
+            class="input input-bordered w-full"
           />
         </div>
         <div class="card-actions justify-end">

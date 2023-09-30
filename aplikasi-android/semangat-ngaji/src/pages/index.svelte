@@ -11,10 +11,25 @@
   if (localStorage.semua_data) {
     semua_data = JSON.parse(localStorage.semua_data);
   }
-
 </script>
 
 <div class="p-3">
+  <div class="mb-3">
+    <button
+      class="btn mr-3"
+      on:click={() =>
+        (location.href =
+          "https://play.google.com/store/apps/details?id=com.mzaini30.semangatngaji")}
+      >Review App</button
+    >
+    <button
+      class="btn"
+      on:click={() =>
+        (location.href =
+          "https://play.google.com/store/apps/dev?id=5401138465689796048")}
+      >Other Apps</button
+    >
+  </div>
   <Chartnya></Chartnya>
   <div class="card card-compact w-full bg-base-100 shadow-xl">
     <div class="card-body">
