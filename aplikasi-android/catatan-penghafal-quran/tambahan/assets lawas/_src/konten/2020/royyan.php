@@ -1,0 +1,17 @@
+<?php ob_start() ?>
+**Pantang Menyerah Menghafal Al-Quran**
+
+_Royyan Abdullah Assariy_
+
+Assalamualaikum. Hai namaku Royyan, aku bersekolah di Madrasah Baitul Izzah. Di sini, aku menghafal Quran. Di saat aku menghafal Al-Quran, ada kalanya aku merasa putus asa karena halaman atau ayat yang kuhafal sangat susah. Tapi, di saat aku putus asa, aku ingat kalau hanya orang yang hafal Al-Quran yang bisa memakaikan mahkota di kepala orang tuanya.
+
+Jadi, aku berusaha lagi dengan terus mengulang-ulang halaman atau ayat yang sulit, motivasi dari ustadz-ustadzku juga membuatku semakin terpacu untuk terus istiqomah menghafal Al-Quran dan juga aku ingin membahagiakan orang tuaku di dunia dan di akhirat, dan aku tak henti berdoa meminta dimudahkan dalam menghafalkan Al-Quran kepada Allah SWT.
+
+Buat teman-temanku di luar sana yang juga sama-sama menghafal Al-Quran, jangan putus asa saat kalian menemukan kesulitan di dalam menghafal, ingat "kesulitan dan kegagalan adalah hal yang mengantarkan seseorang pada keberhasilan". Saat kalian mengalami kesulitan, ulang lagi, lagi, dan lagi. Walau selama apapun itu, dan kalian juga harus berdoa meminta kemudahan pada Allah SWT.
+
+Jadi, jangan putus asa dalam menghafal Al-Qruan demi memakaikan mahkota di kepala orang tua kita, semoga saya yang menulis dan kalian yang membaca bisa menjadi penghafal Al-Quran dan memakaikan mahkota di kepala orang tua kita di surga nanti. 
+
+Sekian. Wassalamualaikum.
+<?php $slot = ob_get_clean() ?>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/layout/konten.php' ?>
