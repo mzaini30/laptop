@@ -38,6 +38,9 @@ dependencies:
   terser:
     specifier: ^5.15.0
     version: 5.15.0
+  tiddlywiki:
+    specifier: ^5.3.1
+    version: 5.3.1
   unocss:
     specifier: ^0.50.4
     version: 0.50.4(postcss@8.4.29)(vite@3.1.2)
@@ -1918,6 +1921,12 @@ packages:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
     dependencies:
       any-promise: 1.3.0
+    dev: false
+
+  /tiddlywiki@5.3.1:
+    resolution: {integrity: sha512-17uoTt8w3wvqaF1fqulHeeR86984N0eC8fgd0Ql1LIKgrHRu1+M3fBW8V/ikofU2s74xr6S1efREHaA2zyhe1w==}
+    engines: {node: '>=0.8.2'}
+    hasBin: true
     dev: false
 
   /to-regex-range@5.0.1:
