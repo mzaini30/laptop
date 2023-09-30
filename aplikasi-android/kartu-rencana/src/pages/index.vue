@@ -28,12 +28,25 @@ if (localStorage.kartu_rencana) {
         >{{ x.title }}
       </router-link>
     </div>
+
+    <div class="mt-3 kumpulan-tombol">
+      <a
+        href="https://play.google.com/store/apps/details?id=com.chitandaeru.karturencana"
+        class="btn btn-success"
+        >Review App</a
+      >
+      <a
+        href="https://play.google.com/store/apps/dev?id=5401138465689796048"
+        class="btn btn-success"
+        >Other Apps</a
+      >
+    </div>
     <!-- <LinkTelegram></LinkTelegram> -->
   </div>
 </template>
 
 <style scoped>
-.mb-3.kumpulan-tombol {
+.kumpulan-tombol {
   display: flex;
   /* align-content: space-between; */
   /* flex-wrap: wrap; */
