@@ -18,9 +18,8 @@ type: text/vnd.tiddlywiki
 					<$text text={{{ [<description>jsonstringify[]] }}}/>
 					</$wikify>
 				`",
-				"ringkasan" : "`<$text text={{{[<currentTiddler>get[ringkasan]]}}}/>`",
-				"kategori" : "`<$text text={{{[<currentTiddler>get[kategori]]}}}/>`",
-				"gambar" : "`<$text text={{{[<currentTiddler>get[gambar]]}}}/>`"
+				"penulis" : "`<$text text={{{[<currentTiddler>get[penulis]]}}}/>`",
+				"angkatan" : "`<$text text={{{[<currentTiddler>get[angkatan]]}}}/>`"
 			}`<$list filter="[<counter-last>!match[yes]]">,</$list>
 		</$list>`
 ]`
