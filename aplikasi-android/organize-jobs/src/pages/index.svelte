@@ -45,6 +45,16 @@
 
 <div class=" luar">
   <img src={gambar} class=" gambarLatar" alt="" />
+  <div class="flex justify-between mb-3">
+    <a
+      href="https://play.google.com/store/apps/details?id=com.successunder30.organizejobs"
+      class="p-2 border bg-white rounded shadow">Review App</a
+    >
+    <a
+      href="https://play.google.com/store/apps/dev?id=5401138465689796048"
+      class="p-2 border bg-white rounded shadow">Other Apps</a
+    >
+  </div>
   <div class="w-full bg-yellow-100 rounded p-2 mb-2 text-sm text-yellow-700">
     Click an item to remove it
   </div>

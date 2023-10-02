@@ -37,7 +37,8 @@
   
   peringatan"
   >
-    Add * in the end of job if it's important.<br /> Example: do homework*
+    Add an exclamation mark (!) for events that cannot be deleted. Example:
+    checking crypto!
   </div>
   <form action="" on:submit|preventDefault={simpan}>
     <textarea
