@@ -1,7 +1,7 @@
 <div class="p-4">
   <div class="mb-4 flex justify-between">
     <a
-      href="https://play.google.com/store/apps/details?id=com.belajar.iqro"
+      href="https://play.google.com/store/apps/details?id=com.belajar.iqroterbaru"
       class="btn">Review App</a
     >
     <a
