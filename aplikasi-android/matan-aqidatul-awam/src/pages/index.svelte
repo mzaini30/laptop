@@ -3,6 +3,10 @@
 </script>
 
 <div class="konten">
+  <div class="flex justify-between p-2">
+    <a href="https://play.google.com/store/apps/details?id=com.learnislam.matanaqidatulawam" class="bg-green-500 text-white border rounded shadow p-2 px-4">Review App</a>
+    <a href="https://play.google.com/store/apps/dev?id=5401138465689796048" class="bg-green-500 text-white border rounded shadow p-2 px-4">Other Apps</a>
+  </div>
   <Beranda />
 </div>
 
