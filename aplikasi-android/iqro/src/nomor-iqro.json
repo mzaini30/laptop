@@ -10,15 +10,23 @@
     "ke": 70
   },
   {
-    "jilid": 3
+    "jilid": 3,
+    "dari": 73,
+    "ke": 102
   },
   {
-    "jilid": 4
+    "jilid": 4,
+    "dari": 105,
+    "ke": 134
   },
   {
-    "jilid": 5
+    "jilid": 5,
+    "dari": 137,
+    "ke": 166
   },
   {
-    "jilid": 6
+    "jilid": 6,
+    "dari": 169,
+    "ke": 198
   }
 ]
