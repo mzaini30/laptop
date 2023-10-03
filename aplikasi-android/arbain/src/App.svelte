@@ -12,3 +12,5 @@
 </script>
 
 <Router {routes} />
+<button class="btn btn-circle fixed bottom-2 left-2 bg-info">➖</button>
+<button class="btn btn-circle fixed bottom-2 right-2 bg-info">➕</button>
