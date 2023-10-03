@@ -1,5 +1,13 @@
 <script>
   import data from "../tiddlers/published.json";
+
+  scrollTo(0, 0);
+
+  let posisi_terakhir = "";
+
+  if (localStorage.posisi_terakhir) {
+    posisi_terakhir = localStorage.posisi_terakhir;
+  }
 </script>
 
 <div class="p-3">
@@ -19,6 +27,7 @@
         <a
           href="#/baca/{x.published_date}"
           style="direction: rtl;"
+          class:active={posisi_terakhir == x.published_date}
           class="text-right">{x.title.split(". ")[1]}</a
         >
       </li>
