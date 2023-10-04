@@ -22,7 +22,7 @@
       class="btn">Other Apps</a
     >
   </div>
-  <ul class="menu bg-base-200 w-full rounded-box">
+  <ul class="menu bg-base-200 w-full rounded-box mb-14">
     {#each data.sort((a, b) => (a.title > b.title ? 1 : -1)) as x}
       <li class="">
         <a

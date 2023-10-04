@@ -2,6 +2,7 @@
   export let params = {};
 
   import data from "../../tiddlers/published.json";
+  import { ukuran_font } from "../../state";
 
   let id_berikutnya = "";
 
@@ -36,7 +37,8 @@
 <div class="p-4" style="direction: rtl;">
   <h1 class="text-3xl mb-6 font-bold">{terpilih.title.split(". ")[1]}</h1>
   <div
-    class="[&_br]:block leading-[2] [&_br]:w-full [&_br]:h-6 [&_br]:content-['']"
+    style="font-size: {$ukuran_font}px;"
+    class="[&_br]:block leading-[2] [&_*]:[font-size:inherit] [&_br]:w-full [&_br]:h-6 [&_br]:content-['']"
   >
     {@html terpilih.text}
   </div>
