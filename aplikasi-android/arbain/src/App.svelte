@@ -7,6 +7,7 @@
   import "./App.css";
   // import "uno.css";
   import stat_aja from "stat-aja";
+  import { ukuran_font } from "./state";
 
   // stat_aja({ judul: "Judul Aplikasi", tipe: "Aplikasi Android" });
 </script>

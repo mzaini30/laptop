@@ -1,5 +1,6 @@
 <script>
   import data from "../tiddlers/published.json";
+  import { ukuran_font } from "../state";
 
   scrollTo(0, 0);
 
@@ -23,7 +24,7 @@
   </div>
   <ul class="menu bg-base-200 w-full rounded-box">
     {#each data.sort((a, b) => (a.title > b.title ? 1 : -1)) as x}
-      <li class="" style="">
+      <li class="" style="font-size: {$ukuran_font}px">
         <a
           href="#/baca/{x.published_date}"
           style="direction: rtl;"
