@@ -17,6 +17,9 @@ dependencies:
   daisyui:
     specifier: ^3.6.4
     version: 3.6.4
+  marked:
+    specifier: ^9.1.0
+    version: 9.1.0
   postcss:
     specifier: ^8.4.29
     version: 8.4.29
@@ -1399,6 +1402,12 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: false
+
+  /marked@9.1.0:
+    resolution: {integrity: sha512-VZjm0PM5DMv7WodqOUps3g6Q7dmxs9YGiFUZ7a2majzQTTCgX+6S6NAJHPvOhgFBzYz8s4QZKWWMfZKFmsfOgA==}
+    engines: {node: '>= 16'}
+    hasBin: true
     dev: false
 
   /mdn-data@2.0.30:
