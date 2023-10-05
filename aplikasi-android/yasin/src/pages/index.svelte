@@ -10,7 +10,14 @@
     ukuran_font = JSON.parse(localStorage.ukuran_font);
   }
 
-  function ubah_ukuran(ukuran) {}
+  function ubah_ukuran(ukuran) {
+    let ukuran_baru = ukuran_font + ukuran;
+    if (ukuran_baru < 0) {
+      ukuran_baru = 0;
+    }
+    ukuran_font = ukuran_baru;
+    localStorage.ukuran_font = JSON.stringify(ukuran_font);
+  }
 </script>
 
 <div class="p-4 pb-20">
@@ -27,6 +34,12 @@
   <div class="text-right leading-[2]" style="font-size: {ukuran_font}px;">
     {@html tampil}
   </div>
-  <button class="btn btn-secondary fixed left-2 bottom-2">➖</button>
-  <button class="btn btn-secondary fixed right-2 bottom-2">➕</button>
+  <button
+    on:click={() => ubah_ukuran(-2)}
+    class="btn btn-secondary fixed left-2 bottom-2">➖</button
+  >
+  <button
+    class="btn btn-secondary fixed right-2 bottom-2"
+    on:click={() => ubah_ukuran(2)}>➕</button
+  >
 </div>
