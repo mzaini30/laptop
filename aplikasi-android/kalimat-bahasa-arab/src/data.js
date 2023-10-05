@@ -155,6 +155,88 @@ export default function () {
       terjemah: "Pikiran positif membawa kesuksesan.",
     },
   ];
+  let data3 = [
+    {
+      arab: "التعلم مفتاح النجاح",
+      terjemah: "Belajar adalah kunci kesuksesan.",
+    },
+    {
+      arab: "الصداقة تزدهر مع الوقت",
+      terjemah: "Persahabatan tumbuh dengan waktu.",
+    },
+    {
+      arab: "السفر يفتح آفاقًا جديدة",
+      terjemah: "Mengembara membuka jalan baru.",
+    },
+    {
+      arab: "العمل الجماعي يقود إلى الإنجاز",
+      terjemah: "Kerja sama tim menghasilkan prestasi.",
+    },
+    {
+      arab: "التفاؤل يجلب النجاح",
+      terjemah: "Optimisme membawa kesuksesan.",
+    },
+    {
+      arab: "الصحة النفسية مهمة جدًا",
+      terjemah: "Kesehatan mental sangat penting.",
+    },
+    {
+      arab: "الثقة بالنفس تساعدك على التفوق",
+      terjemah: "Percaya diri membantu Anda meraih kesuksesan.",
+    },
+    {
+      arab: "النجاح يأتي لأولئك الذين يصممون على تحقيقه",
+      terjemah: "Kesuksesan datang bagi mereka yang tekad untuk meraihnya.",
+    },
+    {
+      arab: "العقل الهادئ يفكر بوضوح",
+      terjemah: "Pikiran yang tenang berpikir dengan jelas.",
+    },
+    {
+      arab: "العطاء يثري الروح",
+      terjemah: "Memberi memperkaya jiwa.",
+    },
+    {
+      arab: "التواضع يجلب الاحترام",
+      terjemah: "Kerendahan hati mendatangkan penghargaan.",
+    },
+    {
+      arab: "العمل الجاد يؤتي ثماره",
+      terjemah: "Kerja keras membuahkan hasil.",
+    },
+    {
+      arab: "الصدق هو أساس أي علاقة ناجحة",
+      terjemah: "Kejujuran adalah dasar setiap hubungan yang sukses.",
+    },
+    {
+      arab: "الابتسامة تنقل السعادة",
+      terjemah: "Senyuman membawa kebahagiaan.",
+    },
+    {
+      arab: "التخطيط يقود إلى النجاح",
+      terjemah: "Perencanaan membawa kepada kesuksesan.",
+    },
+    {
+      arab: "العائلة هي ملجأ القلب",
+      terjemah: "Keluarga adalah tempat hati berlindung.",
+    },
+    {
+      arab: "الإصرار يتغلب على الصعاب",
+      terjemah: "Keberanian mengatasi kesulitan.",
+    },
+    {
+      arab: "السعادة هي حق الإنسان",
+      terjemah: "Kebahagiaan adalah hak setiap manusia.",
+    },
+    {
+      arab: "التفكير الإيجابي يغير العالم",
+      terjemah: "Pemikiran positif mengubah dunia.",
+    },
+    {
+      arab: "التواضع يجعلك عظيمًا",
+      terjemah: "Kerendahan hati membuatmu hebat.",
+    },
+  ];
 
-  return [...data, ...data2];
+  return [...data, ...data2, ...data3];
 }
