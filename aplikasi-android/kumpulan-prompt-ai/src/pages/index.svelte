@@ -4,7 +4,7 @@
 </script>
 
 <div class="p-4">
-  <div>
+  <div class="flex justify-between">
     <button
       class="btn mr-3"
       on:click={() =>
@@ -20,7 +20,7 @@
       >Other Apps</button
     >
   </div>
-  <div class="join mt-4 join-vertical">
+  <div class="join mt-4 join-vertical w-full">
     {#each data.sort((a, b) => (a.title > b.title ? 1 : -1)) as x}
       <button
         on:click={() => push(`/baca/${x.slug}`)}
