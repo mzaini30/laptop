@@ -23,7 +23,7 @@
 <div class="p-4 pb-20">
   <div class="flex justify-between mb-4">
     <a
-      href="https://play.google.com/store/apps/details?id=com.surat.yasin"
+      href="https://play.google.com/store/apps/details?id=com.surat.yasinterbaru"
       class="btn">Review App</a
     >
     <a

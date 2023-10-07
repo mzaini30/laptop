@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <div class="p-4">
   <div class="flex justify-between mb-4">
     <a
@@ -31,7 +34,7 @@
       </div>
       <div class="form-control w-full max-w-full">
         <label class="label">
-          <span class="label-text">Namanya</span>
+          <span class="label-text">Nama Dia</span>
         </label>
         <input
           type="text"
