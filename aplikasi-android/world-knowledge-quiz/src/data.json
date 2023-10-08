@@ -1,19 +1,1056 @@
 [
   {
-    "question": "Apa warna langit?",
-    "options": ["Merah", "Hijau", "Biru", "Kuning"],
-    "correctAnswer": "Biru",
+    "question": "What is the capital of France?",
+    "options": ["Berlin", "Madrid", "Paris", "London"],
+    "correctAnswer": "Paris",
     "selectedOption": ""
   },
   {
-    "question": "Siapakah presiden Amerika Serikat saat ini?",
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctAnswer": "Mars",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote the play 'Romeo and Juliet'?",
     "options": [
-      "George Washington",
-      "Abraham Lincoln",
-      "Barack Obama",
-      "Joe Biden"
+      "Charles Dickens",
+      "Jane Austen",
+      "William Shakespeare",
+      "Leo Tolstoy"
     ],
-    "correctAnswer": "Joe Biden",
+    "correctAnswer": "William Shakespeare",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest mammal in the world?",
+    "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    "correctAnswer": "Blue Whale",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "correctAnswer": "Carbon Dioxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "In which year did Christopher Columbus discover America?",
+    "options": ["1492", "1588", "1620", "1776"],
+    "correctAnswer": "1492",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is the author of 'To Kill a Mockingbird'?",
+    "options": ["George Orwell", "Harper Lee", "J.K. Rowling", "Mark Twain"],
+    "correctAnswer": "Harper Lee",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest ocean in the world?",
+    "options": [
+      "Indian Ocean",
+      "Atlantic Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
+    ],
+    "correctAnswer": "Pacific Ocean",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": ["China", "South Korea", "Japan", "Thailand"],
+    "correctAnswer": "Japan",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "options": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Leonardo da Vinci",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Antarctica"],
+    "correctAnswer": "Antarctica",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the currency of Japan?",
+    "options": ["Yen", "Won", "Dollar", "Euro"],
+    "correctAnswer": "Yen",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is responsible for the greenhouse effect?",
+    "options": ["Oxygen", "Carbon Dioxide", "Methane", "Nitrogen"],
+    "correctAnswer": "Carbon Dioxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+    "options": [
+      "Amelia Earhart",
+      "Sally Ride",
+      "Bessie Coleman",
+      "Valentina Tereshkova"
+    ],
+    "correctAnswer": "Amelia Earhart",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is famous for the Great Wall?",
+    "options": ["China", "India", "Russia", "Egypt"],
+    "correctAnswer": "China",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'War and Peace'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "Leo Tolstoy",
+      "George Orwell",
+      "Mark Twain"
+    ],
+    "correctAnswer": "Leo Tolstoy",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Au", "Ag", "Fe", "Hg"],
+    "correctAnswer": "Au",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Blue Planet'?",
+    "options": ["Mars", "Venus", "Earth", "Saturn"],
+    "correctAnswer": "Earth",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the currency of Brazil?",
+    "options": ["Peso", "Real", "Sol", "Dollar"],
+    "correctAnswer": "Real",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is the author of 'The Catcher in the Rye'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "J.D. Salinger",
+      "George Orwell",
+      "Mark Twain"
+    ],
+    "correctAnswer": "J.D. Salinger",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is most abundant in Earth's atmosphere?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "correctAnswer": "Nitrogen",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest mammal on land?",
+    "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    "correctAnswer": "African Elephant",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the 'Land of the Rising Sun'?",
+    "options": ["China", "South Korea", "Japan", "Thailand"],
+    "correctAnswer": "Japan",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is known as the 'Father of Modern Physics'?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Nikola Tesla"
+    ],
+    "correctAnswer": "Albert Einstein",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "options": [
+      "Indian Ocean",
+      "Atlantic Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
+    ],
+    "correctAnswer": "Pacific Ocean",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for oxygen?",
+    "options": ["O", "O2", "O3", "Ox"],
+    "correctAnswer": "O",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctAnswer": "Mars",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest prime number?",
+    "options": ["0", "1", "2", "3"],
+    "correctAnswer": "2",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who painted the 'Mona Lisa'?",
+    "options": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Leonardo da Vinci",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Antarctica"],
+    "correctAnswer": "Antarctica",
+    "selectedOption": ""
+  },
+  {
+    "question": "In which country did the Olympic Games originate?",
+    "options": ["Greece", "Italy", "Egypt", "China"],
+    "correctAnswer": "Greece",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Great Gatsby'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "J.K. Rowling",
+      "Harper Lee",
+      "George Orwell"
+    ],
+    "correctAnswer": "F. Scott Fitzgerald",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is responsible for the greenhouse effect?",
+    "options": ["Oxygen", "Carbon Dioxide", "Methane", "Nitrogen"],
+    "correctAnswer": "Carbon Dioxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Mercury"],
+    "correctAnswer": "Mercury",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of Japan?",
+    "options": ["Tulip", "Cherry Blossom", "Rose", "Sunflower"],
+    "correctAnswer": "Cherry Blossom",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Hobbit'?",
+    "options": [
+      "J.R.R. Tolkien",
+      "George Orwell",
+      "C.S. Lewis",
+      "J.K. Rowling"
+    ],
+    "correctAnswer": "J.R.R. Tolkien",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Blue Planet'?",
+    "options": ["Mars", "Venus", "Earth", "Saturn"],
+    "correctAnswer": "Earth",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'War and Peace'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "Leo Tolstoy",
+      "George Orwell",
+      "Mark Twain"
+    ],
+    "correctAnswer": "Leo Tolstoy",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Au", "Ag", "Fe", "Hg"],
+    "correctAnswer": "Au",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is known as laughing gas?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Nitrous Oxide"],
+    "correctAnswer": "Nitrous Oxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of Canada?",
+    "options": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+    "correctAnswer": "Ottawa",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Evening Star'?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "correctAnswer": "Venus",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest continent in the world?",
+    "options": ["North America", "Africa", "Asia", "Europe"],
+    "correctAnswer": "Asia",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the 'Land of the Midnight Sun'?",
+    "options": ["Norway", "Sweden", "Finland", "Russia"],
+    "correctAnswer": "Norway",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "options": ["H2O", "O2", "CO2", "NaCl"],
+    "correctAnswer": "H2O",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who was the first person to walk on the moon?",
+    "options": ["Buzz Aldrin", "Neil Armstrong", "John Glenn", "Yuri Gagarin"],
+    "correctAnswer": "Neil Armstrong",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "options": ["Heart", "Liver", "Brain", "Skin"],
+    "correctAnswer": "Skin",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest bird in the world?",
+    "options": ["Eagle", "Ostrich", "Penguin", "Sparrow"],
+    "correctAnswer": "Ostrich",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for silver?",
+    "options": ["Ag", "Au", "Fe", "Hg"],
+    "correctAnswer": "Ag",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "Isaac Asimov"
+    ],
+    "correctAnswer": "George Orwell",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "correctAnswer": "Canberra",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is used for filling balloons and making voices high-pitched?",
+    "options": ["Oxygen", "Nitrogen", "Helium", "Carbon Dioxide"],
+    "correctAnswer": "Helium",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest bone in the human body?",
+    "options": ["Femur", "Radius", "Humerus", "Tibia"],
+    "correctAnswer": "Femur",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctAnswer": "Mars",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who painted the 'Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Vincent van Gogh",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest bone in the human body?",
+    "options": ["Stapes", "Femur", "Tibia", "Radius"],
+    "correctAnswer": "Stapes",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the 'Land of Fire and Ice'?",
+    "options": ["Iceland", "Greenland", "Norway", "Canada"],
+    "correctAnswer": "Iceland",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for iron?",
+    "options": ["Au", "Ag", "Fe", "Hg"],
+    "correctAnswer": "Fe",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is the author of 'The Odyssey'?",
+    "options": ["Homer", "Virgil", "Ovid", "Aristotle"],
+    "correctAnswer": "Homer",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of China?",
+    "options": ["Shanghai", "Beijing", "Hong Kong", "Guangzhou"],
+    "correctAnswer": "Beijing",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for sodium?",
+    "options": ["Na", "Nb", "Ne", "No"],
+    "correctAnswer": "Na",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas do plants release during photosynthesis?",
+    "options": ["Carbon Dioxide", "Oxygen", "Methane", "Nitrogen"],
+    "correctAnswer": "Oxygen",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of the United States?",
+    "options": ["Rose", "Daisy", "Tulip", "Sunflower"],
+    "correctAnswer": "Rose",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in the solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is known as the 'Queen of Pop'?",
+    "options": ["Madonna", "Whitney Houston", "Beyoncé", "Britney Spears"],
+    "correctAnswer": "Madonna",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest volcano in the solar system?",
+    "options": [
+      "Mount St. Helens",
+      "Mount Kilimanjaro",
+      "Olympus Mons",
+      "Mount Everest"
+    ],
+    "correctAnswer": "Olympus Mons",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "correctAnswer": "Mars",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest prime number?",
+    "options": ["0", "1", "2", "3"],
+    "correctAnswer": "2",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who painted the 'Mona Lisa'?",
+    "options": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Leonardo da Vinci",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Antarctica"],
+    "correctAnswer": "Antarctica",
+    "selectedOption": ""
+  },
+  {
+    "question": "In which country did the Olympic Games originate?",
+    "options": ["Greece", "Italy", "Egypt", "China"],
+    "correctAnswer": "Greece",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Great Gatsby'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "J.K. Rowling",
+      "Harper Lee",
+      "George Orwell"
+    ],
+    "correctAnswer": "F. Scott Fitzgerald",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is responsible for the greenhouse effect?",
+    "options": ["Oxygen", "Carbon Dioxide", "Methane", "Nitrogen"],
+    "correctAnswer": "Carbon Dioxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Mercury"],
+    "correctAnswer": "Mercury",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of Japan?",
+    "options": ["Tulip", "Cherry Blossom", "Rose", "Sunflower"],
+    "correctAnswer": "Cherry Blossom",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Hobbit'?",
+    "options": [
+      "J.R.R. Tolkien",
+      "George Orwell",
+      "C.S. Lewis",
+      "J.K. Rowling"
+    ],
+    "correctAnswer": "J.R.R. Tolkien",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Blue Planet'?",
+    "options": ["Mars", "Venus", "Earth", "Saturn"],
+    "correctAnswer": "Earth",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'War and Peace'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "Leo Tolstoy",
+      "George Orwell",
+      "Mark Twain"
+    ],
+    "correctAnswer": "Leo Tolstoy",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Au", "Ag", "Fe", "Hg"],
+    "correctAnswer": "Au",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is known as laughing gas?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Nitrous Oxide"],
+    "correctAnswer": "Nitrous Oxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of Canada?",
+    "options": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+    "correctAnswer": "Ottawa",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Evening Star'?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "correctAnswer": "Venus",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest continent in the world?",
+    "options": ["North America", "Africa", "Asia", "Europe"],
+    "correctAnswer": "Asia",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the 'Land of the Midnight Sun'?",
+    "options": ["Norway", "Sweden", "Finland", "Russia"],
+    "correctAnswer": "Norway",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for sodium?",
+    "options": ["Na", "Nb", "Ne", "No"],
+    "correctAnswer": "Na",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas do plants release during photosynthesis?",
+    "options": ["Carbon Dioxide", "Oxygen", "Methane", "Nitrogen"],
+    "correctAnswer": "Oxygen",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of the United States?",
+    "options": ["Rose", "Daisy", "Tulip", "Sunflower"],
+    "correctAnswer": "Rose",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in the solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is known as the 'Queen of Pop'?",
+    "options": ["Madonna", "Whitney Houston", "Beyoncé", "Britney Spears"],
+    "correctAnswer": "Madonna",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest volcano in the solar system?",
+    "options": [
+      "Mount St. Helens",
+      "Mount Kilimanjaro",
+      "Olympus Mons",
+      "Mount Everest"
+    ],
+    "correctAnswer": "Olympus Mons",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for chlorine?",
+    "options": ["Cl", "C", "Ch", "Ce"],
+    "correctAnswer": "Cl",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'Pride and Prejudice'?",
+    "options": [
+      "Jane Austen",
+      "Charles Dickens",
+      "Emily Brontë",
+      "Leo Tolstoy"
+    ],
+    "correctAnswer": "Jane Austen",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest bird in the world?",
+    "options": ["Eagle", "Ostrich", "Penguin", "Hummingbird"],
+    "correctAnswer": "Hummingbird",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of France?",
+    "options": ["Rose", "Lily", "Sunflower", "Tulip"],
+    "correctAnswer": "Lily",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Giant Planet'?",
+    "options": ["Mars", "Jupiter", "Saturn", "Uranus"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'Frankenstein'?",
+    "options": ["Mary Shelley", "Edgar Allan Poe", "Bram Stoker", "H.G. Wells"],
+    "correctAnswer": "Mary Shelley",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest species of shark?",
+    "options": [
+      "Hammerhead Shark",
+      "Great White Shark",
+      "Whale Shark",
+      "Tiger Shark"
+    ],
+    "correctAnswer": "Whale Shark",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is known as 'laughing gas'?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Nitrous Oxide"],
+    "correctAnswer": "Nitrous Oxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "correctAnswer": "Canberra",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Lord of the Rings'?",
+    "options": [
+      "George R.R. Martin",
+      "J.K. Rowling",
+      "J.R.R. Tolkien",
+      "C.S. Lewis"
+    ],
+    "correctAnswer": "J.R.R. Tolkien",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is responsible for the 'ozone layer'?",
+    "options": ["Oxygen", "Nitrogen", "Ozone", "Carbon Dioxide"],
+    "correctAnswer": "Ozone",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for silver?",
+    "options": ["Ag", "Au", "Fe", "Hg"],
+    "correctAnswer": "Ag",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is known as the 'Father of Modern Physics'?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Nikola Tesla"
+    ],
+    "correctAnswer": "Albert Einstein",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "options": [
+      "Indian Ocean",
+      "Atlantic Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
+    ],
+    "correctAnswer": "Pacific Ocean",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for oxygen?",
+    "options": ["O", "O2", "O3", "Ox"],
+    "correctAnswer": "O",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "correctAnswer": "Mars",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest prime number?",
+    "options": ["0", "1", "2", "3"],
+    "correctAnswer": "2",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who painted the 'Mona Lisa'?",
+    "options": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Leonardo da Vinci",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Antarctica"],
+    "correctAnswer": "Antarctica",
+    "selectedOption": ""
+  },
+  {
+    "question": "In which country did the Olympic Games originate?",
+    "options": ["Greece", "Italy", "Egypt", "China"],
+    "correctAnswer": "Greece",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Great Gatsby'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "J.K. Rowling",
+      "Harper Lee",
+      "George Orwell"
+    ],
+    "correctAnswer": "F. Scott Fitzgerald",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is responsible for the greenhouse effect?",
+    "options": ["Oxygen", "Carbon Dioxide", "Methane", "Nitrogen"],
+    "correctAnswer": "Carbon Dioxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Mercury"],
+    "correctAnswer": "Mercury",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of Japan?",
+    "options": ["Tulip", "Cherry Blossom", "Rose", "Sunflower"],
+    "correctAnswer": "Cherry Blossom",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'The Hobbit'?",
+    "options": [
+      "J.R.R. Tolkien",
+      "George Orwell",
+      "C.S. Lewis",
+      "J.K. Rowling"
+    ],
+    "correctAnswer": "J.R.R. Tolkien",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Blue Planet'?",
+    "options": ["Mars", "Venus", "Earth", "Saturn"],
+    "correctAnswer": "Earth",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote 'War and Peace'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "Leo Tolstoy",
+      "George Orwell",
+      "Mark Twain"
+    ],
+    "correctAnswer": "Leo Tolstoy",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Au", "Ag", "Fe", "Hg"],
+    "correctAnswer": "Au",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is known as laughing gas?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Nitrous Oxide"],
+    "correctAnswer": "Nitrous Oxide",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of Canada?",
+    "options": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+    "correctAnswer": "Ottawa",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Evening Star'?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "correctAnswer": "Venus",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest continent in the world?",
+    "options": ["North America", "Africa", "Asia", "Europe"],
+    "correctAnswer": "Asia",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the 'Land of the Midnight Sun'?",
+    "options": ["Norway", "Sweden", "Finland", "Russia"],
+    "correctAnswer": "Norway",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "options": ["H2O", "O2", "CO2", "NaCl"],
+    "correctAnswer": "H2O",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who was the first person to walk on the moon?",
+    "options": ["Buzz Aldrin", "Neil Armstrong", "John Glenn", "Yuri Gagarin"],
+    "correctAnswer": "Neil Armstrong",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "options": ["Heart", "Liver", "Brain", "Skin"],
+    "correctAnswer": "Skin",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest bird in the world?",
+    "options": ["Eagle", "Ostrich", "Penguin", "Sparrow"],
+    "correctAnswer": "Ostrich",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for silver?",
+    "options": ["Ag", "Au", "Fe", "Hg"],
+    "correctAnswer": "Ag",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who wrote '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "Isaac Asimov"
+    ],
+    "correctAnswer": "George Orwell",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "correctAnswer": "Canberra",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas is used for filling balloons and making voices high-pitched?",
+    "options": ["Oxygen", "Nitrogen", "Helium", "Carbon Dioxide"],
+    "correctAnswer": "Helium",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest bone in the human body?",
+    "options": ["Femur", "Radius", "Humerus", "Tibia"],
+    "correctAnswer": "Femur",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctAnswer": "Mars",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who painted the 'Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Vincent van Gogh",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the smallest bone in the human body?",
+    "options": ["Stapes", "Femur", "Tibia", "Radius"],
+    "correctAnswer": "Stapes",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which country is known as the 'Land of Fire and Ice'?",
+    "options": ["Iceland", "Greenland", "Norway", "Canada"],
+    "correctAnswer": "Iceland",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for iron?",
+    "options": ["Au", "Ag", "Fe", "Hg"],
+    "correctAnswer": "Fe",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is the author of 'The Odyssey'?",
+    "options": ["Homer", "Virgil", "Ovid", "Aristotle"],
+    "correctAnswer": "Homer",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the capital of China?",
+    "options": ["Shanghai", "Beijing", "Hong Kong", "Guangzhou"],
+    "correctAnswer": "Beijing",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the chemical symbol for sodium?",
+    "options": ["Na", "Nb", "Ne", "No"],
+    "correctAnswer": "Na",
+    "selectedOption": ""
+  },
+  {
+    "question": "Which gas do plants release during photosynthesis?",
+    "options": ["Carbon Dioxide", "Oxygen", "Methane", "Nitrogen"],
+    "correctAnswer": "Oxygen",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the national flower of the United States?",
+    "options": ["Rose", "Daisy", "Tulip", "Sunflower"],
+    "correctAnswer": "Rose",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest planet in the solar system?",
+    "options": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Jupiter",
+    "selectedOption": ""
+  },
+  {
+    "question": "Who is known as the 'Queen of Pop'?",
+    "options": ["Madonna", "Whitney Houston", "Beyoncé", "Britney Spears"],
+    "correctAnswer": "Madonna",
+    "selectedOption": ""
+  },
+  {
+    "question": "What is the largest volcano in the solar system?",
+    "options": [
+      "Mount St. Helens",
+      "Mount Kilimanjaro",
+      "Olympus Mons",
+      "Mount Everest"
+    ],
+    "correctAnswer": "Olympus Mons",
     "selectedOption": ""
   }
 ]
