@@ -58,9 +58,12 @@
       </div>
 
       <script type="text/javascript">
-        semua_bulan_dan_tahun = JSON.parse(
-          localStorage.bulan_dan_tahun
-        ).reverse();
+        semua_bulan_dan_tahun = [];
+        if (localStorage.bulan_dan_tahun) {
+          semua_bulan_dan_tahun = JSON.parse(
+            localStorage.bulan_dan_tahun
+          ).reverse();
+        }
         isi = "";
         semua_data = [];
         odoj.data
