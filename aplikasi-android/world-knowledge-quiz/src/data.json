@@ -1,0 +1,19 @@
+[
+  {
+    "question": "Apa warna langit?",
+    "options": ["Merah", "Hijau", "Biru", "Kuning"],
+    "correctAnswer": "Biru",
+    "selectedOption": ""
+  },
+  {
+    "question": "Siapakah presiden Amerika Serikat saat ini?",
+    "options": [
+      "George Washington",
+      "Abraham Lincoln",
+      "Barack Obama",
+      "Joe Biden"
+    ],
+    "correctAnswer": "Joe Biden",
+    "selectedOption": ""
+  }
+]
