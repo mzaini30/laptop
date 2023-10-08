@@ -1,0 +1,34 @@
+* {
+	word-wrap: break-word;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.navbar-fixed-bottom .table {
+	margin-bottom: 0;
+}
+
+.navbar-fixed-bottom .table,
+.navbar-fixed-bottom tr,
+.navbar-fixed-bottom td {
+	border: none !important;
+}
+
+.navbar-fixed-bottom .btn {
+	width: 100%;
+}
+
+.sembunyi {
+	display: none;
+}
+
+.progress {
+	margin-bottom: 0;
+}
