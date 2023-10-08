@@ -68,22 +68,22 @@ $(".navbar-nav a").click(() => $(".navbar-toggle").click())
     <div class="[&_*]:text-pink-500">
       <div class="form-control w-full max-w-full">
         <label class="label">
-          <span class="label-text">Namamu</span>
+          <span class="label-text">Your Name</span>
         </label>
         <input
           type="text"
-          placeholder="Tulis di sini"
+          placeholder="Write Here"
           class="input input-bordered w-full max-w-full"
           bind:value={namamu}
         />
       </div>
       <div class="form-control w-full max-w-full">
         <label class="label">
-          <span class="label-text">Nama Dia</span>
+          <span class="label-text">His/Her Name</span>
         </label>
         <input
           type="text"
-          placeholder="Tulis di sini"
+          placeholder="Write Here"
           class="input input-bordered w-full max-w-full"
           bind:value={nama_dia}
         />
