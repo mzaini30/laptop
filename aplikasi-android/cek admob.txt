@@ -1,4 +1,3 @@
-Cek Halaman Quran
 COFFEESCRIPT RUNNER
 Create CV
 Crypto Signal
