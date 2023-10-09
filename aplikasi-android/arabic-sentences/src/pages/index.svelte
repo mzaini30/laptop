@@ -1,11 +1,11 @@
 <script>
   import { acak } from "kumpulan-tools";
-  import data from "../data";
+  import data from "../data.json";
 
   let terpilih = {};
 
   function ambil_terpilih() {
-    terpilih = acak(data())[0];
+    terpilih = acak(data)[0];
   }
   ambil_terpilih();
 </script>
