@@ -1,1 +1,1 @@
-open("https://kumpulan-tools.github.io/aplikasi/penilaian-hadits/", "_blank");
+open("https://kumpulan-tools.github.io/aplikasi/belajar-excel/", "_blank");
