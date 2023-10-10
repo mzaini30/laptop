@@ -12,7 +12,7 @@ KISAH INTROVERT
 Kode Bank
 Kumpulan Cerpen
 KUMPULAN PERTANYAAN
-Kumpulan Prompt AI
+
 LIBRARIAN
 LISTICLE
 MARKDOWN KE HTML
@@ -24,7 +24,7 @@ Menjadi yang Terbaik
 MURAJAAH
 MY TASKS
 NGAJI
-Organize Jobs
+
 Ornamen Kaligrafi
 OUTLINE TULISAN
 Penghitung Diskon
@@ -33,7 +33,7 @@ Persenan
 PESAN RAHASIA
 PUG PLAYGROUND
 Quotes
-QURAN PENGAJIAN
+
 Renungan
 Scalping
 SELESAI BACA
