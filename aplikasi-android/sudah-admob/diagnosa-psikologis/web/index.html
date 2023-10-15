@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diagnosa Psikologis</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
+	<style type="text/css">
+		body {
+			padding-top: 70px;
+		}
+
+		.sembunyi {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand judul-aplikasi" data-menuju='awal' href="#!">Diagnosa Psikologis</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	      	<li><a href="https://play.google.com/store/apps/dev?id=5401138465689796048">Aplikasi Lainnya</a></li>
+	        <li><a href="https://play.google.com/store/apps/details?id=com.mzaini30.diagnosapsikologis">Review Aplikasi</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div class="elemen A awal">
+			<p>Apakah anda merasa gelisah, susah tidur, pikirannya kacau dan merasa takut ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="A1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Normal">tidak</a></div>
+		</div>
+
+		<div class="elemen A1 sembunyi">
+			<p>Apakah anda merasa ada perubahan susasana perasaan ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S">tidak</a></div>
+		</div>
+
+		<div class="elemen B sembunyi">
+			<p>Apakah subjek merasa cepat lelah ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B-a">tidak</a></div>
+		</div>
+
+		<div class="elemen S sembunyi">
+			<p>Apakah subjek dibawah kendali kesadarannya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R">tidak</a></div>
+		</div>
+
+		<div class="elemen B1 sembunyi">
+			<p>Apakah subjek suka menyendiri ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B2">tidak</a></div>
+		</div>
+
+		<div class="elemen B2 sembunyi">
+			<p>Apakah subjek suka berperasangka buruk ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B3">tidak</a></div>
+		</div>
+
+		<div class="elemen B3 sembunyi">
+			<p>Apakah subjek berkeinginan menjauhkan diri dari masyarakat ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B4">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B4">tidak</a></div>
+		</div>
+
+		<div class="elemen B4 sembunyi">
+			<p>Apakah subjek selalu merasa bersalah ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Afektif" data-hasil='Afektif'>ya</a></div>
+		</div>
+
+		<div class="elemen B-a sembunyi">
+			<p>Apakah subjek tidak mampu menampakkan emosinya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B-b">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S">tidak</a></div>
+		</div>
+
+		<div class="elemen B-b sembunyi">
+			<p>Apakah subjek kurang dalam dorongan beraktifitas ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B-c">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B-c">tidak</a></div>
+		</div>
+
+		<div class="elemen B-c sembunyi">
+			<p>Apakah subjek kurang mampu berbicara ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B-d">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="B-d">tidak</a></div>
+		</div>
+
+		<div class="elemen B-d sembunyi">
+			<p>Apakah subjek tidak dapat menikmati kegiatan yang disenanginya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Skizofrenia" data-hasil='Skizofrenia'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Skizofrenia" data-hasil='Skizofrenia'>tidak</a></div>
+		</div>
+
+		<div class="elemen R sembunyi">
+			<p>Apakah subjek sulit untuk diajak berbicara ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-a">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1">tidak</a></div>
+		</div>
+
+		<div class="elemen R1 sembunyi">
+			<p>Apakah subjek tidak mengenal dimana ia tinggal sekarang ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R2">tidak</a></div>
+		</div>
+
+		<div class="elemen R2 sembunyi">
+			<p>Apakah subjek terganggu daya ingatnya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R2-1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Normal"data-hasil='Normal'>tidak</a></div>
+		</div>
+
+		<div class="elemen R-a sembunyi">
+			<p>Apakah subjek mengkonsumsi obat penenang ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-b">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-b">tidak</a></div>
+		</div>
+
+		<div class="elemen R-b sembunyi">
+			<p>Apakah subjek tidak mampu membayangkan masa depan ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-c">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-c">tidak</a></div>
+		</div>
+
+		<div class="elemen R-c sembunyi">
+			<p>Apakah subjek tidak mampu mengenali hal-hal yang baru ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-d">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R-d">tidak</a></div>
+		</div>
+
+		<div class="elemen R-d sembunyi">
+			<p>Apakah subjek mengalami hambatan pada pekerjaan ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Amnesia">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Amnesia">tidak</a></div>
+		</div>
+
+		<div class="elemen R1-1 sembunyi">
+			<p>Apakah subjek percaya terhadap hal-hal aneh ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-2">tidak</a></div>
+		</div>
+
+		<div class="elemen R1-2 sembunyi">
+			<p>Apakah subjek suka berhalusinasi ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-3">tidak</a></div>
+		</div>
+
+		<div class="elemen R1-3 sembunyi">
+			<p>Apakah subjek mudah tersinggung ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-4">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-4">tidak</a></div>
+		</div>
+
+		<div class="elemen R1-4 sembunyi">
+			<p>Apakah subjek susah makan ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-5">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R1-5">tidak</a></div>
+		</div>
+
+		<div class="elemen R1-5 sembunyi">
+			<p>Apakah subjek susah mandi ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Demensia"data-hasil='Demensia'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Demensia"data-hasil='Demensia'>tidak</a></div>
+		</div>
+
+		<div class="elemen R2-1 sembunyi">
+			<p>Apakah subjek lupa dengan identitasnya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R2-2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R2-2">tidak</a></div>
+		</div>
+
+		<div class="elemen R2-2 sembunyi">
+			<p>Apakah subjek susah berkonsentrasi ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R2-3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R2-3">tidak</a></div>
+		</div>
+
+		<div class="elemen R2-3 sembunyi">
+			<p>Apakah subjek sering berilusinasi ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Delirium"data-hasil='Delirium'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Delirium"data-hasil='Delirium'>tidak</a></div>
+		</div>
+
+		<div class="elemen S1 sembunyi">
+			<p>Apakah subjek merasa tidak berguna ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S2">tidak</a></div>
+		</div>
+
+		<div class="elemen S1-1 sembunyi">
+			<p>Apakah subjek merasa harga dirinya rendah ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-2">tidak</a></div>
+		</div>
+
+		<div class="elemen S1-2 sembunyi">
+			<p>Apakah subjek pernah berfikiran untuk mengakhiri hidupnya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-3">tidak</a></div>
+		</div>
+
+		<div class="elemen S1-3 sembunyi">
+			<p>Apakah subjek mengalami perasaan tidak nyata ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-4">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S1-4">tidak</a></div>
+		</div>
+
+		<div class="elemen S1-4 sembunyi">
+			<p>Apakah subjek merasa harga dirinya rendah ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Disosiatif"data-hasil='Disosiatif'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Disosiatif"data-hasil='Disosiatif'>tidak</a></div>
+		</div>
+
+		<div class="elemen S2 sembunyi">
+			<p>Apakah subjek mudah marah ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S2-1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S3">tidak</a></div>
+		</div>
+
+		<div class="elemen S2-1 sembunyi">
+			<p>Apakah subjek sulit untuk berteman ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S2-2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S2-2">tidak</a></div>
+		</div>
+
+		<div class="elemen S2-2 sembunyi">
+			<p>Apakah subjek selalu curiga terhadap orang lain ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S2-3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S2-3">tidak</a></div>
+		</div>
+
+		<div class="elemen S2-3 sembunyi">
+			<p>Apakah subjek selalu merasa sedih ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Neurosis_depresif"data-hasil='Neurosis depresif'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Neurosis_depresif"data-hasil='Neurosis depresif'>tidak</a></div>
+		</div>
+
+		<div class="elemen S3 sembunyi">
+			<p>Apakah subjek merasa mual ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S3-1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4">tidak</a></div>
+		</div>
+
+		<div class="elemen S3-1 sembunyi">
+			<p>Apakah subjek muntah ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S3-2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S3-2">tidak</a></div>
+		</div>
+
+		<div class="elemen S3-2 sembunyi">
+			<p>Apakah subjek kembung ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S3-3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S3-3">tidak</a></div>
+		</div>
+
+		<div class="elemen S3-3 sembunyi">
+			<p>Apakah subjek pandangannya ganda ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Kepribadian"data-hasil='Kepribadian'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Kepribadian"data-hasil='Kepribadian'>tidak</a></div>
+		</div>
+		
+		<div class="elemen S4 sembunyi">
+			<p>Apakah subjek merasa cemas ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-1">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-a">tidak</a></div>
+		</div>
+
+		<div class="elemen S4-1 sembunyi">
+			<p>Apakah subjek mudah tersinggung ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-2">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-2">tidak</a></div>
+		</div>
+
+		<div class="elemen S4-2 sembunyi">
+			<p>Apakah subjek merasa sakit/nyeri pada tubuhnya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-3">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-3">tidak</a></div>
+		</div>
+
+		<div class="elemen S4-3 sembunyi">
+			<p>Apakah subjek persepsinya berlebihan pada suatu bagian tubuhnya ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Somatoform"data-hasil='Somatoform'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Somatoform"data-hasil='Somatoform'>tidak</a></div>
+		</div>
+
+		<div class="elemen S4-a sembunyi">
+			<p>Apakah subjek sering buang air kecil ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-b">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="R">tidak</a></div>
+		</div>
+
+		<div class="elemen S4-b sembunyi">
+			<p>Apakah subjek sulit buang air kecil ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-c">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-c">tidak</a></div>
+		</div>
+
+		<div class="elemen S4-c sembunyi">
+			<p>Apakah subjek mengalami sesak nafas ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-d">ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="S4-d">tidak</a></div>
+		</div>
+
+		<div class="elemen S4-d sembunyi">
+			<p>Apakah subjek berkeringat dingin ?</p>
+			<br>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Cemas_menyeluruh"data-hasil='Cemas_menyeluruh'>ya</a></div>
+			<div class="list-group"><a href="#!" class="list-group-item" data-menuju="Cemas_menyeluruh"data-hasil='Cemas_menyeluruh'>tidak</a></div>
+		</div>
+
+		<!-- penjelasan -->
+		<div class="elemen Demensia sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "DEMENSIA"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Penderita demensia seringkali menunjukkan beberapa gangguan dan perubahan pada tingkah laku harian, mengalami gangguan memori, kemampuan membuat keputusan dan juga penurunan proses berfikir.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater.
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi.
+-	Hindari makan telur, susu dan lemak salmon.
+-	Lingkungan dibuat senyaman mungkin
+-	Tidak boleh membawa kendaraan, bepergian sendirian
+-	Letakkan barang keperluannya ditempat yang mudah didapatnya.
+-	Berikan lampu yang terang , jam dinding yang besar, tanggalan yang besar agar mudah dilihatnya.
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Delerium sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "DELIRIUM"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Gangguan bersifat sementara, mendadak, mengalami penurunan kemampuan dalam memusatkan perhatian  dan lingkungan, tidak mampu berfikir jernih.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+-	Dekatkan diri pada Tuhan Yang Maha Kuasa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi.
+-	Kalau sedang mengonsumsi obat, dianjurkan untuk berhenti mengonsumsinya.
+-	Mengobati infeksi
+-	Berikan motivasi dan semangat pada pasien.
+-	Cukupi kebutuhan cairan, nutrisi dan vitamin.
+-	Segala alat pengekang boleh digunakan, tapi segera dibuka ketika keadaan sudah membaik.
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Amnesia sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Amnesia"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Gangguan amnesia ditandai terutama oleh gejala tunggal suatu gangguan daya ingat yang menyebabkan gangguan bermakna dalam fungsi sosial atau pekerjaan.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa.
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.\
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+		
+		<!-- penjelasan -->
+		<div class="elemen Cemas_menyeluruh sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Kecemasan Menyeluruh"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Suatu kekhawatiran yang berlebihan dan dihayati.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+
+		<!-- penjelasan -->
+		<div class="elemen Somatoform sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Somatoform"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Kelompok gangguan yang memiliki gejala fisik (sebagai contohnya, nyeri, mual, dan pusing) dimana tidak dapat ditemukan penjelasan medis yang kuat.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Kepribadian sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Kepibradian"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Suatu pola tingkah laku yang berlangsung terus menerus dan menyimpang secara mencolok dari kebiasaan dirinya.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+
+
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Neurosis_depresif sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Neurosis Depresif"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Pola berfikir dan perilaku yang berulang dan menyebabkan depresi.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Disosiatif sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Disosiatif"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Suatu kelompok gangguan dengan gejala utama kehilangan sebagian atau seluruh integrasi normal (di bawah kendali kesadaran) antara ingatan masa lalu, kesadaran identitas dan penginderaan, serta kontrol terhadap gerakan tubuh.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+-	Ciptakan suasana yang aman buat pasien.
+-	Bisa menggunakan hipnotis.
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Skizofrenia sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Skizofrenia"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Gangguan jiwa yang serius karena menganggu cara pikir sehingga pasien tidak lagi melihat kenyataan dengan tepat sebab pikiran pasien dipenuhi dengan alam khayal yang sedemikian rupa sehingga pasien mencampur adukkan antara alam khayal dan realitas atau kenyataan.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Sering berkomunikasi dengan pasien.
+-	Jangan biarkan dia menyendiri.
+-	Lakukan terapi somaterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan)
+-	Gangguan ini perlu penanganan yang tepat oleh orang yang tepat.
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+		<!-- penjelasan -->
+		<div class="elemen Afektif sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Mengalami Gangguan "Afektif"
+				</div>
+			</div>
+			<div class="alert alert-warning">Definisi :</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Merupakan gangguan perasaan. Biasanya ke arah depresi atau bahkan ke arah elasi suasana perasaan meningkat.
+				</div>
+			</div>
+			<div class="alert alert-warning">Pengobatan :</div>
+			<div class="panel panel-default">
+				<textarea name="" id="" cols="30" rows="10" class="markdown-input sembunyi">
+
+
+-	Dekatkan diri pada Tuhan Yang Maha Esa
+-	Konsultasi dengan ahli kesehatan bidang kejiwaan seperti Psikolog dan Psikiater
+-	Olahraga yang cukup agar pasien selalu dalam kondisi sehat.
+-	Lakukan pendekatan dengan pasien dan berikan dia motivasi
+-	Bantu pasien untuk mengekspresikan emosinya.
+-	Jangan dipaksa atau ditekan dalam meluapkan emosi
+-	Lakukan terapi soamterapi (melalui badan), psikoterapi (melalui proses spiritual) dan sosioterapi (melalui lingkungan).
+
+
+</textarea>
+				<div class="panel-body markdown-output"></div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+
+				<!-- penjelasan -->
+		<div class="elemen Normal sembunyi">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					Subjek Normal
+				</div>
+			</div>
+		</div>
+		<!-- /penjelasan -->
+	</div>
+	<script type="text/javascript" src="vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendor/marked.min.js"></script>
+	<script type="text/javascript">
+		$('.navbar-nav a').click(function(){
+			$('.navbar-toggle').click()
+		})
+
+		$('a[data-menuju]').each(function(){
+			$(this).click(function(x){
+				x.preventDefault()
+				$(".elemen").addClass("sembunyi")
+				menuju = $(this).attr('data-menuju')
+				$('.' + menuju).removeClass('sembunyi')
+			})	
+		})
+
+		$('.markdown-output').each(function(){
+			$(this).html(marked($(this).prev().html()))
+		})
+	</script>
+</body>
+</html>

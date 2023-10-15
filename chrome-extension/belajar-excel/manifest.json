@@ -1,12 +1,12 @@
 {
-  "name": "Penilaian Hadits",
-  "description": "Cara cepat menemukan nilai dari ujian hadits Arbain",
+  "name": "Belajar Excel",
+  "description": "Kumpulan tutorial untuk menguasai aplikasi Excel",
   "version": "0.0.1",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html"
   },
   "icons": {
-    "128": "./Desain tanpa judul.png"
+    "128": "./Desain tanpa judul (1).png"
   }
 }

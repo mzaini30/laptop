@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/highlight/default.min.css">
+	<style type="text/css">
+		* {
+			word-wrap: break-word;
+		}
+
+		img {
+			max-width: 100%;
+		}
+		
+		body {
+			margin-top: 70px;
+			margin-bottom: 50px;
+		}
+
+		.navbar-fixed-bottom .table {
+			margin-bottom: 0;
+		}
+
+		.navbar-fixed-bottom .btn {
+			width: 100%;
+		}
+
+		.navbar-fixed-bottom .table,
+		.navbar-fixed-bottom tr,
+		.navbar-fixed-bottom td {
+			border: 0 !important;
+		}
+
+		.sembunyi {
+			display: none;
+		}
+
+		.full {
+			width: 100%;
+		}
+
+		.hapus {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Blog</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="panel panel-default">
+	<div class="list-group"><a href="penulisan.html" class="list-group-item">Aturan penulisan</a></div>
+</div>
+<div class="isi"></div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container">
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control cari">
+							<span class="input-group-addon hapus">&times;</span>
+						</div>
+					</td>
+					<td><a href="tambah.html" class="btn btn-success">Tambah</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+	</div>
+	<br>
+	<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/dexie/dexie.js"></script>
+	<script type="text/javascript" src="vendor/marked/marked.min.js"></script>
+	<script type="text/javascript" src="vendor/highlight/highlight.min.js"></script>
+	<script type="text/javascript">
+		marked.setOptions({
+			breaks: true
+		})
+
+		$.expr[':'].contains = $.expr.createPseudo(function(arg){
+			return function(elem){
+				return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0
+			}
+		})
+
+		blog = new Dexie('database blog')
+		blog.version(1).stores({
+			data: '++id, judul, isi, isi_html'
+		})
+
+		
+
+		
+			$('.navbar-brand').click(x => {
+				x.preventDefault()
+				$('html, body').animate({
+					scrollTop: 0
+				}, 800)
+			})
+			data_hasil = ''
+			blog.data.orderBy('id').reverse().each(function(x){
+				data_hasil += '<a href="tampil.html?' + x.id + '" class="list-group-item item-cari">' + x.judul + ' <span class="sembunyi">' + x.isi + '</span></a>'
+			}).then(function(){
+				$('.isi').html('<div class="list-group">' + data_hasil + '</div>')
+			})
+		
+
+		
+
+		
+
+		$('.cari').on('keyup', function(){
+			if ($('.cari').val() != ''){
+				$('.item-cari').addClass('sembunyi')
+				$('.item-cari').each(function(){
+					if ($(this).is(":contains(" + $('.cari').val() + ")")) {
+						$(this).removeClass('sembunyi')
+					}
+				})
+			} else {
+				$('.item-cari').removeClass('sembunyi')
+			}
+		})
+
+		$('.hapus').each(function(){
+			$(this).click(function(){
+				$(this).parent().find('.form-control').val('')
+				$('.item-cari').removeClass('sembunyi')
+			})
+		})
+	</script>
+</body>
+</html>
