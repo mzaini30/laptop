@@ -8,9 +8,9 @@
 <div
   class="p-2 grid grid-rows-1 gap-2 focus:[&_input]:(outline-none border-orange-500) [&_input]:(w-full p-1 block border-green-500 border)"
 >
-  <p>Harga Saat Ini</p>
+  <p>Current Price</p>
   <input bind:value={harga} type="tel" name="" id="" />
-  <p>Persentase</p>
+  <p>Percentage</p>
   <div class="grid grid-cols-5 gap-2">
     {#each Array(5) as x, n}
       <button
@@ -31,5 +31,4 @@
     value={((harga * (100 - persentase)) / 100 || 0).toLocaleString()}
     readonly
   />
-  <img src={iklan} class="w-full" alt="" />
 </div>
