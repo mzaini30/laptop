@@ -1,0 +1,1 @@
+<a class="block bg-blue-500 text-white p-3 rounded mt-10 text-center" href="https://t.me/tipszen">Join Komunitas Tips Zen</a>

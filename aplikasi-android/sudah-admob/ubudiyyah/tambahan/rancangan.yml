@@ -1,0 +1,32 @@
+nama: "" # ini global
+
+bulan: "Januari 2022" # Mengumpulkan laporan
+tanggal: "12 Januari 2022" # Kalau masih di hari yang sama, update
+shalat_tepat_waktu: # 4 kali
+  subuh: "3 kali"
+  dzuhur: "1 kali"
+  ashar: ""
+  maghrib: ""
+  isya: ""
+shalat_berjamaah:
+  subuh: ""
+  dzuhur: ""
+  ashar: ""
+  maghrib: ""
+  isya: ""
+rawatib:
+  sebelum_subuh: ""
+  sebelum_dzuhur: ""
+  setelah_dzuhur: ""
+  sebelum_ashar: ""
+  setelah_maghrib: ""
+  sebelum_isya: ""
+  setelah_isya: ""
+nafilah:
+  shalat_dhuha: ""
+  shalat_tahajud: ""
+  shalat_witr: ""
+dzikir:
+  dzikir_pagi: ""
+  dzikir_petang: ""
+  istighfar_100_kali: ""

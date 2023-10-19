@@ -1,0 +1,58 @@
+extends base.pug
+
+block isi
+  style
+    :stylus
+      textarea
+        white-space pre
+      .jalankan
+        margin-right 5px
+
+  .p-2(v-scope @vue:mounted="init")
+    textarea.mb-3.form-control(v-model="isi")
+    .btn.btn-success.jalankan(@click="jalankan") Run
+    .btn.btn-danger(@click="hapus") Delete
+  script(src="coffeescript.js")
+  script
+    :coffee
+      id = location.href.split("?")[1]
+      id_string = id.replace "0.", ""
+      
+      textarea = document.querySelector "textarea"
+      ubah_tinggi = ->
+        textarea.style.height = window.innerHeight - 80 + "px"
+      ubah_tinggi()
+      window.addEventListener("resize", -> ubah_tinggi())
+      
+      PetiteVue.createApp({
+        isi: ""
+        jalankan: ->
+          try
+            eval CoffeeScript.compile @isi
+          catch x
+            Swal.fire({
+              icon: "error"
+              title: "Error"
+              text: JSON.stringify x
+            })
+        hapus: ->
+          {value} = await Swal.fire "Delete"
+          if value
+            localStorage.removeItem "kode_#{id_string}"
+            
+            data = localStorage.data_coffee
+            data = JSON.parse data
+            data = data.filter (x) ->
+              x.id.toString() != id.toString()
+            localStorage.data_coffee = JSON.stringify data
+
+            location.href = "index.html"
+
+        init: ->
+          kodenya = localStorage["kode_#{id_string}"]
+          if kodenya
+            @isi = kodenya
+          `setInterval(() => this.simpan(), 3000)`
+        simpan: ->
+          localStorage["kode_#{id_string}"] = @isi
+      }).mount()

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/highlight/default.min.css">
+	<style type="text/css">
+		* {
+			word-wrap: break-word;
+		}
+
+		img {
+			max-width: 100%;
+		}
+		
+		body {
+			margin-top: 70px;
+			margin-bottom: 50px;
+		}
+
+		.navbar-fixed-bottom .table {
+			margin-bottom: 0;
+		}
+
+		.navbar-fixed-bottom .btn {
+			width: 100%;
+		}
+
+		.navbar-fixed-bottom .table,
+		.navbar-fixed-bottom tr,
+		.navbar-fixed-bottom td {
+			border: 0 !important;
+		}
+
+		.sembunyi {
+			display: none;
+		}
+
+		.full {
+			width: 100%;
+		}
+
+		.hapus {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Blog</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<p>Hapus kah?</p>
+<p>
+	<div class="btn btn-danger hapus">Iya</div>
+</p>
+
+	</div>
+	<br>
+	<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/dexie/dexie.js"></script>
+	<script type="text/javascript" src="vendor/marked/marked.min.js"></script>
+	<script type="text/javascript" src="vendor/highlight/highlight.min.js"></script>
+	<script type="text/javascript">
+		marked.setOptions({
+			breaks: true
+		})
+
+		$.expr[':'].contains = $.expr.createPseudo(function(arg){
+			return function(elem){
+				return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0
+			}
+		})
+
+		blog = new Dexie('database blog')
+		blog.version(1).stores({
+			data: '++id, judul, isi, isi_html'
+		})
+
+		
+
+		
+
+		
+			isi = ''
+			blog.data.where({
+				id: Number(location.search.substring(1))
+			}).each(function(x){
+				isi += '<p><strong>' + x.judul + '</strong></p>' + x.isi_html
+			}).then(function(){
+				$('.isi').html(isi)
+				$('pre code').each(function(){
+					hljs.highlightBlock(this)
+				})
+			})
+			$('.edit').attr('href', 'edit.html' + location.search)
+			$('.hapus-kah').attr('href', 'hapus-kah.html' + location.search)
+			$('.hapus').click(() => {
+				blog.data.where({
+					id: Number(location.search.substring(1))
+				}).delete().then(function(){
+					location.href = 'index.html'
+				})				
+			})
+		
+
+		
+
+		$('.cari').on('keyup', function(){
+			if ($('.cari').val() != ''){
+				$('.item-cari').addClass('sembunyi')
+				$('.item-cari').each(function(){
+					if ($(this).is(":contains(" + $('.cari').val() + ")")) {
+						$(this).removeClass('sembunyi')
+					}
+				})
+			} else {
+				$('.item-cari').removeClass('sembunyi')
+			}
+		})
+
+		$('.hapus').each(function(){
+			$(this).click(function(){
+				$(this).parent().find('.form-control').val('')
+				$('.item-cari').removeClass('sembunyi')
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+---
+judul: Namespace dalam TypeScript.
+---
+
