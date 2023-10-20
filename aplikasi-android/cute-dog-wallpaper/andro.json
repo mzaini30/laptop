@@ -1,10 +1,10 @@
 {
   "folder": "dist",
   "judul": "Cute Dog Wallpaper",
-  "admobApplication": "ca-app-pub-3940256099942544~3347511713",
-  "admobBanner": "ca-app-pub-3940256099942544/6300978111",
-  "admobOpen": "ca-app-pub-3940256099942544/3419835294",
-  "versi": 1,
+  "admobApplication": "ca-app-pub-9804745932553029~5947488959",
+  "admobBanner": "ca-app-pub-9804745932553029/8329291478",
+  "admobOpen": "ca-app-pub-9804745932553029/8599333339",
+  "versi": 2,
   "id": "com.cutedog.wallpaper",
   "docs": "https://kumpulan-tools.github.io/aplikasi/andro/"
 }
