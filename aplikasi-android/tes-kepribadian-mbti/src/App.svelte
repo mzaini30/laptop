@@ -11,4 +11,6 @@
   // stat_aja({ judul: "Judul Aplikasi", tipe: "Aplikasi Android" });
 </script>
 
-<Router {routes} />
+<div class="">
+  <Router {routes} />
+</div>
