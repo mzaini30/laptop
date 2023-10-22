@@ -1,0 +1,494 @@
+[
+  {
+    "text": "Lebih memilih berkomunikasi dengan bicara",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Berhati-hati, penuh pertimbangan, kaku",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Memilih cara yang sudah ada dan sudah terbukti",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Bergerak dari gambaran umum baru ke detail",
+    "sensing": -1,
+    "intuition": 1
+  },
+  { "text": "Subyektif", "feeling": 1, "thinking": -1 },
+  {
+    "text": "Menuntut perlakuan yang adil dan sama pada semua orang",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Puas ketika mampu menjalankan semuanya sesuai rencana",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Spontan, Fleksibel, tidak diikat waktu",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Menemukan dan mengembangkan ide dengan mendiskusikannya",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Membangun ide dengan matang baru membicarakannya",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Menggunakan keterampilan yang sudah dikuasai",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Berbicara mengenai visi masa depan dan konsep-konsep mengenai visi tersebut",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Diyakinkan dengan penjelasan yang menyentuh perasaan",
+    "feeling": 1,
+    "thinking": -1
+  },
+  { "text": "Mementingkan sebab-akibat", "feeling": -1, "thinking": 1 },
+  {
+    "text": "Daftar dan checklist adalah panduan penting",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Perubahan mendadak tidak jadi masalah",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Berorientasi pada dunia eksternal (kegiatan, orang)",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Lebih suka komunikasi tidak langsung (telp, surat, e-mail)",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  { "text": "Praktis", "sensing": 1, "intuition": -1 },
+  {
+    "text": "Menggunakan imajinasi dan perenungan sebagai pedoman",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Berorientasi pada manusia dan hubungan",
+    "feeling": 1,
+    "thinking": -1
+  },
+  {
+    "text": "Standar harus ditegakkan di atas segalanya (itu menunjukkan kehormatan dan harga diri)",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Hidup harus sudah diatur dari awal",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Aturan, jadwal dan target sangat mengikat dan membebani",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Fokus pada banyak hobi secara luas dan umum",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Mencari kesempatan untuk berkomunikasi secara perorangan",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Secara konsisten mengamati dan mengingat detail",
+    "sensing": 1,
+    "intuition": -1
+  },
+  { "text": "SOP sangat membosankan", "sensing": -1, "intuition": 1 },
+  {
+    "text": "Mengambil keputusan berdasar perasaan pribadi dan kondisi orang lain",
+    "feeling": 1,
+    "thinking": -1
+  },
+  {
+    "text": "Bersemangat saat mengkritik dan menemukan kesalahan",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Bertindak sesuai apa yang sudah direncanakan",
+    "judging": 1,
+    "perceiving": -1
+  },
+  { "text": "Berorientasi pada proses", "judging": -1, "perceiving": 1 },
+  { "text": "Sosial dan ekspresif", "extrovert": 1, "introvert": -1 },
+  { "text": "Menyimpan semangat dalam hati", "extrovert": -1, "introvert": 1 },
+  {
+    "text": "Berfokus pada masa kini (apa yang bisa diperbaiki sekarang)",
+    "sensing": 1,
+    "intuition": -1
+  },
+  { "text": "Bebas dan dinamis", "sensing": -1, "intuition": 1 },
+  {
+    "text": "Mengemukakan kesepakatan terlebih dahulu",
+    "feeling": 1,
+    "thinking": -1
+  },
+  { "text": "Sering dianggap keras kepala", "feeling": -1, "thinking": 1 },
+  { "text": "Perubahan adalah musuh", "judging": 1, "perceiving": -1 },
+  {
+    "text": "Membiarkan orang lain bertindak bebas asalkan tujuan tercapai",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Bertemu orang dan aktivitas sosial membuat bersemangat",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Berpikir secara matang sebelum bertindak",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Menarik kesimpulan dengan lama dan hati-hati",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Memilih ide inspiratif lebih penting daripada fakta",
+    "sensing": -1,
+    "intuition": 1
+  },
+  { "text": "Berempati", "feeling": 1, "thinking": -1 },
+  { "text": "Mempertanyakan", "feeling": -1, "thinking": 1 },
+  {
+    "text": "Situasi last minute sangat menyiksa, membuat stress dan merupakan kesalahan",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Memperhatikan hal-hal baru dan siap menyesuaikan diri serta mengubah target",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Beraktifitas sendirian di rumah membosankan",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Lebih memilih tempat yang tenang dan pribadi untuk berkonsentrasi",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Mengklarifikasi ide dan teori sebelum dipraktekkan",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Perubahan dan variasi lebih diutamakan",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Menghargai seseorang karena sifat dan perilakunya",
+    "feeling": 1,
+    "thinking": -1
+  },
+  { "text": "Yang penting tujuan tercapai", "feeling": -1, "thinking": 1 },
+  { "text": "Berpegang teguh pada pendirian", "judging": 1, "perceiving": -1 },
+  {
+    "text": "Pendirian masih bisa berubah tergantung situasi nantinya",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Berinisiatif tinggi hampir dalam berbagai hal meskipun tidak berhubungan dengan dirinya",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Berinisiatif bila situasi memaksa atau berhubungan dengan kepentingan sendiri",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Bertindak step by step dengan timeframe yang jelas",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Bertindak dengan semangat tanpa menggunakan timeframe",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Terlalu kaku pada peraturan dan pekerjaan itu kejam",
+    "feeling": 1,
+    "thinking": -1
+  },
+  {
+    "text": "Melibatkan perasaan itu tidak profesional",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Merasa tenang bila semua sudah diputuskan",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Merasa nyaman bila situasi tetap terbuka terhadap pilihan-pilihan lain",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Lebih memilih tempat yang ramai dan banyak interaksi / aktifitas",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Beraktifitas sendirian di rumah menyenangkan",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Kontinuitas dan stabilitas lebih diutamakan",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "menarik kesimpulan dengan cepat sesuai naluri",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Yang penting situasi harmonis terjaga",
+    "feeling": 1,
+    "thinking": -1
+  },
+  {
+    "text": "Mengemukakan tujuan dan sasaran lebih dahulu",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Ketidakpastian membuat bingung dan meresahkan",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Ketidakpastian itu seru, menegangkan dan membuat hati lebih senang",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Berani bertindak tanpa terlalu lama berfikir",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Pertemuan dengan orang lain dan aktivitas sosial melelahkan",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Memilih fakta lebih penting daripada ide inspiratif",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Memahami ide dan teori saat mempraktekkannya langsung",
+    "sensing": -1,
+    "intuition": 1
+  },
+  { "text": "Mengakomodasi", "feeling": 1, "thinking": -1 },
+  {
+    "text": "Menghargai seseorang karena skill dan faktor teknis",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Fokus pada target dan mengabaikan hal-hal baru",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Situasi last minute membuat bersemangat dan memunculkan potensi",
+    "judging": -1,
+    "perceiving": 1
+  },
+  { "text": "Mengekspresikan semangat", "extrovert": 1, "introvert": -1 },
+  { "text": "Tertutup dan mandiri", "extrovert": -1, "introvert": 1 },
+  { "text": "Prosedural dan tradisional", "sensing": 1, "intuition": -1 },
+  {
+    "text": "Berfokus pada masa depan (apa yang mungkin dicapai di masa depan)",
+    "sensing": -1,
+    "intuition": 1
+  },
+  { "text": "Sering dianggap terlalu memihak", "feeling": 1, "thinking": -1 },
+  { "text": "Menganalisa", "feeling": -1, "thinking": 1 },
+  {
+    "text": "Mengatur orang lain dengan tata tertib agar tujuan tercapai",
+    "judging": 1,
+    "perceiving": -1
+  },
+  { "text": "Perubahan adalah semangat hidup", "judging": -1, "perceiving": 1 },
+  {
+    "text": "Memilih berkomunikasi pada sekelompok orang",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Fokus pada sedikit hobi namun mendalam",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  { "text": "SOP sangat membantu", "sensing": 1, "intuition": -1 },
+  {
+    "text": "Mengamati dan mengingat detail hanya bila berhubungan dengan pola",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Bersemangat saat menolong orang keluar dari kesalahan dan meluruskan",
+    "feeling": 1,
+    "thinking": -1
+  },
+  {
+    "text": "Mengambil keputusan berdasar logika dan aturan main",
+    "feeling": -1,
+    "thinking": 1
+  },
+  { "text": "Berorientasi pada hasil", "judging": 1, "perceiving": -1 },
+  {
+    "text": "Bertindak sesuai situasi dan kondisi yang terjadi saat itu",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Lebih suka komunikasi langsung (tatap muka)",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Berorientasi pada dunia internal (memori, pemikiran, ide)",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Menggunakan pengalaman sebagai pedoman",
+    "sensing": 1,
+    "intuition": -1
+  },
+  { "text": "Konseptual", "sensing": -1, "intuition": 1 },
+  {
+    "text": "Perasaan manusia lebih penting dari sekadar standar (yang adalah benda mati)",
+    "feeling": 1,
+    "thinking": -1
+  },
+  {
+    "text": "Diyakinkan dengan penjelasan yang masuk akal",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Aturan, jadwal dan target akan sangat membantu dan memperjelas tindakan",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Hidup seharusnya mengalir sesuai kondisi",
+    "judging": -1,
+    "perceiving": 1
+  },
+  {
+    "text": "Membangun ide pada saat berbicara",
+    "extrovert": 1,
+    "introvert": -1
+  },
+  {
+    "text": "Menemukan dan mengembangkan ide dengan merenungkan",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Berbicara mengenai masalah yang dihadapi hari ini dan langkah-langkah praktis mengatasinya",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Menyukai tantangan untuk menguasai keterampilan baru",
+    "sensing": -1,
+    "intuition": 1
+  },
+  {
+    "text": "Menuntut perlakuan khusus sesuai karakteristik masing-masing orang",
+    "feeling": 1,
+    "thinking": -1
+  },
+  { "text": "Obyektif", "feeling": -1, "thinking": 1 },
+  {
+    "text": "Tidak menyukai hal-hal yang bersifat mendadak dan di luar perencanaan",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Daftar dan checklist adalah tugas dan beban",
+    "judging": -1,
+    "perceiving": 1
+  },
+  { "text": "Spontan, Easy Going, fleksibel", "extrovert": 1, "introvert": -1 },
+  {
+    "text": "Lebih memilih berkomunikasi dengan menulis",
+    "extrovert": -1,
+    "introvert": 1
+  },
+  {
+    "text": "Bergerak dari detail ke gambaran umum sebagai kesimpulan akhir",
+    "sensing": 1,
+    "intuition": -1
+  },
+  {
+    "text": "Memilih cara yang unik dan belum dipraktekkan orang lain",
+    "sensing": -1,
+    "intuition": 1
+  },
+  { "text": "Mementingkan nilai-nilai personal", "feeling": 1, "thinking": -1 },
+  {
+    "text": "Berorientasi tugas dan job description",
+    "feeling": -1,
+    "thinking": 1
+  },
+  {
+    "text": "Terencana dan memiliki deadline jelas",
+    "judging": 1,
+    "perceiving": -1
+  },
+  {
+    "text": "Puas ketika mampu beradaptasi dengan momentum yang terjadi",
+    "judging": -1,
+    "perceiving": 1
+  }
+]
