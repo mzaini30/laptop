@@ -71,7 +71,7 @@
 
 <main>
   <div class="flex items-center h-screen">
-    <div class="">
+    <div class="mx-auto">
       {#if currentStatement < statements.length}
         <p class="text-center mb-10 w-[80%] mx-auto">{currentStatementText}</p>
       {/if}
