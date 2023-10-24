@@ -1,10 +1,10 @@
 {
   "folder": "dist",
   "judul": "Tes Kepribadian MBTI",
-  "admobApplication": "ca-app-pub-3940256099942544~3347511713",
-  "admobBanner": "ca-app-pub-3940256099942544/6300978111",
-  "admobOpen": "ca-app-pub-3940256099942544/3419835294",
-  "versi": 1,
+  "admobApplication": "ca-app-pub-9804745932553029~4235408886",
+  "admobBanner": "ca-app-pub-9804745932553029/4159387263",
+  "admobOpen": "ca-app-pub-9804745932553029/7141592064",
+  "versi": 2,
   "id": "com.teskepribadian.mbti",
   "docs": "https://kumpulan-tools.github.io/aplikasi/andro/"
 }
