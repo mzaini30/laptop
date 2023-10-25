@@ -28,7 +28,7 @@
     <ul class="menu bg-base-200 w-full rounded-box">
       <li>
         <a
-          href="https://play.google.com/store/apps/details?id=com.fantasy.wallpapernew"
+          href="https://play.google.com/store/apps/details?id=com.kaligrafi.wallpaper"
           >Review App</a
         >
       </li>
