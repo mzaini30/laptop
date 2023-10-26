@@ -1,10 +1,11 @@
 {
   "folder": "dist",
-  "judul": "Kaligrafi Wallpaper",
+  "title": "Kaligrafi Wallpaper",
   "admobApplication": "ca-app-pub-3940256099942544~3347511713",
   "admobBanner": "ca-app-pub-3940256099942544/6300978111",
   "admobOpen": "ca-app-pub-3940256099942544/3419835294",
-  "versi": 1,
+  "admobReward": "ca-app-pub-3940256099942544/5224354917",
+  "version": 1,
   "id": "com.kaligrafi.wallpaper",
-  "docs": "https://kumpulan-tools.github.io/aplikasi/andro/"
+  "docs": "https://andro-docs.github.io/"
 }
