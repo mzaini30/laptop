@@ -1,1 +1,0 @@
-# selain-wallpaper
