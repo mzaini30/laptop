@@ -3,12 +3,12 @@
   import { acak } from "kumpulan-tools";
 
   let terpilih = {};
-  let kesempatan = 11;
+  let kesempatan = 21;
 
   function diacak() {
     kesempatan -= 1;
     if (kesempatan < 0) {
-      kesempatan = 10;
+      kesempatan = 20;
       Andro.reward();
     }
     terpilih = acak(data)[0];
