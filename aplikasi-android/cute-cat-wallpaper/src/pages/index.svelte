@@ -3,8 +3,14 @@
   import { acak } from "kumpulan-tools";
 
   let terpilih = {};
+  let nyawa = 21;
 
   function diacak() {
+    nyawa -= 1;
+    if (nyawa < 0) {
+      nyawa = 20;
+      Andro.reward();
+    }
     terpilih = acak(data)[0];
     console.log(terpilih.lokasi_file);
   }
@@ -21,7 +27,12 @@
     on:click={() => Andro.set_wallpaper(terpilih.lokasi_file)}
     >Set as Wallpaper</button
   >
-  <button class="btn text-3xl btn-secondary" on:click={diacak}>🎲</button>
+  <div class="indicator">
+    <div class="indicator-item badge badge-primary">
+      {nyawa == 0 ? "Ad" : nyawa}
+    </div>
+    <button class="btn text-3xl btn-secondary" on:click={diacak}>🎲</button>
+  </div>
 </div>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
