@@ -28,7 +28,9 @@
     >Set as Wallpaper</button
   >
   <div class="indicator">
-    <span class="indicator-item badge badge-primary">{kesempatan}</span>
+    <span class="indicator-item badge badge-primary"
+      >{kesempatan == 0 ? "Ad" : kesempatan}</span
+    >
     <button class="btn text-3xl btn-secondary" on:click={diacak}>🎲</button>
   </div>
 </div>
