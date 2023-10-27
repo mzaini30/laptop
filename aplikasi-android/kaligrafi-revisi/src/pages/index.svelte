@@ -10,7 +10,7 @@
   import { acak } from "kumpulan-tools";
 
   let iklan_terpilih = acak(iklan)[0];
-
+  let support_me = true;
   let fontSize = 50;
   let teks = "";
   let warna = "#000";
@@ -46,7 +46,7 @@
 
     {#if teks}
       <div class="grid grid-cols-1 gap-3">
-        <div class="mt-3 flex gap-2">
+        <div class="mt-3 flex gap-2 justify-between">
           <button
             class="btn"
             on:click={() =>
@@ -62,6 +62,18 @@
             >Other Apps</button
           >
         </div>
+        {#if support_me}
+          <div
+            class="indicator w-[80%] mx-auto"
+            on:click={() => {
+              support_me = false;
+              Andro.reward();
+            }}
+          >
+            <span class="indicator-item badge badge-primary">Ad</span>
+            <button class="btn w-full block">Support Me</button>
+          </div>
+        {/if}
         <!-- <img src={iklan} class="block mt-3" alt="" /> -->
         <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
