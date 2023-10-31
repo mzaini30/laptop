@@ -7,12 +7,13 @@
 
   function diacak() {
     kesempatan -= 1;
+
+    terpilih = acak(data)[0];
+    console.log(terpilih.lokasi_file);
     if (kesempatan < 0) {
       kesempatan = 20;
       Andro.reward();
     }
-    terpilih = acak(data)[0];
-    console.log(terpilih.lokasi_file);
   }
   diacak();
 </script>
@@ -37,17 +38,6 @@
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
     <ul class="menu bg-base-200 w-full rounded-box">
-      <li>
-        <a
-          href="https://play.google.com/store/apps/details?id=com.mzaini30.kaligrafiwallpaper"
-          >Review App</a
-        >
-      </li>
-      <li>
-        <a href="https://play.google.com/store/apps/dev?id=5401138465689796048"
-          >Other Apps</a
-        >
-      </li>
       <li><a href={terpilih.link}>Source</a></li>
     </ul>
   </div>
