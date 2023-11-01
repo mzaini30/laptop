@@ -3,10 +3,16 @@
   import { acak } from "kumpulan-tools";
 
   let terpilih = {};
+  let coin = 21;
 
   function diacak() {
     terpilih = acak(data)[0];
     console.log(terpilih.lokasi_file);
+    coin -= 1;
+    if (coin < 0) {
+      coin = 20;
+      Andro.reward();
+    }
   }
   diacak();
 </script>
@@ -21,22 +27,16 @@
     on:click={() => Andro.set_wallpaper(terpilih.lokasi_file)}
     >Set as Wallpaper</button
   >
-  <button class="btn text-3xl btn-secondary" on:click={diacak}>🎲</button>
+  <div class="indicator">
+    <div class="indicator-item badge badge-error">
+      {coin == 0 ? "Ad" : coin}
+    </div>
+    <button class="btn text-3xl btn-secondary" on:click={diacak}>🎲</button>
+  </div>
 </div>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
     <ul class="menu bg-base-200 w-full rounded-box">
-      <li>
-        <a
-          href="https://play.google.com/store/apps/details?id=com.shark.wallpapernew"
-          >Review App</a
-        >
-      </li>
-      <li>
-        <a href="https://play.google.com/store/apps/dev?id=5401138465689796048"
-          >Other Apps</a
-        >
-      </li>
       <li><a href={terpilih.link}>Source</a></li>
     </ul>
   </div>
