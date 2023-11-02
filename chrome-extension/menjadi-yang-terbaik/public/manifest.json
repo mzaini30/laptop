@@ -1,0 +1,12 @@
+{
+  "name": "Be The Best",
+  "description": "Be the best by increasing quantity",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "./buka.html"
+  },
+  "icons": {
+    "128": "./Desain tanpa judul.png"
+  }
+}
