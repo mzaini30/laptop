@@ -46,34 +46,11 @@
 
     {#if teks}
       <div class="grid grid-cols-1 gap-3">
-        <div class="mt-3 flex gap-2 justify-between">
-          <button
-            class="btn"
-            on:click={() =>
-              (location.href =
-                "https://play.google.com/store/apps/details?id=com.trihandayani.kaligrafi")}
-            >Review App</button
-          >
-          <button
-            class="btn"
-            on:click={() =>
-              (location.href =
-                "https://play.google.com/store/apps/dev?id=5401138465689796048")}
-            >Other Apps</button
+        <div class="mt-3">
+          <a href="https://t.me/apktrihandayani" class="btn w-full">Join Team</a
           >
         </div>
-        {#if support_me}
-          <div
-            class="indicator w-[80%] mx-auto"
-            on:click={() => {
-              support_me = false;
-              Andro.reward();
-            }}
-          >
-            <span class="indicator-item badge badge-primary">Ad</span>
-            <button class="btn w-full block">Support Me</button>
-          </div>
-        {/if}
+
         <!-- <img src={iklan} class="block mt-3" alt="" /> -->
         <!-- <a href={iklan_terpilih.link} class="">
           <img src={iklan_terpilih.gambar} alt="" />
