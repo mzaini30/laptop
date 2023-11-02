@@ -1,0 +1,18 @@
+{
+  "name": "Be The Best",
+  "description": "Be the best by increasing quantity",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "91.1.0",
+      "id": "{uuid_masukkan_di_sini}"
+    }
+  }
+}
