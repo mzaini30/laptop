@@ -111,7 +111,7 @@
     semua_data = [...semua_data, ...sisipan_tanggal];
   }
 
-  let datanya = calculateMovingAverages(semua_data).slice(-7);
+  let datanya = calculateMovingAverages(semua_data).slice(-30);
   console.log(datanya);
 
   let labels = [];
