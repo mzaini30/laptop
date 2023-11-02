@@ -18,7 +18,7 @@
     console.log(terpilih);
 
     let tanggalan = new Date();
-    // tanggalan = new Date("2023-09-29");
+    // tanggalan = new Date("2023-11-03");
     let tanggal = tanggalan.getDate();
 
     let semua_data = terpilih.data;
@@ -92,33 +92,38 @@
     <button class="btn" on:click={() => push("/edit-list")}>Edit List</button>
   </div>
   {#key reset}
-    {#each [...JSON.parse(localStorage.listnya)].sort( (a, b) => (a.judul > b.judul ? 1 : -1), ) as x (x.id)}
-      <div class="bg-base-100">
-        <Chartnya semua_data={x.data}></Chartnya>
-      </div>
-      <div class="card card-compact w-full bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title text-center block">{x.judul}</h2>
-          <div class="flex justify-between">
-            <button
-              class="btn btn-circle"
-              on:click={() => {
-                tambahkan(x.id, -1);
-              }}>➖</button
-            >
-            <button>
-              {#if x.data.length > 0 && x.data[x.data.length - 1].tanggal == new Date().getDate()}
-                {x.data[x.data.length - 1].banyaknya}
-              {:else}
-                0
-              {/if}
-            </button>
-            <button class="btn btn-circle" on:click={() => tambahkan(x.id, 1)}
-              >➕</button
-            >
+    <div class="grid grid-cols-4 gap-3">
+      {#each [...JSON.parse(localStorage.listnya)].sort( (a, b) => (a.judul > b.judul ? 1 : -1), ) as x (x.id)}
+        <div>
+          <div class="bg-base-100">
+            <Chartnya semua_data={x.data}></Chartnya>
+          </div>
+          <div class="card card-compact w-full bg-base-100 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title text-center block">{x.judul}</h2>
+              <div class="flex justify-between">
+                <button
+                  class="btn btn-circle"
+                  on:click={() => {
+                    tambahkan(x.id, -1);
+                  }}>➖</button
+                >
+                <button>
+                  {#if x.data.length > 0 && x.data[x.data.length - 1].tanggal == new Date().getDate()}
+                    {x.data[x.data.length - 1].banyaknya}
+                  {:else}
+                    0
+                  {/if}
+                </button>
+                <button
+                  class="btn btn-circle"
+                  on:click={() => tambahkan(x.id, 1)}>➕</button
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
   {/key}
 </div>

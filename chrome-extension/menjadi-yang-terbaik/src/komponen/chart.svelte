@@ -82,7 +82,7 @@
   // }
 
   let tanggalan = new Date();
-  // tanggalan = new Date("2023-09-29");
+  // tanggalan = new Date("2023-11-03");
   let tanggal = tanggalan.getDate();
 
   if (semua_data.length > 0) {
@@ -134,18 +134,18 @@
         borderColor: "red",
         fill: false,
       },
-      {
-        label: "Rata-Rata Seminggu",
-        data: ma7, // Data untuk line 2
-        borderColor: "green",
-        fill: false,
-      },
-      {
-        label: "Rata-Rata Sebulan",
-        data: ma30, // Data untuk line 3
-        borderColor: "blue",
-        fill: false,
-      },
+      // {
+      //   label: "Rata-Rata Seminggu",
+      //   data: ma7, // Data untuk line 2
+      //   borderColor: "green",
+      //   fill: false,
+      // },
+      // {
+      //   label: "Rata-Rata Sebulan",
+      //   data: ma30, // Data untuk line 3
+      //   borderColor: "blue",
+      //   fill: false,
+      // },
     ],
   };
 

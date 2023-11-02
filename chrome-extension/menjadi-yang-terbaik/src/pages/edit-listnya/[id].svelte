@@ -2,8 +2,12 @@
   export let params = {};
 
   import { push, replace } from "svelte-spa-router";
+  import { onMount } from "svelte";
 
   let teks = "";
+  let elemen_input;
+
+  onMount(() => elemen_input.focus());
 
   let datanya = JSON.parse(localStorage.listnya).filter(
     (x) => x.id == params.id,
@@ -33,6 +37,7 @@
 <div class="p-4">
   <form action="" on:submit|preventDefault={update}>
     <input
+      bind:this={elemen_input}
       bind:value={teks}
       type="text"
       class="input input-bordered w-full mb-5"

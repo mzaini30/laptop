@@ -2,9 +2,13 @@
   import slug from "../fungsi/slug";
   import toast from "only-toast";
   import { push } from "svelte-spa-router";
+  import { onMount } from "svelte";
 
   let input_baru = "";
   let listnya = []; // id, judul
+  let fokus;
+
+  onMount(() => fokus.focus());
 
   if (localStorage.listnya) {
     listnya = JSON.parse(localStorage.listnya);
@@ -42,6 +46,7 @@
   <form action="" class="mt-4" on:submit|preventDefault={tambahkan_baru}>
     <p>List Baru:</p>
     <input
+      bind:this={fokus}
       type="text"
       bind:value={input_baru}
       class="input input-bordered w-full"
