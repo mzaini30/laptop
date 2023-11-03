@@ -7,11 +7,12 @@
 
   function diacak() {
     coin -= 1;
+
+    terpilih = acak(data)[0];
     if (coin < 0) {
       coin = 20;
       Andro.reward();
     }
-    terpilih = acak(data)[0];
   }
   diacak();
 </script>
