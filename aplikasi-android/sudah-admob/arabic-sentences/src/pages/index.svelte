@@ -29,6 +29,9 @@
     </div>
   </div>
 </div>
+<div class="fixed left-2 bottom-2">
+  <a href="https://t.me/apktrihandayani" class="btn">Join Telegram</a>
+</div>
 <div class=" fixed bottom-2 right-2">
   <div class="indicator">
     <div class="indicator-item badge badge-error">
