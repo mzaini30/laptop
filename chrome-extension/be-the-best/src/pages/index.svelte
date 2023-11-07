@@ -1,6 +1,7 @@
 <script>
   import Chartnya from "../komponen/chart.svelte";
   import { push } from "svelte-spa-router";
+  import slug from "../fungsi/slug";
 
   let reset = false;
 
@@ -9,6 +10,40 @@
     listnya = JSON.parse(localStorage.listnya);
   } else {
     localStorage.listnya = JSON.stringify([]);
+  }
+
+  function tambahkan_baru(input_baru) {
+    let ada = false;
+    if (listnya.length > 0) {
+      for (let x of listnya) {
+        if (x.judul.toLowerCase() == input_baru.toLowerCase()) {
+          ada = true;
+        }
+      }
+    }
+    if (ada == false) {
+      listnya = [
+        ...listnya,
+        {
+          id: crypto.randomUUID(),
+          judul: input_baru,
+          slug: slug(input_baru),
+          data: [], // tanggal, banyaknya
+        },
+      ];
+      localStorage.listnya = JSON.stringify(listnya);
+      input_baru = "";
+    } else {
+      input_baru = "";
+    }
+    reset = !reset;
+  }
+
+  function tambah() {
+    let namanya = prompt("Enter Quest Name");
+    if (namanya) {
+      tambahkan_baru(namanya);
+    }
   }
 
   function tambahkan(id, selisih) {
@@ -76,31 +111,49 @@
     localStorage.listnya = JSON.stringify(listnya);
   }
 
-  // let halaman_terakhir = 1;
-  // let semua_data = []; // terbaru = paling atas (tanggal, banyaknya)
+  function edit({ id, judul }) {
+    let tanyain = prompt("Modify Title (Write 'delete' to delete it)", judul);
+    if (tanyain) {
+      let listnya = JSON.parse(localStorage.listnya);
+      if (tanyain == "delete") {
+        let list_baru = listnya.filter((x) => x.id != id);
+        localStorage.listnya = JSON.stringify(list_baru);
+        reset = !reset;
+      } else {
+        let ambil = [...listnya.filter((x) => x.id == id)][0];
+        ambil.judul = tanyain;
+        console.log(ambil);
 
-  // if (localStorage.halaman_terakhir) {
-  //   halaman_terakhir = JSON.parse(localStorage.halaman_terakhir);
-  // }
-  // if (localStorage.semua_data) {
-  //   semua_data = JSON.parse(localStorage.semua_data);
-  // }
+        let hapus_dulu = [...listnya].filter((x) => x.id != id);
+        let list_baru = [...hapus_dulu, ambil];
+
+        localStorage.listnya = JSON.stringify(list_baru);
+        reset = !reset;
+      }
+    }
+  }
 </script>
 
 <div class="p-3 grid grid-cols-1 gap-3">
-  <div>
-    <button class="btn" on:click={() => push("/edit-list")}>Edit List</button>
-  </div>
   {#key reset}
     <div class="grid grid-cols-4 gap-3">
-      {#each [...JSON.parse(localStorage.listnya)].sort( (a, b) => (a.judul > b.judul ? 1 : -1), ) as x (x.id)}
+      {#each [...JSON.parse(localStorage.listnya)].sort( (a, b) => (a.judul > b.judul ? 1 : -1) ) as x (x.id)}
         <div>
           <div class="bg-base-100">
-            <Chartnya semua_data={x.data}></Chartnya>
+            <Chartnya semua_data={x.data} />
           </div>
-          <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <div class="card card-compact w-full bg-base-100">
             <div class="card-body">
-              <h2 class="card-title text-center block">{x.judul}</h2>
+              <h2
+                class="card-title text-center block select-none cursor-pointer"
+                on:dblclick={() =>
+                  edit({
+                    id: x.id,
+                    judul: x.judul,
+                  })}
+              >
+                {x.judul}
+              </h2>
               <div class="flex justify-between">
                 <button
                   class="btn btn-circle"
@@ -127,3 +180,7 @@
     </div>
   {/key}
 </div>
+<button
+  class="btn btn-circle btn-primary fixed bottom-2 right-2"
+  on:click={tambah}>➕</button
+>
