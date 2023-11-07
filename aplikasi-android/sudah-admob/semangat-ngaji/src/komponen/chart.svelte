@@ -19,7 +19,7 @@
     LineElement,
     LinearScale,
     PointElement,
-    CategoryScale,
+    CategoryScale
   );
 
   function calculateMovingAverages(data) {
@@ -39,12 +39,12 @@
     for (let i = 0; i < data.length; i++) {
       // Hitung moving average 7
       const movingAverage7 = calculateAverage(
-        data.slice(Math.max(0, i - 6), i + 1),
+        data.slice(Math.max(0, i - 6), i + 1)
       );
 
       // Hitung moving average 30
       const movingAverage30 = calculateAverage(
-        data.slice(Math.max(0, i - 29), i + 1),
+        data.slice(Math.max(0, i - 29), i + 1)
       );
 
       ma7.push(movingAverage7);
@@ -69,7 +69,7 @@
 
     const sum = subarray.reduce(
       (total, dataPoint) => total + dataPoint.banyaknya,
-      0,
+      0
     );
     return sum / subarray.length;
   }
@@ -79,7 +79,6 @@
     semua_data = JSON.parse(localStorage.semua_data);
   }
 
-  
   let tanggalan = new Date();
   let tanggal = tanggalan.getDate();
 
@@ -107,14 +106,11 @@
         ];
       }
     }
-    semua_data = [
-      ...semua_data,
-      ...sisipan_tanggal
-    ];
-    console.log(sisipan_tanggal)
+    semua_data = [...semua_data, ...sisipan_tanggal];
+    console.log(sisipan_tanggal);
   }
 
-  let datanya = calculateMovingAverages(semua_data).slice(-7);
+  let datanya = calculateMovingAverages(semua_data).slice(-30);
   console.log(datanya);
 
   let labels = [];
@@ -137,18 +133,18 @@
         borderColor: "red",
         fill: false,
       },
-      {
-        label: "Rata-Rata Seminggu",
-        data: ma7, // Data untuk line 2
-        borderColor: "green",
-        fill: false,
-      },
-      {
-        label: "Rata-Rata Sebulan",
-        data: ma30, // Data untuk line 3
-        borderColor: "blue",
-        fill: false,
-      },
+      // {
+      //   label: "Rata-Rata Seminggu",
+      //   data: ma7, // Data untuk line 2
+      //   borderColor: "green",
+      //   fill: false,
+      // },
+      // {
+      //   label: "Rata-Rata Sebulan",
+      //   data: ma30, // Data untuk line 3
+      //   borderColor: "blue",
+      //   fill: false,
+      // },
     ],
   };
 
