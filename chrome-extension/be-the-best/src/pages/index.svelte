@@ -114,20 +114,22 @@
   function edit({ id, judul }) {
     let tanyain = prompt("Modify Title (Write 'delete' to delete it)", judul);
     if (tanyain) {
-      let listnya = JSON.parse(localStorage.listnya);
+      let listnya_ambil = JSON.parse(localStorage.listnya);
       if (tanyain == "delete") {
-        let list_baru = listnya.filter((x) => x.id != id);
+        let list_baru = listnya_ambil.filter((x) => x.id != id);
         localStorage.listnya = JSON.stringify(list_baru);
+        listnya = list_baru;
         reset = !reset;
       } else {
-        let ambil = [...listnya.filter((x) => x.id == id)][0];
+        let ambil = [...listnya_ambil.filter((x) => x.id == id)][0];
         ambil.judul = tanyain;
         console.log(ambil);
 
-        let hapus_dulu = [...listnya].filter((x) => x.id != id);
+        let hapus_dulu = [...listnya_ambil].filter((x) => x.id != id);
         let list_baru = [...hapus_dulu, ambil];
 
         localStorage.listnya = JSON.stringify(list_baru);
+        listnya = list_baru;
         reset = !reset;
       }
     }
@@ -146,7 +148,7 @@
             <div class="card-body">
               <h2
                 class="card-title text-center block select-none cursor-pointer"
-                on:dblclick={() =>
+                on:click={() =>
                   edit({
                     id: x.id,
                     judul: x.judul,
