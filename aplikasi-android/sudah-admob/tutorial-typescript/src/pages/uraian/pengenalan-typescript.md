@@ -1,4 +1,0 @@
----
-judul: Pengenalan TypeScript.
----
-

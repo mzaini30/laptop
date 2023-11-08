@@ -1,1 +1,0 @@
-pug . -w -o html

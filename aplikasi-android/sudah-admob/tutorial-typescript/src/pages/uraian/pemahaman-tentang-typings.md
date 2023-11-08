@@ -1,4 +1,0 @@
----
-judul: Pemahaman Tentang Typings.
----
-
