@@ -1,4 +1,0 @@
----
-judul: Menggunakan Looping ForEach.
----
-

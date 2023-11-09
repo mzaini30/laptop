@@ -1,4 +1,0 @@
----
-judul: Fungsi dalam TypeScript.
----
-

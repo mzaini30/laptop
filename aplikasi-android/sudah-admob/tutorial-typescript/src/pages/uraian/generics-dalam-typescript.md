@@ -1,4 +1,0 @@
----
-judul: Generics dalam TypeScript.
----
-
