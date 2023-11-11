@@ -1,0 +1,301 @@
+<html lang="en">
+  <head>
+    <b:skin></b:skin>
+    <sergey-import src="slider-css"></sergey-import>
+    <meta name="astro-view-transitions-enabled" content="true" />
+    <meta name="astro-view-transitions-fallback" content="animate" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><data:view.title.escaped/></title>
+    <b:include data="blog" name="all-head-content" />
+    <sergey-import src="css"></sergey-import>
+    <sergey-import src="js"></sergey-import>
+  </head>
+  <body>
+    <div class="grid sm:grid-cols-2">
+      <div class="py-[50px] sm:py-5">
+        <div class="w-[75%] mx-auto">
+          <b:section id="header-kiri">
+            <sergey-import src="gadget/header"></sergey-import>
+            <sergey-import src="gadget/label"></sergey-import>
+          </b:section>
+        </div>
+      </div>
+      <div class="relative">
+        <b:section id="header-kanan">
+          <sergey-import src="gadget/gambar-besar-header"></sergey-import>
+          <sergey-import src="gadget/slideshow"></sergey-import>
+        </b:section>
+      </div>
+    </div>
+    <div class="text-center p-[50px] sm:p-[80px]">
+      <b:section id="link">
+        <b:widget
+          id="PopularPosts1"
+          locked="false"
+          title="Postingan Populer"
+          type="PopularPosts"
+        >
+          <b:widget-settings>
+            <b:widget-setting name="numItemsToShow">1</b:widget-setting>
+            <b:widget-setting name="showThumbnails">false</b:widget-setting>
+            <b:widget-setting name="showSnippets">true</b:widget-setting>
+            <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id="main">
+            <b:loop values="data:posts" var="post">
+              <a expr:href="data:post.href"
+                ><div class="uppercase font-bold"><data:post.title /></div>
+                <div class="">
+                  <data:post.snippet /></div
+              ></a>
+            </b:loop>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+    <div class="">
+      <b:section id="bagian-konten">
+        <b:widget id="Blog1" type="Blog">
+          <b:includable id="main">
+            <b:if cond='data:blog.pageType != "item"'>
+              <sergey-import src="list-konten"></sergey-import>
+              <b:else></b:else>
+              <sergey-import src="konten"></sergey-import>
+            </b:if>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+
+    <b:section id="link-2">
+      <b:widget
+        id="PopularPosts2"
+        locked="false"
+        title="Postingan Populer"
+        type="PopularPosts"
+      >
+        <b:widget-settings>
+          <b:widget-setting name="numItemsToShow">1</b:widget-setting>
+          <b:widget-setting name="showThumbnails">false</b:widget-setting>
+          <b:widget-setting name="showSnippets">true</b:widget-setting>
+          <b:widget-setting name="timeRange">LAST_WEEK</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id="main">
+          <div class="text-center p-[50px] sm:p-[80px]">
+            <b:loop values="data:posts" var="post">
+              <a expr:href="data:post.href"
+                ><div class="uppercase font-bold"><data:post.title /></div>
+                <div class="">
+                  <data:post.snippet /></div
+              ></a>
+            </b:loop>
+          </div>
+        </b:includable>
+      </b:widget>
+      <b:widget
+        id="PopularPosts3"
+        locked="false"
+        title="Postingan Populer"
+        type="PopularPosts"
+      >
+        <b:widget-settings>
+          <b:widget-setting name="numItemsToShow">3</b:widget-setting>
+          <b:widget-setting name="showThumbnails">false</b:widget-setting>
+          <b:widget-setting name="showSnippets">true</b:widget-setting>
+          <b:widget-setting name="timeRange">LAST_MONTH</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id="main">
+          <div class="mb-[80px]">
+            <div class="w-[80%] mx-auto grid sm:grid-cols-3 gap-10">
+              <b:loop values="data:posts" var="post">
+                <a
+                  expr:href="data:post.href"
+                  class="shadow-xl p-12 text-center bg-white"
+                  ><img
+                    src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/vector-bicycle-icon.4c920eb1_hHaE8.webp"
+                    class="mx-auto block mb-[50px] w-[30%] h-auto"
+                    alt="Gambar sepeda"
+                    width="490"
+                    height="490"
+                    loading="lazy"
+                    decoding="async" />
+                  <div class="font-bold text-lg mb-5"><data:post.title /></div>
+                  <div class="">
+                    <data:post.snippet /></div
+                ></a>
+              </b:loop>
+            </div>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+
+    <div class="w-full bg-white">
+      <div>
+        <b:section
+          id="kumpulan-link"
+          class="w-[80%] py-[50px] mx-auto grid sm:grid-cols-4 gap-10"
+        >
+          <b:widget
+            id="LinkList2"
+            locked="false"
+            title="Link 1"
+            type="LinkList"
+          >
+            <b:widget-settings>
+              <b:widget-setting name="link-3"
+                >https://wikipedia.com</b:widget-setting
+              >
+              <b:widget-setting name="sorting">NONE</b:widget-setting>
+              <b:widget-setting name="text-1">Facebook</b:widget-setting>
+              <b:widget-setting name="link-1"
+                >https://facebook.com</b:widget-setting
+              >
+              <b:widget-setting name="text-0">Google</b:widget-setting>
+              <b:widget-setting name="link-2"
+                >https://twitter.com</b:widget-setting
+              >
+              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+              <b:widget-setting name="link-0"
+                >https://google.com</b:widget-setting
+              >
+              <b:widget-setting name="text-2">Twitter</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id="main">
+              <div>
+                <p class="font-bold mb-3"><data:title /></p>
+                <b:loop values="data:links" var="link">
+                  <a
+                    expr:href="data:link.target"
+                    class="mb-1 block text-gray-600"
+                  >
+                    <data:link.name />
+                  </a>
+                </b:loop>
+              </div>
+            </b:includable>
+          </b:widget>
+          <b:widget
+            id="LinkList3"
+            locked="false"
+            title="Link 2"
+            type="LinkList"
+          >
+            <b:widget-settings>
+              <b:widget-setting name="link-3"
+                >https://wikipedia.com</b:widget-setting
+              >
+              <b:widget-setting name="sorting">NONE</b:widget-setting>
+              <b:widget-setting name="text-1">Facebook</b:widget-setting>
+              <b:widget-setting name="link-1"
+                >https://facebook.com</b:widget-setting
+              >
+              <b:widget-setting name="text-0">Google</b:widget-setting>
+              <b:widget-setting name="link-2"
+                >https://twitter.com</b:widget-setting
+              >
+              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+              <b:widget-setting name="link-0"
+                >https://google.com</b:widget-setting
+              >
+              <b:widget-setting name="text-2">Twitter</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id="main">
+              <div>
+                <p class="font-bold mb-3"><data:title /></p>
+                <b:loop values="data:links" var="link">
+                  <a
+                    expr:href="data:link.target"
+                    class="mb-1 block text-gray-600"
+                  >
+                    <data:link.name />
+                  </a>
+                </b:loop>
+              </div>
+            </b:includable>
+          </b:widget>
+          <b:widget
+            id="LinkList4"
+            locked="false"
+            title="Link 3"
+            type="LinkList"
+          >
+            <b:widget-settings>
+              <b:widget-setting name="link-3"
+                >https://wikipedia.com</b:widget-setting
+              >
+              <b:widget-setting name="sorting">NONE</b:widget-setting>
+              <b:widget-setting name="text-1">Facebook</b:widget-setting>
+              <b:widget-setting name="link-1"
+                >https://facebook.com</b:widget-setting
+              >
+              <b:widget-setting name="text-0">Google</b:widget-setting>
+              <b:widget-setting name="link-2"
+                >https://twitter.com</b:widget-setting
+              >
+              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+              <b:widget-setting name="link-0"
+                >https://google.com</b:widget-setting
+              >
+              <b:widget-setting name="text-2">Twitter</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id="main">
+              <div>
+                <p class="font-bold mb-3"><data:title /></p>
+                <b:loop values="data:links" var="link">
+                  <a
+                    expr:href="data:link.target"
+                    class="mb-1 block text-gray-600"
+                  >
+                    <data:link.name />
+                  </a>
+                </b:loop>
+              </div>
+            </b:includable>
+          </b:widget>
+          <b:widget
+            id="LinkList5"
+            locked="false"
+            title="Link 4"
+            type="LinkList"
+          >
+            <b:widget-settings>
+              <b:widget-setting name="link-3"
+                >https://wikipedia.com</b:widget-setting
+              >
+              <b:widget-setting name="sorting">NONE</b:widget-setting>
+              <b:widget-setting name="text-1">Facebook</b:widget-setting>
+              <b:widget-setting name="link-1"
+                >https://facebook.com</b:widget-setting
+              >
+              <b:widget-setting name="text-0">Google</b:widget-setting>
+              <b:widget-setting name="link-2"
+                >https://twitter.com</b:widget-setting
+              >
+              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+              <b:widget-setting name="link-0"
+                >https://google.com</b:widget-setting
+              >
+              <b:widget-setting name="text-2">Twitter</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id="main">
+              <div>
+                <p class="font-bold mb-3"><data:title /></p>
+                <b:loop values="data:links" var="link">
+                  <a
+                    expr:href="data:link.target"
+                    class="mb-1 block text-gray-600"
+                  >
+                    <data:link.name />
+                  </a>
+                </b:loop>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+    </div>
+    <sergey-import src="slider-js"></sergey-import>
+  </body>
+</html>
