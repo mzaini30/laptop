@@ -30,69 +30,18 @@
     </div>
     <div class="text-center p-[50px] sm:p-[80px]">
       <b:section id="link">
-        <b:widget
-          id="PopularPosts1"
-          locked="false"
-          title="Postingan Populer"
-          type="PopularPosts"
-        >
-          <b:widget-settings>
-            <b:widget-setting name="numItemsToShow">1</b:widget-setting>
-            <b:widget-setting name="showThumbnails">false</b:widget-setting>
-            <b:widget-setting name="showSnippets">true</b:widget-setting>
-            <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id="main">
-            <b:loop values="data:posts" var="post">
-              <a expr:href="data:post.href"
-                ><div class="uppercase font-bold"><data:post.title /></div>
-                <div class="">
-                  <data:post.snippet /></div
-              ></a>
-            </b:loop>
-          </b:includable>
-        </b:widget>
+        <sergey-import src="gadget/postingan-populer-1"></sergey-import>
       </b:section>
     </div>
     <div class="">
       <b:section id="bagian-konten">
-        <b:widget id="Blog1" type="Blog">
-          <b:includable id="main">
-            <b:if cond='data:blog.pageType != "item"'>
-              <sergey-import src="list-konten"></sergey-import>
-              <b:else></b:else>
-              <sergey-import src="konten"></sergey-import>
-            </b:if>
-          </b:includable>
-        </b:widget>
+        <sergey-import src="gadget/blog"></sergey-import>
       </b:section>
     </div>
 
     <b:section id="link-2">
-      <b:widget
-        id="PopularPosts2"
-        locked="false"
-        title="Postingan Populer"
-        type="PopularPosts"
-      >
-        <b:widget-settings>
-          <b:widget-setting name="numItemsToShow">1</b:widget-setting>
-          <b:widget-setting name="showThumbnails">false</b:widget-setting>
-          <b:widget-setting name="showSnippets">true</b:widget-setting>
-          <b:widget-setting name="timeRange">LAST_WEEK</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id="main">
-          <div class="text-center p-[50px] sm:p-[80px]">
-            <b:loop values="data:posts" var="post">
-              <a expr:href="data:post.href"
-                ><div class="uppercase font-bold"><data:post.title /></div>
-                <div class="">
-                  <data:post.snippet /></div
-              ></a>
-            </b:loop>
-          </div>
-        </b:includable>
-      </b:widget>
+      <sergey-import src="gadget/postingan-populer-2"></sergey-import>
+
       <b:widget
         id="PopularPosts3"
         locked="false"
