@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "paraglide-js compile --project ./project.inlang.json && vite build && surge build",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -12,7 +12,8 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"wiki": "tiddlywiki src --listen"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -34,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"tiddlywiki": "^5.3.1"
+		"tiddlywiki": "^5.3.1",
+		"@inlang/paraglide-js": "1.0.0-prerelease.9"
 	}
 }
