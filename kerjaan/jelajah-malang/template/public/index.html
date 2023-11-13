@@ -2334,188 +2334,180 @@
         <div class="w-[75%] mx-auto">
           <b:section id="header-kiri">
             <b:widget id="Header1" locked="false" title="Judul" type="Header">
-              <b:widget-settings>
-                <b:widget-setting name="displayUrl"
-                  >https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/Logo%20Jelajah%20Malang.342f5cc3_11tO0O.webp</b:widget-setting
-                >
-                <b:widget-setting name="displayHeight">100</b:widget-setting>
-                <b:widget-setting name="sectionWidth">1076</b:widget-setting>
-                <b:widget-setting name="useImage">true</b:widget-setting>
-                <b:widget-setting name="shrinkToFit">false</b:widget-setting>
-                <b:widget-setting name="imagePlacement"
-                  >BEHIND</b:widget-setting
-                >
-                <b:widget-setting name="displayWidth">100</b:widget-setting>
-              </b:widget-settings>
-              <b:includable id="main">
-                <a href="/"
-                  ><img
-                    expr:alt="data:title"
-                    expr:height="data:height"
-                    expr:width="data:width"
-                    expr:src="data:sourceUrl"
-                    class="mb-5"
-                    loading="lazy"
-                    decoding="async" />
-                  <h1 class="text-[60px] mb-5 font-bold">
-                    <b:include name="title" /></h1
-                ></a>
-                <p class="text-gray-600">
-                  <b:include name="description" />
-                </p>
-              </b:includable>
-            </b:widget>
+  <b:widget-settings>
+    <b:widget-setting name="displayUrl"
+      >https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/Logo%20Jelajah%20Malang.342f5cc3_11tO0O.webp</b:widget-setting
+    >
+    <b:widget-setting name="displayHeight">100</b:widget-setting>
+    <b:widget-setting name="sectionWidth">1076</b:widget-setting>
+    <b:widget-setting name="useImage">true</b:widget-setting>
+    <b:widget-setting name="shrinkToFit">false</b:widget-setting>
+    <b:widget-setting name="imagePlacement">BEHIND</b:widget-setting>
+    <b:widget-setting name="displayWidth">100</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <a href="/"
+      ><img
+        expr:alt="data:title"
+        expr:height="data:height"
+        expr:width="data:width"
+        expr:src="data:sourceUrl"
+        class="mb-5"
+        loading="lazy"
+        decoding="async" />
+      <h1 class="text-[60px] mb-5 font-bold">
+        <b:include name="title" /></h1
+    ></a>
+    <p class="text-gray-600">
+      <b:include name="description" />
+    </p>
+  </b:includable>
+</b:widget>
+
             <b:widget id="Label1" locked="false" title="Label" type="Label">
-              <b:widget-settings>
-                <b:widget-setting name="sorting">ALPHA</b:widget-setting>
-                <b:widget-setting name="display">LIST</b:widget-setting>
-                <b:widget-setting name="selectedLabelsList" />
-                <b:widget-setting name="showType">ALL</b:widget-setting>
-                <b:widget-setting name="showFreqNumbers"
-                  >false</b:widget-setting
-                >
-              </b:widget-settings>
-              <b:includable id="main">
-                <div class="mt-10">
-                  <b:loop values="data:labels" var="label">
-                    <a
-                      expr:href="data:label.url"
-                      class="border border-gray-500 text-gray-500 px-3 py-1 inline-block mr-2 mb-2 rounded-2xl text-[12px]"
-                      ><data:label.name
-                    /></a>
-                  </b:loop>
-                </div>
-              </b:includable>
-            </b:widget>
+  <b:widget-settings>
+    <b:widget-setting name="sorting">ALPHA</b:widget-setting>
+    <b:widget-setting name="display">LIST</b:widget-setting>
+    <b:widget-setting name="selectedLabelsList" />
+    <b:widget-setting name="showType">ALL</b:widget-setting>
+    <b:widget-setting name="showFreqNumbers">false</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="mt-10">
+      <b:loop values="data:labels" var="label">
+        <a
+          expr:href="data:label.url"
+          class="border border-gray-500 text-gray-500 px-3 py-1 inline-block mr-2 mb-2 rounded-2xl text-[12px]"
+          ><data:label.name
+        /></a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
+
           </b:section>
         </div>
       </div>
       <div class="relative">
         <b:section id="header-kanan">
+          <b:widget id="Image1" locked="false" title="gambar header" type="Image">
+  <b:widget-settings>
+    <b:widget-setting name="displayUrl"
+      >https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_2ovx2L.webp</b:widget-setting
+    >
+    <b:widget-setting name="displayHeight">680</b:widget-setting>
+    <b:widget-setting name="sectionWidth">1076</b:widget-setting>
+    <b:widget-setting name="shrinkToFit">false</b:widget-setting>
+    <b:widget-setting name="displayWidth">680</b:widget-setting>
+    <b:widget-setting name="link" />
+    <b:widget-setting name="caption" />
+  </b:widget-settings>
+  <b:includable id="main">
+    <img
+      expr:src="data:sourceUrl"
+      expr:alt="data:title"
+      class="h-screen object-cover"
+      expr:width="data:width"
+      expr:height="data:height"
+      loading="lazy"
+      decoding="async"
+    />
+  </b:includable>
+</b:widget>
+
           <b:widget
-            id="Image1"
-            locked="false"
-            title="gambar header"
-            type="Image"
-          >
-            <b:widget-settings>
-              <b:widget-setting name="displayUrl"
-                >https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_2ovx2L.webp</b:widget-setting
-              >
-              <b:widget-setting name="displayHeight">680</b:widget-setting>
-              <b:widget-setting name="sectionWidth">1076</b:widget-setting>
-              <b:widget-setting name="shrinkToFit">false</b:widget-setting>
-              <b:widget-setting name="displayWidth">680</b:widget-setting>
-              <b:widget-setting name="link" />
-              <b:widget-setting name="caption" />
-            </b:widget-settings>
-            <b:includable id="main">
-              <img
-                expr:src="data:sourceUrl"
-                expr:alt="data:title"
-                class="h-screen object-cover"
-                expr:width="data:width"
-                expr:height="data:height"
-                loading="lazy"
-                decoding="async"
-              />
-            </b:includable>
-          </b:widget>
-          <b:widget
-            id="LinkList1"
-            locked="false"
-            title="gambar slideshow (nama situs = link gambar)"
-            type="LinkList"
-          >
-            <b:widget-settings>
-              <b:widget-setting name="sorting">NONE</b:widget-setting>
-              <b:widget-setting name="text-1"
-                >https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrC6EAYGeyNHMQOXjofVVH7nx0puhHdxsBgNVp3TYN4FzXrj4tKYOOntCjb7d6n63-JQz0-PIeFlMuXFNtmXDT-NNQeXwUEb13jE1n8KNVhXYy9jM8qZ9Qi_57AektAvmd8nGW1oUCm1hTa9PoPXLNkBE3nGZcmM1LO0zLVyRPsUhJblpTSU600WKSyLRz/s16000/candi%20singosari.jpg</b:widget-setting
-              >
-              <b:widget-setting name="link-1"
-                >https://www.jelajahmalang.com/2023/10/karma-dari-usangnya-perjanjian-lama.html</b:widget-setting
-              >
-              <b:widget-setting name="text-0"
-                >https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmSAPNfDimnZeLoBUXq0Sl8UIuHJe7X7Wh1YRBvLhBftH1c6aIVJaJV-fPULglk5oBxWAildpExEafx6oMpVWdJsPZ8Uwrv0tovUnM49mxXWD_1onVrrl1zeRlQWIi5SqlgyNWPEB3AG9VGDBEq6reevv7y4kSNnpRbkikOWDr50AON0hVCNFnsfLXcNwH/s16000/petirtaan%20watu%20gedhe.jpg</b:widget-setting
-              >
-              <b:widget-setting name="link-2"
-                >https://www.jelajahmalang.com/</b:widget-setting
-              >
-              <b:widget-setting name="link-0"
-                >https://www.jelajahmalang.com/2023/10/karma-dari-usangnya-perjanjian-lama.html</b:widget-setting
-              >
-              <b:widget-setting name="text-2"
-                >https://blogger.googleusercontent.com/img/a/AVvXsEj5BJHv9_8TucPVqPhE-Bm0hhN8jimCLnqpSSf-Qg9ybP5HYTZ8OSGatM3NlvFPU35bMWK7kl_bJP3JK7bjfMNX_ZwUD-dUClBadgGXVwNGmjL48MN6bVIqHPM6Y7fT6C09UZ6tAFjxqDX4MYhtjefSn0k1qpHUG8mQhWOy19TmIT_buZ7_0zaW_MupDqWq=w1024</b:widget-setting
-              >
-            </b:widget-settings>
-            <b:includable id="main">
-              <div class="absolute bottom-0 left-0 p-5">
-                <div class="swiffy-slider slider-item-show2 slider-item-reveal">
-                  <ul
-                    class="slider-container [&amp;_img]:object-cover [&amp;_img]:aspect-video [&amp;_img]:rounded-xl [&amp;_img]:border-[5px] [&amp;_img]:border-white"
-                  >
-                    <b:loop values="data:links" var="link">
-                      <li>
-                        <a expr:href="data:link.target"
-                          ><img
-                            expr:src="data:link.name"
-                            alt="Slider"
-                            width="1080"
-                            height="607"
-                            loading="lazy"
-                            decoding="async"
-                        /></a>
-                      </li>
-                    </b:loop>
-                  </ul>
-                  <button type="button" class="slider-nav"></button
-                  ><button
-                    type="button"
-                    class="slider-nav slider-nav-next"
-                  ></button>
-                  <div class="slider-indicators">
-                    <button class="active"></button><button></button
-                    ><button></button>
-                  </div>
-                </div>
-              </div>
-            </b:includable>
-          </b:widget>
+  id="LinkList1"
+  locked="false"
+  title="gambar slideshow (nama situs = link gambar)"
+  type="LinkList"
+>
+  <b:widget-settings>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1"
+      >https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrC6EAYGeyNHMQOXjofVVH7nx0puhHdxsBgNVp3TYN4FzXrj4tKYOOntCjb7d6n63-JQz0-PIeFlMuXFNtmXDT-NNQeXwUEb13jE1n8KNVhXYy9jM8qZ9Qi_57AektAvmd8nGW1oUCm1hTa9PoPXLNkBE3nGZcmM1LO0zLVyRPsUhJblpTSU600WKSyLRz/s16000/candi%20singosari.jpg</b:widget-setting
+    >
+    <b:widget-setting name="link-1"
+      >https://www.jelajahmalang.com/2023/10/karma-dari-usangnya-perjanjian-lama.html</b:widget-setting
+    >
+    <b:widget-setting name="text-0"
+      >https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmSAPNfDimnZeLoBUXq0Sl8UIuHJe7X7Wh1YRBvLhBftH1c6aIVJaJV-fPULglk5oBxWAildpExEafx6oMpVWdJsPZ8Uwrv0tovUnM49mxXWD_1onVrrl1zeRlQWIi5SqlgyNWPEB3AG9VGDBEq6reevv7y4kSNnpRbkikOWDr50AON0hVCNFnsfLXcNwH/s16000/petirtaan%20watu%20gedhe.jpg</b:widget-setting
+    >
+    <b:widget-setting name="link-2"
+      >https://www.jelajahmalang.com/</b:widget-setting
+    >
+    <b:widget-setting name="link-0"
+      >https://www.jelajahmalang.com/2023/10/karma-dari-usangnya-perjanjian-lama.html</b:widget-setting
+    >
+    <b:widget-setting name="text-2"
+      >https://blogger.googleusercontent.com/img/a/AVvXsEj5BJHv9_8TucPVqPhE-Bm0hhN8jimCLnqpSSf-Qg9ybP5HYTZ8OSGatM3NlvFPU35bMWK7kl_bJP3JK7bjfMNX_ZwUD-dUClBadgGXVwNGmjL48MN6bVIqHPM6Y7fT6C09UZ6tAFjxqDX4MYhtjefSn0k1qpHUG8mQhWOy19TmIT_buZ7_0zaW_MupDqWq=w1024</b:widget-setting
+    >
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="absolute bottom-0 left-0 p-5">
+      <div class="swiffy-slider slider-item-show2 slider-item-reveal">
+        <ul
+          class="slider-container [&amp;_img]:object-cover [&amp;_img]:aspect-video [&amp;_img]:rounded-xl [&amp;_img]:border-[5px] [&amp;_img]:border-white"
+        >
+          <b:loop values="data:links" var="link">
+            <li>
+              <a expr:href="data:link.target"
+                ><img
+                  expr:src="data:link.name"
+                  alt="Slider"
+                  width="1080"
+                  height="607"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+            </li>
+          </b:loop>
+        </ul>
+        <button type="button" class="slider-nav"></button
+        ><button type="button" class="slider-nav slider-nav-next"></button>
+        <div class="slider-indicators">
+          <button class="active"></button><button></button><button></button>
+        </div>
+      </div>
+    </div>
+  </b:includable>
+</b:widget>
+
         </b:section>
       </div>
     </div>
     <div class="text-center p-[50px] sm:p-[80px]">
       <b:section id="link">
         <b:widget
-          id="PopularPosts1"
-          locked="false"
-          title="Postingan Populer"
-          type="PopularPosts"
-        >
-          <b:widget-settings>
-            <b:widget-setting name="numItemsToShow">1</b:widget-setting>
-            <b:widget-setting name="showThumbnails">false</b:widget-setting>
-            <b:widget-setting name="showSnippets">true</b:widget-setting>
-            <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id="main">
-            <b:loop values="data:posts" var="post">
-              <a expr:href="data:post.href"
-                ><div class="uppercase font-bold"><data:post.title /></div>
-                <div class="">
-                  <data:post.snippet /></div
-              ></a>
-            </b:loop>
-          </b:includable>
-        </b:widget>
+  id="PopularPosts1"
+  locked="false"
+  title="Postingan Populer"
+  type="PopularPosts"
+>
+  <b:widget-settings>
+    <b:widget-setting name="numItemsToShow">1</b:widget-setting>
+    <b:widget-setting name="showThumbnails">false</b:widget-setting>
+    <b:widget-setting name="showSnippets">true</b:widget-setting>
+    <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <b:loop values="data:posts" var="post">
+      <a expr:href="data:post.href"
+        ><div class="uppercase font-bold"><data:post.title /></div>
+        <div class="">
+          <data:post.snippet /></div
+      ></a>
+    </b:loop>
+  </b:includable>
+</b:widget>
+
       </b:section>
     </div>
     <div class="">
       <b:section id="bagian-konten">
         <b:widget id="Blog1" type="Blog">
-          <b:includable id="main">
-            <b:if cond='data:blog.pageType != "item"'>
-              <b:loop values="data:posts" var="post">
+  <b:includable id="main">
+    <b:if cond='data:blog.pageType != "item"'>
+      <b:loop values="data:posts" var="post">
   <template
     class="list-postingan"
     expr:data-title="data:post.title"
@@ -2642,8 +2634,8 @@
   // ]]>
 </script>
 
-              <b:else></b:else>
-              <b:loop values="data:posts" var="post">
+      <b:else></b:else>
+      <b:loop values="data:posts" var="post">
   <div class="max-w-[80%] sm:max-w-[60%] mx-auto">
     <div class="prose">
       <h1><data:post.title /></h1>
@@ -2661,73 +2653,76 @@
   /* ]]> */
 </style>
 
-            </b:if>
-          </b:includable>
-        </b:widget>
+    </b:if>
+  </b:includable>
+</b:widget>
+
       </b:section>
     </div>
 
     <b:section id="link-2">
       <b:widget
-        id="PopularPosts2"
-        locked="false"
-        title="Postingan Populer"
-        type="PopularPosts"
-      >
-        <b:widget-settings>
-          <b:widget-setting name="numItemsToShow">1</b:widget-setting>
-          <b:widget-setting name="showThumbnails">false</b:widget-setting>
-          <b:widget-setting name="showSnippets">true</b:widget-setting>
-          <b:widget-setting name="timeRange">LAST_WEEK</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id="main">
-          <div class="text-center p-[50px] sm:p-[80px]">
-            <b:loop values="data:posts" var="post">
-              <a expr:href="data:post.href"
-                ><div class="uppercase font-bold"><data:post.title /></div>
-                <div class="">
-                  <data:post.snippet /></div
-              ></a>
-            </b:loop>
-          </div>
-        </b:includable>
-      </b:widget>
+  id="PopularPosts2"
+  locked="false"
+  title="Postingan Populer"
+  type="PopularPosts"
+>
+  <b:widget-settings>
+    <b:widget-setting name="numItemsToShow">1</b:widget-setting>
+    <b:widget-setting name="showThumbnails">false</b:widget-setting>
+    <b:widget-setting name="showSnippets">true</b:widget-setting>
+    <b:widget-setting name="timeRange">LAST_WEEK</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="text-center p-[50px] sm:p-[80px]">
+      <b:loop values="data:posts" var="post">
+        <a expr:href="data:post.href"
+          ><div class="uppercase font-bold"><data:post.title /></div>
+          <div class="">
+            <data:post.snippet /></div
+        ></a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
+
       <b:widget
-        id="PopularPosts3"
-        locked="false"
-        title="Postingan Populer"
-        type="PopularPosts"
-      >
-        <b:widget-settings>
-          <b:widget-setting name="numItemsToShow">3</b:widget-setting>
-          <b:widget-setting name="showThumbnails">false</b:widget-setting>
-          <b:widget-setting name="showSnippets">true</b:widget-setting>
-          <b:widget-setting name="timeRange">LAST_MONTH</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id="main">
-          <div class="mb-[80px]">
-            <div class="w-[80%] mx-auto grid sm:grid-cols-3 gap-10">
-              <b:loop values="data:posts" var="post">
-                <a
-                  expr:href="data:post.href"
-                  class="shadow-xl p-12 text-center bg-white"
-                  ><img
-                    src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/vector-bicycle-icon.4c920eb1_hHaE8.webp"
-                    class="mx-auto block mb-[50px] w-[30%] h-auto"
-                    alt="Gambar sepeda"
-                    width="490"
-                    height="490"
-                    loading="lazy"
-                    decoding="async" />
-                  <div class="font-bold text-lg mb-5"><data:post.title /></div>
-                  <div class="">
-                    <data:post.snippet /></div
-                ></a>
-              </b:loop>
-            </div>
-          </div>
-        </b:includable>
-      </b:widget>
+  id="PopularPosts3"
+  locked="false"
+  title="Postingan Populer"
+  type="PopularPosts"
+>
+  <b:widget-settings>
+    <b:widget-setting name="numItemsToShow">3</b:widget-setting>
+    <b:widget-setting name="showThumbnails">false</b:widget-setting>
+    <b:widget-setting name="showSnippets">true</b:widget-setting>
+    <b:widget-setting name="timeRange">LAST_MONTH</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="mb-[80px]">
+      <div class="w-[80%] mx-auto grid sm:grid-cols-3 gap-10">
+        <b:loop values="data:posts" var="post">
+          <a
+            expr:href="data:post.href"
+            class="shadow-xl p-12 text-center bg-white"
+            ><img
+              src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/vector-bicycle-icon.4c920eb1_hHaE8.webp"
+              class="mx-auto block mb-[50px] w-[30%] h-auto"
+              alt="Gambar sepeda"
+              width="490"
+              height="490"
+              loading="lazy"
+              decoding="async" />
+            <div class="font-bold text-lg mb-5"><data:post.title /></div>
+            <div class="">
+              <data:post.snippet /></div
+          ></a>
+        </b:loop>
+      </div>
+    </div>
+  </b:includable>
+</b:widget>
+
     </b:section>
 
     <div class="w-full bg-white">
@@ -2736,162 +2731,102 @@
           id="kumpulan-link"
           class="w-[80%] py-[50px] mx-auto grid sm:grid-cols-4 gap-10"
         >
-          <b:widget
-            id="LinkList2"
-            locked="false"
-            title="Link 1"
-            type="LinkList"
-          >
-            <b:widget-settings>
-              <b:widget-setting name="link-3"
-                >https://wikipedia.com</b:widget-setting
-              >
-              <b:widget-setting name="sorting">NONE</b:widget-setting>
-              <b:widget-setting name="text-1">Facebook</b:widget-setting>
-              <b:widget-setting name="link-1"
-                >https://facebook.com</b:widget-setting
-              >
-              <b:widget-setting name="text-0">Google</b:widget-setting>
-              <b:widget-setting name="link-2"
-                >https://twitter.com</b:widget-setting
-              >
-              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
-              <b:widget-setting name="link-0"
-                >https://google.com</b:widget-setting
-              >
-              <b:widget-setting name="text-2">Twitter</b:widget-setting>
-            </b:widget-settings>
-            <b:includable id="main">
-              <div>
-                <p class="font-bold mb-3"><data:title /></p>
-                <b:loop values="data:links" var="link">
-                  <a
-                    expr:href="data:link.target"
-                    class="mb-1 block text-gray-600"
-                  >
-                    <data:link.name />
-                  </a>
-                </b:loop>
-              </div>
-            </b:includable>
-          </b:widget>
-          <b:widget
-            id="LinkList3"
-            locked="false"
-            title="Link 2"
-            type="LinkList"
-          >
-            <b:widget-settings>
-              <b:widget-setting name="link-3"
-                >https://wikipedia.com</b:widget-setting
-              >
-              <b:widget-setting name="sorting">NONE</b:widget-setting>
-              <b:widget-setting name="text-1">Facebook</b:widget-setting>
-              <b:widget-setting name="link-1"
-                >https://facebook.com</b:widget-setting
-              >
-              <b:widget-setting name="text-0">Google</b:widget-setting>
-              <b:widget-setting name="link-2"
-                >https://twitter.com</b:widget-setting
-              >
-              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
-              <b:widget-setting name="link-0"
-                >https://google.com</b:widget-setting
-              >
-              <b:widget-setting name="text-2">Twitter</b:widget-setting>
-            </b:widget-settings>
-            <b:includable id="main">
-              <div>
-                <p class="font-bold mb-3"><data:title /></p>
-                <b:loop values="data:links" var="link">
-                  <a
-                    expr:href="data:link.target"
-                    class="mb-1 block text-gray-600"
-                  >
-                    <data:link.name />
-                  </a>
-                </b:loop>
-              </div>
-            </b:includable>
-          </b:widget>
-          <b:widget
-            id="LinkList4"
-            locked="false"
-            title="Link 3"
-            type="LinkList"
-          >
-            <b:widget-settings>
-              <b:widget-setting name="link-3"
-                >https://wikipedia.com</b:widget-setting
-              >
-              <b:widget-setting name="sorting">NONE</b:widget-setting>
-              <b:widget-setting name="text-1">Facebook</b:widget-setting>
-              <b:widget-setting name="link-1"
-                >https://facebook.com</b:widget-setting
-              >
-              <b:widget-setting name="text-0">Google</b:widget-setting>
-              <b:widget-setting name="link-2"
-                >https://twitter.com</b:widget-setting
-              >
-              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
-              <b:widget-setting name="link-0"
-                >https://google.com</b:widget-setting
-              >
-              <b:widget-setting name="text-2">Twitter</b:widget-setting>
-            </b:widget-settings>
-            <b:includable id="main">
-              <div>
-                <p class="font-bold mb-3"><data:title /></p>
-                <b:loop values="data:links" var="link">
-                  <a
-                    expr:href="data:link.target"
-                    class="mb-1 block text-gray-600"
-                  >
-                    <data:link.name />
-                  </a>
-                </b:loop>
-              </div>
-            </b:includable>
-          </b:widget>
-          <b:widget
-            id="LinkList5"
-            locked="false"
-            title="Link 4"
-            type="LinkList"
-          >
-            <b:widget-settings>
-              <b:widget-setting name="link-3"
-                >https://wikipedia.com</b:widget-setting
-              >
-              <b:widget-setting name="sorting">NONE</b:widget-setting>
-              <b:widget-setting name="text-1">Facebook</b:widget-setting>
-              <b:widget-setting name="link-1"
-                >https://facebook.com</b:widget-setting
-              >
-              <b:widget-setting name="text-0">Google</b:widget-setting>
-              <b:widget-setting name="link-2"
-                >https://twitter.com</b:widget-setting
-              >
-              <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
-              <b:widget-setting name="link-0"
-                >https://google.com</b:widget-setting
-              >
-              <b:widget-setting name="text-2">Twitter</b:widget-setting>
-            </b:widget-settings>
-            <b:includable id="main">
-              <div>
-                <p class="font-bold mb-3"><data:title /></p>
-                <b:loop values="data:links" var="link">
-                  <a
-                    expr:href="data:link.target"
-                    class="mb-1 block text-gray-600"
-                  >
-                    <data:link.name />
-                  </a>
-                </b:loop>
-              </div>
-            </b:includable>
-          </b:widget>
+          <b:widget id="LinkList2" locked="false" title="Link 1" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="link-3">https://wikipedia.com</b:widget-setting>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1">Facebook</b:widget-setting>
+    <b:widget-setting name="link-1">https://facebook.com</b:widget-setting>
+    <b:widget-setting name="text-0">Google</b:widget-setting>
+    <b:widget-setting name="link-2">https://twitter.com</b:widget-setting>
+    <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+    <b:widget-setting name="link-0">https://google.com</b:widget-setting>
+    <b:widget-setting name="text-2">Twitter</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div>
+      <p class="font-bold mb-3"><data:title /></p>
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target" class="mb-1 block text-gray-600">
+          <data:link.name />
+        </a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
+
+          <b:widget id="LinkList3" locked="false" title="Link 2" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="link-3">https://wikipedia.com</b:widget-setting>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1">Facebook</b:widget-setting>
+    <b:widget-setting name="link-1">https://facebook.com</b:widget-setting>
+    <b:widget-setting name="text-0">Google</b:widget-setting>
+    <b:widget-setting name="link-2">https://twitter.com</b:widget-setting>
+    <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+    <b:widget-setting name="link-0">https://google.com</b:widget-setting>
+    <b:widget-setting name="text-2">Twitter</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div>
+      <p class="font-bold mb-3"><data:title /></p>
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target" class="mb-1 block text-gray-600">
+          <data:link.name />
+        </a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
+
+          <b:widget id="LinkList4" locked="false" title="Link 3" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="link-3">https://wikipedia.com</b:widget-setting>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1">Facebook</b:widget-setting>
+    <b:widget-setting name="link-1">https://facebook.com</b:widget-setting>
+    <b:widget-setting name="text-0">Google</b:widget-setting>
+    <b:widget-setting name="link-2">https://twitter.com</b:widget-setting>
+    <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+    <b:widget-setting name="link-0">https://google.com</b:widget-setting>
+    <b:widget-setting name="text-2">Twitter</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div>
+      <p class="font-bold mb-3"><data:title /></p>
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target" class="mb-1 block text-gray-600">
+          <data:link.name />
+        </a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
+
+          <b:widget id="LinkList5" locked="false" title="Link 4" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="link-3">https://wikipedia.com</b:widget-setting>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1">Facebook</b:widget-setting>
+    <b:widget-setting name="link-1">https://facebook.com</b:widget-setting>
+    <b:widget-setting name="text-0">Google</b:widget-setting>
+    <b:widget-setting name="link-2">https://twitter.com</b:widget-setting>
+    <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+    <b:widget-setting name="link-0">https://google.com</b:widget-setting>
+    <b:widget-setting name="text-2">Twitter</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div>
+      <p class="font-bold mb-3"><data:title /></p>
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target" class="mb-1 block text-gray-600">
+          <data:link.name />
+        </a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
+
         </b:section>
       </div>
     </div>
