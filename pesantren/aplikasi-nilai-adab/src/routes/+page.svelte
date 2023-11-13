@@ -27,15 +27,12 @@
 		}
 	}
 
-	$effect(() => {
-		for (let x of kelompok_santri) {
-			if (x.kelompok == kelas_terpilih) {
-				nama_santri = x.santri;
-			}
-		}
-	});
+	// $effect(() => {
 
-	$effect(() => {
+	// });
+
+	// $effect(() => {
+	function buat_kelompok_kelas() {
 		if (['Adab', 'Bahasa Arab', 'Fiqh', 'Hadits', 'Siroh'].includes(pelajaran_terpilih)) {
 			kelompok_kelas = ['Kelas 1', 'Kelas 2', 'Kelas 3'];
 		}
@@ -45,13 +42,20 @@
 		if (pelajaran_terpilih == 'Komputer') {
 			kelompok_kelas = ['Kelas Senin', 'Kelas Selasa', 'Kelas Rabu', 'Kelas Kamis', 'Kelas Jumat'];
 		}
-	});
+	}
+	// });
 
-	$effect(() => {
-		generate_santri();
-	});
+	// $effect(() => {
+	generate_santri();
+	// });
 
 	function generate_santri() {
+		for (let x of kelompok_santri) {
+			if (x.kelompok == kelas_terpilih) {
+				nama_santri = x.santri;
+			}
+		}
+
 		list_isian = [];
 		for (let x of nama_santri) {
 			list_isian = [
@@ -155,14 +159,12 @@
 </svelte:head>
 
 <div class="p-3">
-	<p>Pelajaran terpilih: {pelajaran_terpilih}</p>
-	<p>Kelompok kelas: {JSON.stringify(kelompok_kelas)}</p>
 	<div
 		class="bagian-menu [&>.kotak]:border-2 [&>.kotak]:p-2 [&>.kotak]:shadow-green-200 [&>.kotak]:inline-block [&>.kotak]:shadow [&>.kotak_select]:w-full [&>.kotak_select]:border [&>.kotak_select]:mt-2"
 	>
 		<div class="kotak">
 			<p>Pilih Pelajaran</p>
-			<select bind:value={pelajaran_terpilih} name="" id="">
+			<select bind:value={pelajaran_terpilih} on:change={buat_kelompok_kelas} name="" id="">
 				{#each list_pelajaran as x}
 					<option>{x}</option>
 				{/each}
@@ -170,7 +172,7 @@
 		</div>
 		<div class="kotak">
 			<p>Pilih Kelompok Kelas</p>
-			<select bind:value={kelas_terpilih} name="" id="">
+			<select bind:value={kelas_terpilih} on:change={generate_santri} name="" id="">
 				{#each kelompok_kelas as x}
 					<option>{x}</option>
 				{/each}
