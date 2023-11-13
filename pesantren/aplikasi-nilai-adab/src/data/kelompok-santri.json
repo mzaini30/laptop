@@ -1,0 +1,191 @@
+[
+	{
+		"kelompok": "Kelas 1",
+		"santri": [
+			"Ahmad Abdullah Kholis",
+			"Aiko Zahwa syarofana",
+			"Aisyah muwahhidah",
+			"Aisyah Putri Az Zahra",
+			"Amila nahwal Haq",
+			"Ammar Huda Al Farisy",
+			"Audrey callysta Fatih",
+			"Hanif Syaifullah",
+			"Ifroyim Habibullah Fatah",
+			"Kamil Khairul Azam",
+			"Khanza nur Assyifa",
+			"Mirza Faeyza Raziq Ramadhan",
+			"Muhammad Daffa Abdul Rafi",
+			"Muhammad Nizam Ghifari",
+			"Muhammad Nur Riski",
+			"Nadil Al Fayyadh",
+			"Syifa Salsabila",
+			"Wildan Habibi Ariyadi",
+			"Zidane Al Asytar Syakur",
+			"Zufar Lahid Royyan Ashidik"
+		]
+	},
+	{
+		"kelompok": "Kelas 2",
+		"santri": [
+			"Akmal Al Jundi",
+			"Alya Zulfa Ramadhani",
+			"Idris",
+			"Muhammad Al Fahrezy",
+			"Muhammad Faisal Asy Syams",
+			"Muhammad Fakhri",
+			"Muhammad Jamel Asy Syahid",
+			"Najwa Qurrota'Aini",
+			"Nur Intan Amirah Shafiqh",
+			"Ruwayfi Rafa Alhamdani",
+			"Sekar Arum Wijayanti"
+		]
+	},
+	{
+		"kelompok": "Kelas 3",
+		"santri": [
+			"Arviandow",
+			"Ayaturrahman Shinra Aufa",
+			"Hazwan Hafidzudin",
+			"Khalid Ghazy",
+			"Muhammad Radja",
+			"Muhammad Rasya",
+			"Muhammad Rayhan",
+			"Rihal Muharrikul Haq",
+			"Mila Najiyah",
+			"Najwa Hani Fillah",
+			"Nayla Izzatul Hasanah",
+			"Nida Khalwatus S",
+			"Safaraz Aufa Rifdah",
+			"Waldan Faiq Hasan"
+		]
+	},
+	{
+		"kelompok": "Kelas Dasar",
+		"santri": [
+			"Arviandow",
+			"Muhammad Al Fahrezy",
+			"Waldan Faiq Hasan",
+			"Muhammad Nur Riski",
+			"Ammar Huda Al Farisy",
+			"Muhammad Rayhan",
+			"Ifroyim Habibullah Fatah",
+			"Wildan Habibi Ariyadi",
+			"Muhammad Daffa Abdul Rafi",
+			"Zufar Lahid Royyan Ashidik",
+			"Khanza nur Assyifa",
+			"Aisyah Putri Az Zahra",
+			"Alya Zulfa Rahmdhani",
+			"Sekar Arum Wijayanti"
+		]
+	},
+	{
+		"kelompok": "Kelas Tengah",
+		"santri": [
+			"Amila nahwal Haq",
+			"Audrey callysta Fatih",
+			"Ayaturrahman Shinra Aufa",
+			"Idris",
+			"Kamil Khairul Azam",
+			"Mila Najiyah",
+			"Mirza Faeyza Raziq Ramadhan",
+			"Muhammad Fakhri",
+			"Muhammad Jamel Asy Syahid",
+			"Muhammad Nizam Ghifari",
+			"Muhammad Radja",
+			"Najwa Hani Fillah",
+			"Najwa Qurrota'Aini",
+			"Nida Khalwatus S",
+			"Zidane Al Asytar Syakur"
+		]
+	},
+	{
+		"kelompok": "Kelas Siap",
+		"santri": [
+			"Ahmad Abdullah Kholis",
+			"Aiko Zahwa syarofana",
+			"Aisyah muwahhidah",
+			"Akmal Al Jundi",
+			"Hanif Syaifullah",
+			"Hazwan Hafidzudin",
+			"Khalid Ghazy",
+			"Muhammad Faisal Asy Syams",
+			"Nadil Al Fayyadh",
+			"Nayla Izzatul Hasanah",
+			"Nur Intan Amira Syafiq",
+			"Rihal Muharrikul Haq",
+			"Ruwayfi Rafa Alhamdani",
+			"Safaraz Aufa Rifdah",
+			"Syifa Salsabila"
+		]
+	},
+	{
+		"kelompok": "Kelas Senin",
+		"santri": [
+			"Aidan",
+			"Dafa",
+			"Hanif",
+			"Kamil",
+			"Mirza",
+			"Nadil",
+			"Nizam",
+			"Wildan",
+			"Zidane",
+			"Zufar"
+		]
+	},
+	{
+		"kelompok": "Kelas Selasa",
+		"santri": [
+			"Akmal Al Jundi",
+			"Ammar",
+			"Idris",
+			"Ifroyim",
+			"Kholis",
+			"Muhammad Al Fahrezy",
+			"Muhammad Faisal Asy Syams",
+			"Muhammad Jamel Asy Syahid",
+			"Rizki"
+		]
+	},
+	{
+		"kelompok": "Kelas Rabu",
+		"santri": [
+			"Arviandow",
+			"Ayaturrahman Shinra Aufa",
+			"Hazwan Hafidzudin**",
+			"Khalid Ghazy*",
+			"Muhammad Fakhri",
+			"Muhammad Radja",
+			"Muhammad Rayhan",
+			"Rihal Muharrikul Haq*",
+			"Ruwayfi Rafa Alhamdani",
+			"Waldan Faiq Hasan"
+		]
+	},
+	{
+		"kelompok": "Kelas Kamis",
+		"santri": [
+			"Aiko",
+			"Aisyah M",
+			"Aisyah Putri",
+			"Alya Zulfa Rahmdhani",
+			"Amila",
+			"Audrey",
+			"Khanza",
+			"Syifa"
+		]
+	},
+	{
+		"kelompok": "Kelas Jumat",
+		"santri": [
+			"Mila Najiyah*",
+			"Najwa Hani Fillah*",
+			"Najwa Qurrota'Aini",
+			"Nayla Izzatul Hasanah*",
+			"Nida Khalwatus S*",
+			"Nur Intan Amira Syafiq*",
+			"Safaraz Aufa Rifdah*",
+			"Sekar Arum Wijayanti"
+		]
+	}
+]
