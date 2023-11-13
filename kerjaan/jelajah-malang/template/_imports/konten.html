@@ -1,0 +1,17 @@
+<b:loop values="data:posts" var="post">
+  <div class="max-w-[80%] sm:max-w-[60%] mx-auto">
+    <div class="prose">
+      <h1><data:post.title /></h1>
+      <data:post.body />
+    </div>
+    <b:include data="post" name="threaded_comments"></b:include>
+  </div>
+</b:loop>
+
+<style>
+  /* <![CDATA[ */
+  .prose {
+    max-width: 100%;
+  }
+  /* ]]> */
+</style>

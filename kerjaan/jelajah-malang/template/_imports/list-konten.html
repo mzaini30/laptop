@@ -1,0 +1,126 @@
+<b:loop values="data:posts" var="post">
+  <template
+    class="list-postingan"
+    expr:data-title="data:post.title"
+    expr:data-thumbnail="data:post.thumbnailUrl"
+    expr:data-link="data:post.url"
+  ></template>
+</b:loop>
+<div
+  class="w-[80%] mx-auto [&amp;_a]:block grid sm:grid-cols-4 gap-[17px] [&amp;_img]:object-cover [&amp;_img]:w-full [&amp;_img]:h-[inherit] [&amp;_.caption]:absolute [&amp;_.caption]:w-full [&amp;_.caption]:left-0 [&amp;_.caption]:bottom-0 [&amp;_.caption]:p-3 [&amp;_.caption]:font-bold [&amp;_.caption]:text-white"
+>
+  <div class="col-span-2">
+    <a
+      href="/isi"
+      class="h-[40vw] sm:h-[20vw] overflow-hidden rounded-lg relative konten"
+      ><img
+        src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_Z1i85IC.webp"
+        class=""
+        alt="Gambar item"
+        width="1440"
+        height="1440"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="caption">Ini Judulnya</p></a
+    >
+    <div class="grid sm:grid-cols-2 mt-[17px] gap-[17px]">
+      <a
+        href="/isi"
+        class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg relative konten"
+        ><img
+          src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_Z1i85IC.webp"
+          class=""
+          alt="Gambar item"
+          width="1440"
+          height="1440"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="caption">Ini Judulnya</p></a
+      ><a
+        href="/isi"
+        class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg relative konten"
+        ><img
+          src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_Z1i85IC.webp"
+          class=""
+          alt="Gambar item"
+          width="1440"
+          height="1440"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="caption">Ini Judulnya</p></a
+      >
+    </div>
+  </div>
+  <a
+    href="/isi"
+    class="overflow-hidden col-span-2 sm:col-span-1 h-[40vw] sm:h-[calc(40vw+17px)] rounded-lg relative konten"
+    ><img
+      src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_Z1i85IC.webp"
+      class=""
+      alt="Gambar item"
+      width="1440"
+      height="1440"
+      loading="lazy"
+      decoding="async"
+    />
+    <p class="caption">Ini Judulnya</p></a
+  >
+  <div class="col-span-2 sm:col-span-1">
+    <a
+      href="/isi"
+      class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg mb-[17px] relative konten"
+      ><img
+        src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_Z1i85IC.webp"
+        class=""
+        alt="Gambar item"
+        width="1440"
+        height="1440"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="caption">Ini Judulnya</p></a
+    ><a
+      href="/isi"
+      class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg relative konten"
+      ><img
+        src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/things-to-do-malang-java-header-1440x1440.0b83f574_Z1i85IC.webp"
+        class=""
+        alt="Gambar item"
+        width="1440"
+        height="1440"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="caption">Ini Judulnya</p></a
+    >
+  </div>
+</div>
+<!-- <template class='list-postingan' data-thumbnail='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdtzcD2R0VIrL_XLDYu3f8g4usmQmJXwhKg1UvqxWWrI_UCFCyyaV5IIWBv__d0wm1WfwWwDpYuHen0e0539a37l3Uiz0xibAew7MC3WPznUeORiCHOKnfKm9U213Am8iDsLzV8ZmEmQ7K8INDzY-A1Nfkf-1S8PpRAc9R2GbP_CYNLlVcI2lEmE5ZHRNN/s72-c/Travel%20mobile%20application%20_Travo_.jpg' data-title='Tulisan Terbaru'></template>
+<template class='list-postingan' data-thumbnail='https://blogger.googleusercontent.com/img/a/AVvXsEhlIqziH3NzeOAFHy1Nw8FJGPrmxCiRkNJcTlahD6O24Bj5lWxfN9wexxXXeTo1BGYKqmkwYeU5vGgyXyHoCub9ysypIbdi7PWkAYCOBhpHCnlnfktlWFBiKhAEDha1q-uwvTrdY6LFjo2mH6dE6jBzFvJ1UceRHuHqtpz7LAqErR0ODW6RU0rWZ5kFog=s72-w640-c-h424' data-title='Berkenalan dengan Bahasa Pemrograman Golang'></template> -->
+
+<script>
+  // <![CDATA[
+  function olah_list_konten() {
+    let sumber = document.querySelectorAll(".list-postingan");
+    let target = document.querySelectorAll(".konten");
+    for (let n in [...target]) {
+      if (sumber[n]) {
+        target[n].setAttribute("href", sumber[n].dataset.link);
+        target[n].querySelector(".caption").innerText = sumber[n].dataset.title;
+        let link_gambar = sumber[n].dataset.thumbnail;
+        if (link_gambar.includes("/s72-c/")) {
+          link_gambar = link_gambar.replace("/s72-c/", "/w1440/");
+        } else if (link_gambar.includes("=s72-w640-c-")) {
+          link_gambar = link_gambar.replace("=s72-w640-c-", "=w1440-");
+        }
+        target[n].querySelector("img").setAttribute("src", link_gambar);
+      }
+    }
+  }
+  olah_list_konten();
+  document.addEventListener("astro:after-swap", olah_list_konten);
+  // ]]>
+</script>

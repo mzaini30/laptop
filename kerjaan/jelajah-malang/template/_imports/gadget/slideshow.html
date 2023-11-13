@@ -1,0 +1,56 @@
+<b:widget
+  id="LinkList1"
+  locked="false"
+  title="gambar slideshow (nama situs = link gambar)"
+  type="LinkList"
+>
+  <b:widget-settings>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1"
+      >https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrC6EAYGeyNHMQOXjofVVH7nx0puhHdxsBgNVp3TYN4FzXrj4tKYOOntCjb7d6n63-JQz0-PIeFlMuXFNtmXDT-NNQeXwUEb13jE1n8KNVhXYy9jM8qZ9Qi_57AektAvmd8nGW1oUCm1hTa9PoPXLNkBE3nGZcmM1LO0zLVyRPsUhJblpTSU600WKSyLRz/s16000/candi%20singosari.jpg</b:widget-setting
+    >
+    <b:widget-setting name="link-1"
+      >https://www.jelajahmalang.com/2023/10/karma-dari-usangnya-perjanjian-lama.html</b:widget-setting
+    >
+    <b:widget-setting name="text-0"
+      >https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmSAPNfDimnZeLoBUXq0Sl8UIuHJe7X7Wh1YRBvLhBftH1c6aIVJaJV-fPULglk5oBxWAildpExEafx6oMpVWdJsPZ8Uwrv0tovUnM49mxXWD_1onVrrl1zeRlQWIi5SqlgyNWPEB3AG9VGDBEq6reevv7y4kSNnpRbkikOWDr50AON0hVCNFnsfLXcNwH/s16000/petirtaan%20watu%20gedhe.jpg</b:widget-setting
+    >
+    <b:widget-setting name="link-2"
+      >https://www.jelajahmalang.com/</b:widget-setting
+    >
+    <b:widget-setting name="link-0"
+      >https://www.jelajahmalang.com/2023/10/karma-dari-usangnya-perjanjian-lama.html</b:widget-setting
+    >
+    <b:widget-setting name="text-2"
+      >https://blogger.googleusercontent.com/img/a/AVvXsEj5BJHv9_8TucPVqPhE-Bm0hhN8jimCLnqpSSf-Qg9ybP5HYTZ8OSGatM3NlvFPU35bMWK7kl_bJP3JK7bjfMNX_ZwUD-dUClBadgGXVwNGmjL48MN6bVIqHPM6Y7fT6C09UZ6tAFjxqDX4MYhtjefSn0k1qpHUG8mQhWOy19TmIT_buZ7_0zaW_MupDqWq=w1024</b:widget-setting
+    >
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="absolute bottom-0 left-0 p-5">
+      <div class="swiffy-slider slider-item-show2 slider-item-reveal">
+        <ul
+          class="slider-container [&amp;_img]:object-cover [&amp;_img]:aspect-video [&amp;_img]:rounded-xl [&amp;_img]:border-[5px] [&amp;_img]:border-white"
+        >
+          <b:loop values="data:links" var="link">
+            <li>
+              <a expr:href="data:link.target"
+                ><img
+                  expr:src="data:link.name"
+                  alt="Slider"
+                  width="1080"
+                  height="607"
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+            </li>
+          </b:loop>
+        </ul>
+        <button type="button" class="slider-nav"></button
+        ><button type="button" class="slider-nav slider-nav-next"></button>
+        <div class="slider-indicators">
+          <button class="active"></button><button></button><button></button>
+        </div>
+      </div>
+    </div>
+  </b:includable>
+</b:widget>

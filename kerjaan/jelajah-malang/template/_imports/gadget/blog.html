@@ -1,0 +1,9 @@
+<b:widget id="Blog1" type="Blog">
+  <b:includable id="main">
+    <b:if cond='data:blog.pageType != "item"'>
+      <sergey-import src="list-konten"></sergey-import>
+      <b:else></b:else>
+      <sergey-import src="konten"></sergey-import>
+    </b:if>
+  </b:includable>
+</b:widget>

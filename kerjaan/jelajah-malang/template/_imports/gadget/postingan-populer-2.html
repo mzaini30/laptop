@@ -1,0 +1,24 @@
+<b:widget
+  id="PopularPosts2"
+  locked="false"
+  title="Postingan Populer"
+  type="PopularPosts"
+>
+  <b:widget-settings>
+    <b:widget-setting name="numItemsToShow">1</b:widget-setting>
+    <b:widget-setting name="showThumbnails">false</b:widget-setting>
+    <b:widget-setting name="showSnippets">true</b:widget-setting>
+    <b:widget-setting name="timeRange">LAST_WEEK</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="text-center p-[50px] sm:p-[80px]">
+      <b:loop values="data:posts" var="post">
+        <a expr:href="data:post.href"
+          ><div class="uppercase font-bold"><data:post.title /></div>
+          <div class="">
+            <data:post.snippet /></div
+        ></a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>

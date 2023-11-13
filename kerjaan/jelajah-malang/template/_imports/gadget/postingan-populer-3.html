@@ -1,0 +1,36 @@
+<b:widget
+  id="PopularPosts3"
+  locked="false"
+  title="Postingan Populer"
+  type="PopularPosts"
+>
+  <b:widget-settings>
+    <b:widget-setting name="numItemsToShow">3</b:widget-setting>
+    <b:widget-setting name="showThumbnails">false</b:widget-setting>
+    <b:widget-setting name="showSnippets">true</b:widget-setting>
+    <b:widget-setting name="timeRange">LAST_MONTH</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="mb-[80px]">
+      <div class="w-[80%] mx-auto grid sm:grid-cols-3 gap-10">
+        <b:loop values="data:posts" var="post">
+          <a
+            expr:href="data:post.href"
+            class="shadow-xl p-12 text-center bg-white"
+            ><img
+              src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/vector-bicycle-icon.4c920eb1_hHaE8.webp"
+              class="mx-auto block mb-[50px] w-[30%] h-auto"
+              alt="Gambar sepeda"
+              width="490"
+              height="490"
+              loading="lazy"
+              decoding="async" />
+            <div class="font-bold text-lg mb-5"><data:post.title /></div>
+            <div class="">
+              <data:post.snippet /></div
+          ></a>
+        </b:loop>
+      </div>
+    </div>
+  </b:includable>
+</b:widget>

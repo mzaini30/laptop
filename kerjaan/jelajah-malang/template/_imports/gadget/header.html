@@ -1,0 +1,30 @@
+<b:widget id="Header1" locked="false" title="Judul" type="Header">
+  <b:widget-settings>
+    <b:widget-setting name="displayUrl"
+      >https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/Logo%20Jelajah%20Malang.342f5cc3_11tO0O.webp</b:widget-setting
+    >
+    <b:widget-setting name="displayHeight">100</b:widget-setting>
+    <b:widget-setting name="sectionWidth">1076</b:widget-setting>
+    <b:widget-setting name="useImage">true</b:widget-setting>
+    <b:widget-setting name="shrinkToFit">false</b:widget-setting>
+    <b:widget-setting name="imagePlacement">BEHIND</b:widget-setting>
+    <b:widget-setting name="displayWidth">100</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <a href="/"
+      ><img
+        expr:alt="data:title"
+        expr:height="data:height"
+        expr:width="data:width"
+        expr:src="data:sourceUrl"
+        class="mb-5"
+        loading="lazy"
+        decoding="async" />
+      <h1 class="text-[60px] mb-5 font-bold">
+        <b:include name="title" /></h1
+    ></a>
+    <p class="text-gray-600">
+      <b:include name="description" />
+    </p>
+  </b:includable>
+</b:widget>

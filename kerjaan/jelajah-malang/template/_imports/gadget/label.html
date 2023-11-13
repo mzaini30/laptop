@@ -1,0 +1,20 @@
+<b:widget id="Label1" locked="false" title="Label" type="Label">
+  <b:widget-settings>
+    <b:widget-setting name="sorting">ALPHA</b:widget-setting>
+    <b:widget-setting name="display">LIST</b:widget-setting>
+    <b:widget-setting name="selectedLabelsList" />
+    <b:widget-setting name="showType">ALL</b:widget-setting>
+    <b:widget-setting name="showFreqNumbers">false</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="mt-10">
+      <b:loop values="data:labels" var="label">
+        <a
+          expr:href="data:label.url"
+          class="border border-gray-500 text-gray-500 px-3 py-1 inline-block mr-2 mb-2 rounded-2xl text-[12px]"
+          ><data:label.name
+        /></a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>

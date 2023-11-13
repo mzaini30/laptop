@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <b:skin></b:skin>
+    <sergey-import src="slider-css"></sergey-import>
+    <meta name="astro-view-transitions-enabled" content="true" />
+    <meta name="astro-view-transitions-fallback" content="animate" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><data:view.title.escaped/></title>
+    <b:include data="blog" name="all-head-content" />
+    <sergey-import src="css"></sergey-import>
+    <sergey-import src="js"></sergey-import>
+  </head>
+  <body>
+    <div class="grid sm:grid-cols-2">
+      <div class="py-[50px] sm:py-5">
+        <div class="w-[75%] mx-auto">
+          <b:section id="header-kiri">
+            <sergey-import src="gadget/header"></sergey-import>
+            <sergey-import src="gadget/label"></sergey-import>
+          </b:section>
+        </div>
+      </div>
+      <div class="relative">
+        <b:section id="header-kanan">
+          <sergey-import src="gadget/gambar-besar-header"></sergey-import>
+          <sergey-import src="gadget/slideshow"></sergey-import>
+        </b:section>
+      </div>
+    </div>
+    <div class="text-center p-[50px] sm:p-[80px]">
+      <b:section id="link">
+        <sergey-import src="gadget/postingan-populer-1"></sergey-import>
+      </b:section>
+    </div>
+    <div class="">
+      <b:section id="bagian-konten">
+        <sergey-import src="gadget/blog"></sergey-import>
+      </b:section>
+    </div>
+
+    <b:section id="link-2">
+      <sergey-import src="gadget/our-team"></sergey-import>
+      <sergey-import src="gadget/profile-dan-tour"></sergey-import>
+    </b:section>
+
+    <div class="w-full bg-white">
+      <div>
+        <b:section
+          id="kumpulan-link"
+          class="w-[80%] py-[50px] mx-auto grid sm:grid-cols-4 gap-10"
+        >
+          <sergey-import src="gadget/link-1"></sergey-import>
+          <sergey-import src="gadget/link-2"></sergey-import>
+          <sergey-import src="gadget/link-3"></sergey-import>
+          <sergey-import src="gadget/link-4"></sergey-import>
+        </b:section>
+      </div>
+    </div>
+    <sergey-import src="slider-js"></sergey-import>
+  </body>
+</html>

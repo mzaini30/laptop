@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import Template from "../template/default.astro";
+import header from "../gambar/things-to-do-malang-java-header-1440x1440.jpg";
+---
+
+<Template>
+  <div
+    class="w-[80%] mx-auto [&_a]:block grid sm:grid-cols-4 gap-[17px] [&_img]:object-cover [&_img]:w-full [&_img]:h-[inherit] [&_.caption]:absolute [&_.caption]:w-full [&_.caption]:left-0 [&_.caption]:bottom-0 [&_.caption]:p-3 [&_.caption]:font-bold [&_.caption]:text-white"
+  >
+    <div class="col-span-2">
+      <a
+        href="/isi"
+        class="h-[40vw] sm:h-[20vw] overflow-hidden rounded-lg relative"
+      >
+        <Image class="" src={header} alt="Gambar item" />
+        <p class="caption">Ini Judulnya</p>
+      </a>
+      <div class="grid sm:grid-cols-2 mt-[17px] gap-[17px]">
+        <a
+          href="/isi"
+          class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg relative"
+        >
+          <Image class="" src={header} alt="Gambar item" />
+          <p class="caption">Ini Judulnya</p>
+        </a>
+        <a
+          href="/isi"
+          class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg relative"
+        >
+          <Image class="" src={header} alt="Gambar item" />
+          <p class="caption">Ini Judulnya</p>
+        </a>
+      </div>
+    </div>
+    <a
+      href="/isi"
+      class="overflow-hidden col-span-2 sm:col-span-1 h-[40vw] sm:h-[calc(40vw+17px)] rounded-lg relative"
+    >
+      <Image class="" src={header} alt="Gambar item" />
+      <p class="caption">Ini Judulnya</p>
+    </a>
+    <div class="col-span-2 sm:col-span-1">
+      <a
+        href="/isi"
+        class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg mb-[17px] relative"
+      >
+        <Image class="" src={header} alt="Gambar item" />
+        <p class="caption">Ini Judulnya</p>
+      </a>
+      <a
+        href="/isi"
+        class="overflow-hidden h-[40vw] sm:h-[20vw] rounded-lg relative"
+      >
+        <Image class="" src={header} alt="Gambar item" />
+        <p class="caption">Ini Judulnya</p>
+      </a>
+    </div>
+  </div>
+</Template>

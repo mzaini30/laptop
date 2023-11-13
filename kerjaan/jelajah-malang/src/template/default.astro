@@ -1,0 +1,148 @@
+---
+import logo from "../gambar/Logo Jelajah Malang.png";
+import { ViewTransitions } from "astro:transitions";
+import { Image } from "astro:assets";
+import header from "../gambar/things-to-do-malang-java-header-1440x1440.jpg";
+import TulisanDiTengah from "../komponen/tulisan-di-tengah.astro";
+import bebek from "../gambar/download.svg";
+import sepeda from "../gambar/vector-bicycle-icon.jpg";
+import thumbnail_1 from "../gambar/thumbnail/Icon-Batu-Flower-Garden-akbarirwansyah.jpg";
+import thumbnail_2 from "../gambar/thumbnail/img_paket-wisata-malang-bromo-murah.jpg";
+import thumbnail_3 from "../gambar/thumbnail/taman-nasional-bromo-tengger-jawa-timur-indonesia1-fec4c7dbdd891361257e3ac013896e6f.jpg";
+
+const ukuran_icon = 100;
+const ukuran_header = 680;
+
+const rubrik = ["Fiksi", "Daerah", "Jalan-Jalan", "Kuliner"];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link
+      href="/swiffy-slider.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <ViewTransitions />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jelajah Malang</title>
+  </head>
+  <body>
+    <div class="grid sm:grid-cols-2">
+      <div class="py-[50px] sm:py-5">
+        <div class="w-[75%] mx-auto">
+          <a href="#/">
+            <Image
+              src={logo}
+              alt="Logo"
+              class="mb-5"
+              width={ukuran_icon}
+              height={ukuran_icon}
+            />
+            <h1 class="text-[60px] mb-5 font-bold">Jelajah Malang</h1>
+          </a>
+          <p class="text-gray-600">
+            Seru-seruan jelajahi Malang dengan berjalan kaki
+          </p>
+          <div class="mt-10">
+            {
+              rubrik.map((x) => (
+                <a
+                  href="#/"
+                  class="border border-gray-500 text-gray-500 px-3 py-1 inline-block mr-2 mb-2 rounded-2xl text-[12px]"
+                >
+                  {x}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <Image
+          src={header}
+          alt="Header"
+          class="h-screen object-cover"
+          width={ukuran_header}
+          height={ukuran_header}
+        />
+        <div class="absolute bottom-0 left-0 p-5">
+          <div class="swiffy-slider slider-item-show2 slider-item-reveal">
+            <ul
+              class="slider-container [&_img]:object-cover [&_img]:aspect-video [&_img]:rounded-xl [&_img]:border-[5px] [&_img]:border-white"
+            >
+              {
+                [1, 1, 1].map((x) => (
+                  <li>
+                    <a href="#/">
+                      <Image src={thumbnail_1} alt="Slider" />
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+
+            <div class="slider-indicators">
+              <button class="active"></button>
+              <button></button>
+              <button></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <TulisanDiTengah
+      teks_1="City not to Be Missed"
+      teks_2="Discover incredible accomodation options in the heart of day"
+    />
+    <div class="">
+      <slot />
+    </div>
+    <TulisanDiTengah
+      teks_1="City not to Be Missed"
+      teks_2="Discover incredible accomodation options in the heart of day"
+    />
+    <div class="mb-[80px]">
+      <div class="w-[80%] mx-auto grid sm:grid-cols-3 gap-10">
+        {
+          [1, 1, 1].map((x) => (
+            <a href="#/" class="shadow-xl p-12 text-center bg-white">
+              <Image
+                src={sepeda}
+                class="mx-auto block mb-[50px] w-[30%] h-auto"
+                alt="Gambar sepeda"
+              />
+              <div class="font-bold text-lg mb-5">Ini adalah Judul</div>
+              <div class="">
+                Ini adalah deskripsi yang harusnya panjang kan ya? Ini sudah
+                cukup panjang?
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full bg-white">
+      <div class="w-[80%] py-[50px] mx-auto grid sm:grid-cols-4 gap-10">
+        {
+          [1, 1, 1, 1].map((x) => (
+            <div>
+              <p class="font-bold mb-3">Ini adalah Judul</p>
+              {[1, 1, 1].map((x) => (
+                <a href="#/" class="mb-1 block text-gray-600">
+                  Ini adalah item
+                </a>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </body>
+</html>

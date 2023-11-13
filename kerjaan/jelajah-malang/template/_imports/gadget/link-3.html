@@ -1,0 +1,23 @@
+<b:widget id="LinkList4" locked="false" title="Link 3" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="link-3">https://wikipedia.com</b:widget-setting>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-1">Facebook</b:widget-setting>
+    <b:widget-setting name="link-1">https://facebook.com</b:widget-setting>
+    <b:widget-setting name="text-0">Google</b:widget-setting>
+    <b:widget-setting name="link-2">https://twitter.com</b:widget-setting>
+    <b:widget-setting name="text-3">Wikipedia</b:widget-setting>
+    <b:widget-setting name="link-0">https://google.com</b:widget-setting>
+    <b:widget-setting name="text-2">Twitter</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div>
+      <p class="font-bold mb-3"><data:title /></p>
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target" class="mb-1 block text-gray-600">
+          <data:link.name />
+        </a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>
