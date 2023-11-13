@@ -1,0 +1,31 @@
+<b:widget id="LinkList7" locked="false" title="" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-0">Profile</b:widget-setting>
+    <b:widget-setting name="link-0">/</b:widget-setting>
+    <b:widget-setting name="text-1">Tour</b:widget-setting>
+    <b:widget-setting name="link-1">/</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="mb-[80px]">
+      <div class="w-[80%] mx-auto grid sm:grid-cols-3 gap-10">
+        <b:loop values="data:links" var="link">
+          <a
+            expr:href="data:link.target"
+            class="shadow-xl p-12 text-center bg-white"
+            ><img
+              src="https://raw.githubusercontent.com/mzaini30/jelajah-malang-static/master/vector-bicycle-icon.4c920eb1_hHaE8.webp"
+              class="mx-auto block mb-[50px] w-[30%] h-auto"
+              alt="Gambar sepeda"
+              width="490"
+              height="490"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="font-bold text-lg mb-5"><data:link.name /></div>
+          </a>
+        </b:loop>
+      </div>
+    </div>
+  </b:includable>
+</b:widget>
