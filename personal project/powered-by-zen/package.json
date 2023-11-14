@@ -36,5 +36,10 @@
 		"vite": "^4.4.2",
 		"vitest": "^0.32.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@sveltejs/adapter-static": "^2.0.3",
+		"@tailwindcss/typography": "^0.5.10",
+		"daisyui": "^4.0.4"
+	}
 }
