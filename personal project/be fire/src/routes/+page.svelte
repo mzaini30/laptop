@@ -35,7 +35,12 @@
 					id: crypto.randomUUID(),
 					judul: input_baru,
 					slug: slug(input_baru),
-					data: [] // tanggal, banyaknya
+					data: [
+						{
+							tanggal: new Date().getDate(),
+							banyaknya: 0
+						}
+					] // tanggal, banyaknya
 				}
 			];
 			localStorage.listnya = JSON.stringify(listnya);

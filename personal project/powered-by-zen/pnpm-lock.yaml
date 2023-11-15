@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.0.3
     version: 2.0.3(@sveltejs/kit@1.27.5)
   '@sveltejs/enhanced-img':
-    specifier: ^0.1.1
-    version: 0.1.1(svelte@5.0.0-next.2)
+    specifier: ^0.1.2
+    version: 0.1.2(svelte@5.0.0-next.2)
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.5)
@@ -431,8 +431,8 @@ packages:
       '@sveltejs/kit': 1.27.5(svelte@5.0.0-next.2)(vite@4.5.0)
     dev: false
 
-  /@sveltejs/enhanced-img@0.1.1(svelte@5.0.0-next.2):
-    resolution: {integrity: sha512-euWs+GU6F3f7tqtwrDCW5AOFwRMTusHcW4uyD/0AMBJVftj2/N0scoB6hEtTk8rkwIOT/AkawZhmL+GGketVig==}
+  /@sveltejs/enhanced-img@0.1.2(svelte@5.0.0-next.2):
+    resolution: {integrity: sha512-lN7fJVd6l0/9rcS6eHvhO5ztP3SYXVYiLOyHWp+5wrKixLWmK5Z7nUcni/bkQ66b12qzPHHb7Y6pQLjkuzqAAA==}
     dependencies:
       magic-string: 0.30.5
       svelte-parse-markup: 0.1.2(svelte@5.0.0-next.2)

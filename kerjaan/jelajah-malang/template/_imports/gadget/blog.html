@@ -1,7 +1,22 @@
 <b:widget id="Blog1" type="Blog">
   <b:includable id="main">
     <b:if cond='data:blog.pageType != "item"'>
-      <sergey-import src="list-konten"></sergey-import>
+      <div class="list-konten-beranda">
+        <sergey-import src="list-konten"></sergey-import>
+      </div>
+      <div class="list-konten-lengkap">
+        <sergey-import src="list-konten-lengkap"></sergey-import>
+      </div>
+      <script>
+        (function () {
+          let list_konten_beranda = document.querySelector(
+            ".list-konten-beranda"
+          );
+          let list_konten_lengkap = document.querySelector(
+            ".list-konten-lengkap"
+          );
+        })();
+      </script>
       <b:else></b:else>
       <sergey-import src="konten"></sergey-import>
     </b:if>
