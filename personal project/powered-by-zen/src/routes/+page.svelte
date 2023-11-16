@@ -6,7 +6,7 @@
 	<title>{$t('zen-hack')}</title>
 </svelte:head>
 
-<div class="py-[10px] sm:py-[100px] bg-blue-200">
+<div class="py-[10px] sm:py-[100px] bg-blue-200 min-h-screen">
 	<div class="w-[95%] sm:w-[80%] p-[30px] bg-white shadow mx-auto">
 		<div class="prose max-w-full">
 			<h2>{$t('apa-aja-yang-ditawarkan-oleh-zen-0')}</h2>
