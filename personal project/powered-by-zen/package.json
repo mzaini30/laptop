@@ -39,10 +39,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@inlang/paraglide-js": "1.0.0-prerelease.9",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/enhanced-img": "^0.1.2",
 		"@tailwindcss/typography": "^0.5.10",
 		"daisyui": "^4.0.4",
-		"@inlang/paraglide-js": "1.0.0-prerelease.9"
+		"svelte-i18n": "^4.0.0"
 	}
 }

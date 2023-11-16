@@ -1,6 +1,6 @@
 <script>
 	import Header from '../bagian/header.svelte';
-	import * as m from '../paraglide/messages';
+	import { _ as t } from 'svelte-i18n';
 </script>
 
 <svelte:head>
@@ -8,19 +8,21 @@
 </svelte:head>
 
 <div class="prose max-w-full">
-	<h2>Apa aja yang ditawarkan oleh Zen?</h2>
+	<h2>{$t('apa-aja-yang-ditawarkan-oleh-zen-0')}</h2>
 	<ol>
-		<li>Perbaikan website</li>
-		<li>Perbaikan template Blogspot</li>
-		<li>Perbaikan kode HTML, CSS, dan JavaScript</li>
-		<li>Perbaikan WordPress</li>
-		<li>Pembuatan website</li>
-		<li>Pembuatan Chrome extension</li>
-		<li>Pembuatan aplikasi Android</li>
+		<li>{$t('perbaikan-website')}</li>
+		<li>{$t('perbaikan-template-blogspot')}</li>
+		<li>{$t('perbaikan-kode-html-css-dan-javascript')}</li>
+		<li>{$t('perbaikan-wordpress')}</li>
+		<li>{$t('pembuatan-website')}</li>
+		<li>{$t('pembuatan-chrome-extension')}</li>
+		<li>{$t('pembuatan-aplikasi-android')}</li>
 	</ol>
-	<h2>Berapa biayanya?</h2>
+	<h2>{$t('berapa-biayanya')}</h2>
 	<p>
 		Biayanya adalah 150 ribu per hari. Bisa dicicil kok. Nanti kesepakatan biaya, di awal. Sehingga,
 		bisa dipertimbangkan terlebih dahulu.
 	</p>
+	<h2>Bagaimana cara memesan jasa perbaikan website?</h2>
+	<p>Silahkan kontak WhatsApp di nomor 0815-4514-3654</p>
 </div>
