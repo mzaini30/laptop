@@ -2631,7 +2631,52 @@
 
       </div>
       <div class="list-konten-lengkap">
-        <p>Kucing</p>
+        <style>
+  /* <![CDATA[ */
+  a.kartu {
+    background: white;
+    display: flex;
+    border: 1px solid #c1c1c1;
+    box-shadow: 10px 10px #c1c1c1;
+  }
+
+  .wadah-kartu {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 32px;
+    padding: 50px;
+  }
+
+  h2.kartu-judul {
+    font-weight: bold;
+  }
+
+  .kartu-isi {
+    padding: 5px 20px;
+  }
+
+  p.kartu-ringkasan {
+    font-size: 13px;
+  }
+  /* ]]> */
+</style>
+
+<div class="wadah-kartu">
+  <b:loop values="data:posts" var="post">
+    <a expr:href="data:post.url" class="kartu">
+      <img
+        expr:src="data:post.thumbnailUrl"
+        expr:alt="data:post.title"
+        class="kartu-gambar"
+      />
+      <div class="kartu-isi">
+        <h2 class="kartu-judul"><data:post.title /></h2>
+        <p class="kartu-ringkasan"><data:post.snippet /></p>
+      </div>
+    </a>
+  </b:loop>
+  <b:include name="nextprev"></b:include>
+</div>
 
       </div>
       <script>
@@ -2648,7 +2693,10 @@
           list_konten_lengkap.style.display = "none";
 
           let parameter = new URLSearchParams(location.search);
-          if (parameter && parameter.has("konten-lengkap")) {
+          if (
+            parameter &&
+            (parameter.has("konten-lengkap") || parameter.has("updated-max"))
+          ) {
             list_konten_beranda.style.display = "none";
             list_konten_lengkap.style.display = "block";
           }
@@ -2986,5 +3034,29 @@
   // ]]>
 </script>
 
+    <style>
+      /* <![CDATA[ */
+      img.credit-img {
+        width: 120px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+      }
+
+      .credit {
+        background: white;
+        padding-bottom: 20px;
+      }
+      /* ]]> */
+    </style>
+    <div class="credit">
+      <a href="https://zen-hack.surge.sh/" target="_blank" class="credit-link">
+        <img
+          class="credit-img"
+          src="https://github.com/mzaini30/harga-emas/assets/7939342/a1523ca5-cde9-485f-82d4-cd459789ce23"
+          alt=""
+        />
+      </a>
+    </div>
   </body>
 </html>

@@ -1,1 +1,46 @@
-<p>Kucing</p>
+<style>
+  /* <![CDATA[ */
+  a.kartu {
+    background: white;
+    display: flex;
+    border: 1px solid #c1c1c1;
+    box-shadow: 10px 10px #c1c1c1;
+  }
+
+  .wadah-kartu {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 32px;
+    padding: 50px;
+  }
+
+  h2.kartu-judul {
+    font-weight: bold;
+  }
+
+  .kartu-isi {
+    padding: 5px 20px;
+  }
+
+  p.kartu-ringkasan {
+    font-size: 13px;
+  }
+  /* ]]> */
+</style>
+
+<div class="wadah-kartu">
+  <b:loop values="data:posts" var="post">
+    <a expr:href="data:post.url" class="kartu">
+      <img
+        expr:src="data:post.thumbnailUrl"
+        expr:alt="data:post.title"
+        class="kartu-gambar"
+      />
+      <div class="kartu-isi">
+        <h2 class="kartu-judul"><data:post.title /></h2>
+        <p class="kartu-ringkasan"><data:post.snippet /></p>
+      </div>
+    </a>
+  </b:loop>
+  <b:include name="nextprev"></b:include>
+</div>

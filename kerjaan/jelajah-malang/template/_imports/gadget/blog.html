@@ -21,7 +21,10 @@
           list_konten_lengkap.style.display = "none";
 
           let parameter = new URLSearchParams(location.search);
-          if (parameter && parameter.has("konten-lengkap")) {
+          if (
+            parameter &&
+            (parameter.has("konten-lengkap") || parameter.has("updated-max"))
+          ) {
             list_konten_beranda.style.display = "none";
             list_konten_lengkap.style.display = "block";
           }
