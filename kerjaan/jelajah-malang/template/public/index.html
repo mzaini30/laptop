@@ -2507,7 +2507,8 @@
         <b:widget id="Blog1" type="Blog">
   <b:includable id="main">
     <b:if cond='data:blog.pageType != "item"'>
-      <b:loop values="data:posts" var="post">
+      <div class="list-konten-beranda">
+        <b:loop values="data:posts" var="post">
   <template
     class="list-postingan"
     expr:data-title="data:post.title"
@@ -2634,6 +2635,32 @@
   // ]]>
 </script>
 
+      </div>
+      <div class="list-konten-lengkap">
+        <p>Kucing</p>
+
+      </div>
+      <script>
+        // <![CDATA[
+
+        (function () {
+          let list_konten_beranda = document.querySelector(
+            ".list-konten-beranda"
+          );
+          let list_konten_lengkap = document.querySelector(
+            ".list-konten-lengkap"
+          );
+
+          list_konten_lengkap.style.display = "none";
+
+          let parameter = new URLSearchParams(location.search);
+          if (parameter && parameter.has("konten_lengkap")) {
+            list_konten_beranda.style.display = "none";
+            list_konten_lengkap.style.display = "block";
+          }
+        })();
+        // ]]>
+      </script>
       <b:else></b:else>
       <b:loop values="data:posts" var="post">
   <div class="max-w-[80%] sm:max-w-[60%] mx-auto">

@@ -8,6 +8,8 @@
         <sergey-import src="list-konten-lengkap"></sergey-import>
       </div>
       <script>
+        // <![CDATA[
+
         (function () {
           let list_konten_beranda = document.querySelector(
             ".list-konten-beranda"
@@ -15,7 +17,16 @@
           let list_konten_lengkap = document.querySelector(
             ".list-konten-lengkap"
           );
+
+          list_konten_lengkap.style.display = "none";
+
+          let parameter = new URLSearchParams(location.search);
+          if (parameter && parameter.has("konten_lengkap")) {
+            list_konten_beranda.style.display = "none";
+            list_konten_lengkap.style.display = "block";
+          }
         })();
+        // ]]>
       </script>
       <b:else></b:else>
       <sergey-import src="konten"></sergey-import>
