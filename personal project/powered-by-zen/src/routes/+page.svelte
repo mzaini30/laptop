@@ -1,5 +1,4 @@
 <script>
-	import Header from '../bagian/header.svelte';
 	import { _ as t } from 'svelte-i18n';
 </script>
 
@@ -20,9 +19,10 @@
 	</ol>
 	<h2>{$t('berapa-biayanya')}</h2>
 	<p>
-		Biayanya adalah 150 ribu per hari. Bisa dicicil kok. Nanti kesepakatan biaya, di awal. Sehingga,
-		bisa dipertimbangkan terlebih dahulu.
+		{$t(
+			'biayanya-adalah-150-ribu-per-hari-bisa-dicicil-kok-nanti-kesepakatan-biaya-di-awal-sehingga-bisa-dipertimbangkan-terlebih-dahulu'
+		)}
 	</p>
-	<h2>Bagaimana cara memesan jasa perbaikan website?</h2>
-	<p>Silahkan kontak WhatsApp di nomor 0815-4514-3654</p>
+	<h2>{$t('bagaimana-cara-memesan-jasa-perbaikan-website')}</h2>
+	<p>{$t('silahkan-kontak-whatsapp-di-nomor-0815-4514-3654')}</p>
 </div>
