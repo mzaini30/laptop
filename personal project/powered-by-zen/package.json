@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"compile": "paraglide-js compile --project ./project.inlang.json",
 		"build": "paraglide-js compile --project ./project.inlang.json && vite build && surge build",
 		"preview": "vite preview",
 		"test": "npm run test:integration && npm run test:unit",
