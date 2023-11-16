@@ -1,0 +1,16 @@
+<b:widget id="LinkList8" locked="false" title="" type="LinkList">
+  <b:widget-settings>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-0">Semua Postingan</b:widget-setting>
+    <b:widget-setting name="link-0">/?konten-lengkap=true</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id="main">
+    <div class="text-center p-[50px] sm:p-[80px]">
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target"
+          ><div class="uppercase font-bold"><data:link.name /></div>
+        </a>
+      </b:loop>
+    </div>
+  </b:includable>
+</b:widget>

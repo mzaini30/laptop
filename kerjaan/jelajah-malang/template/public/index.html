@@ -2477,26 +2477,20 @@
     </div>
     <div class="text-center p-[50px] sm:p-[80px]">
       <b:section id="link">
-        <b:widget
-  id="PopularPosts1"
-  locked="false"
-  title="Postingan Populer"
-  type="PopularPosts"
->
+        <b:widget id="LinkList8" locked="false" title="" type="LinkList">
   <b:widget-settings>
-    <b:widget-setting name="numItemsToShow">1</b:widget-setting>
-    <b:widget-setting name="showThumbnails">false</b:widget-setting>
-    <b:widget-setting name="showSnippets">true</b:widget-setting>
-    <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
+    <b:widget-setting name="sorting">NONE</b:widget-setting>
+    <b:widget-setting name="text-0">Semua Postingan</b:widget-setting>
+    <b:widget-setting name="link-0">/?konten-lengkap=true</b:widget-setting>
   </b:widget-settings>
   <b:includable id="main">
-    <b:loop values="data:posts" var="post">
-      <a expr:href="data:post.href"
-        ><div class="uppercase font-bold"><data:post.title /></div>
-        <div class="">
-          <data:post.snippet /></div
-      ></a>
-    </b:loop>
+    <div class="text-center p-[50px] sm:p-[80px]">
+      <b:loop values="data:links" var="link">
+        <a expr:href="data:link.target"
+          ><div class="uppercase font-bold"><data:link.name /></div>
+        </a>
+      </b:loop>
+    </div>
   </b:includable>
 </b:widget>
 
@@ -2643,7 +2637,7 @@
       <script>
         // <![CDATA[
 
-        (function () {
+        function olah_konten() {
           let list_konten_beranda = document.querySelector(
             ".list-konten-beranda"
           );
@@ -2654,11 +2648,13 @@
           list_konten_lengkap.style.display = "none";
 
           let parameter = new URLSearchParams(location.search);
-          if (parameter && parameter.has("konten_lengkap")) {
+          if (parameter && parameter.has("konten-lengkap")) {
             list_konten_beranda.style.display = "none";
             list_konten_lengkap.style.display = "block";
           }
-        })();
+        }
+        olah_konten();
+        document.addEventListener("astro:after-swap", olah_konten);
         // ]]>
       </script>
       <b:else></b:else>
