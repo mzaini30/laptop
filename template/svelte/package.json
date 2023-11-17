@@ -13,7 +13,7 @@
     "@sveltejs/vite-plugin-svelte": "^2.4.1",
     "@unocss/transformer-directives": "^0.55.7",
     "@unocss/transformer-variant-group": "^0.53.3",
-    "svelte": "^4.0.0",
+    "svelte": "5.0.0-next.4",
     "vite": "^4.5.0"
   },
   "dependencies": {
