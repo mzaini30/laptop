@@ -23,6 +23,9 @@ dependencies:
   svelte-i18n:
     specifier: ^4.0.0
     version: 4.0.0(svelte@5.0.0-next.2)
+  tiddlywiki:
+    specifier: ^5.3.1
+    version: 5.3.1
 
 devDependencies:
   '@playwright/test':
@@ -3119,6 +3122,12 @@ packages:
   /throttle-debounce@5.0.0:
     resolution: {integrity: sha512-2iQTSgkkc1Zyk0MeVrt/3BvuOXYPl/R8Z0U2xxo9rjwNciaHDG3R+Lm6dh4EeUci49DanvBnuqI6jshoQQRGEg==}
     engines: {node: '>=12.22'}
+    dev: false
+
+  /tiddlywiki@5.3.1:
+    resolution: {integrity: sha512-17uoTt8w3wvqaF1fqulHeeR86984N0eC8fgd0Ql1LIKgrHRu1+M3fBW8V/ikofU2s74xr6S1efREHaA2zyhe1w==}
+    engines: {node: '>=0.8.2'}
+    hasBin: true
     dev: false
 
   /timers-ext@0.1.7:
