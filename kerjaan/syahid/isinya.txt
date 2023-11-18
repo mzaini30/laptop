@@ -3,7 +3,7 @@ Isinya
 - Artikel 
 - Suara
 - Video
-- Buku PDF
+- Buku PDF: https://hekmaa.net/wp-admin/edit.php?s&post_status=all&post_type=post&action=-1&m=0&cat=46&post_format&filter_action=Filter&paged=1&action2=-1
 - Kata Mutiara
 - Siaran langsung (kalau bisa) 
 - Pengumuman
