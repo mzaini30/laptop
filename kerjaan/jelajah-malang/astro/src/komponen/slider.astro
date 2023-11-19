@@ -1,0 +1,29 @@
+<script is:inline src="/js/jquery-3.7.1.min.js"></script>
+<script src="/slick/slick.min.js" is:inline></script>
+<link rel="stylesheet" href="/slick/slick.css" />
+<link rel="stylesheet" href="/slick/slick-theme.css" />
+
+<div class="slider-for">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+</div>
+<div class="slider-nav"></div>
+
+<script is:inline>
+$(".slider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".slider-nav",
+});
+$(".slider-nav").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: ".slider-for",
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+});
+</script>

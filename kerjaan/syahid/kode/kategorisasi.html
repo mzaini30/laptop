@@ -1,0 +1,54 @@
+<!-- ubah yang ini -->
+<div class="kotak menampilkan_kategori_suara">
+    <div class="kotak-judul">
+        <button class="tombolnya" v-for="x in list_kategori" :class="x.id == id_aktif ? 'active' : null"
+            @click="id_aktif = x.id">
+            {{x.judul}}
+        </button>
+    </div>
+    <div class="penampang-isi">
+        <div v-for="x in list_kategori">
+            <ol class="penampang-ol" v-if="x.id == id_aktif">
+                <li class="penampang-li" v-for="y in x.link_terkumpul">
+                    <a :href="y.linknya">{{y.teksnya}}</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<script type="module">
+    import { createApp } from 'https://unpkg.com/petite-vue?module';
+
+    (function () {
+        let list_kategori = [];
+        // ubah yang ini
+        let kategori_artikel = document.querySelectorAll('.kategori.kategori_suara');
+        kategori_artikel.forEach(x => {
+            let judul = x.querySelector('h2').innerText;
+            let kumpulan_link_artikel = x.querySelectorAll('li a');
+            let link_terkumpul = [];
+            kumpulan_link_artikel.forEach(y => {
+                let teksnya = y.innerText;
+                let linknya = y.getAttribute('href');
+
+                link_terkumpul.push({
+                    teksnya,
+                    linknya
+                });
+            });
+
+            list_kategori.push({
+                id: crypto.randomUUID(),
+                judul,
+                link_terkumpul
+            });
+        });
+        let id_aktif = list_kategori[0].id;
+
+        createApp({
+            list_kategori,
+            id_aktif
+            // ubah yang ini
+        }).mount('.menampilkan_kategori_suara');
+    })();
+</script>
