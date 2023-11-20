@@ -2,6 +2,8 @@
 import MenuAtas from "../komponen/menu-atas.astro";
 import Judul from "../komponen/judul.astro";
 import Slider from "../komponen/slider.astro";
+import Postingan from "../komponen/postingan.astro";
+import Sidebar from "../komponen/sidebar.astro";
 ---
 
 <html lang="en">
@@ -11,10 +13,15 @@ import Slider from "../komponen/slider.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Jelajah Malang</title>
+    <script src="/js/htmx.min.js" is:inline></script>
   </head>
   <body>
     <MenuAtas />
     <Judul />
     <Slider />
+    <div class="">
+      <Postingan />
+      <Sidebar />
+    </div>
   </body>
 </html>

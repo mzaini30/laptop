@@ -2,7 +2,7 @@
 let label = ["jalan-jalan", "buku", "travel"];
 ---
 
-<div class="bg-orange-300 top-0 sticky">
+<div class="bg-orange-300 top-0 sticky z-50">
     <div class="block px-5 py-3 sm:hidden">
         <select
             onchange="
@@ -17,13 +17,13 @@ let label = ["jalan-jalan", "buku", "travel"];
             }
         </select>
     </div>
-    <div class="hidden sm:block">
+    <div class="hidden sm:block" hx-boost="true">
         {
             label.map((x) => {
                 return (
                     <a
                         class="px-5 py-3 hover:bg-orange-500 hover:text-white inline-block"
-                        href={"#/" + x}
+                        href="/"
                     >
                         {x}
                     </a>
