@@ -4,6 +4,7 @@ import Judul from "../komponen/judul.astro";
 import Slider from "../komponen/slider.astro";
 import Postingan from "../komponen/postingan.astro";
 import Sidebar from "../komponen/sidebar.astro";
+import GarisGaris from "../komponen/garis-garis.astro";
 ---
 
 <html lang="en">
@@ -19,9 +20,16 @@ import Sidebar from "../komponen/sidebar.astro";
     <MenuAtas />
     <Judul />
     <Slider />
-    <div class="">
-      <Postingan />
-      <Sidebar />
+    <div class="grid grid-cols-4 gap-5">
+      <div class="col-span-3">
+        <Postingan />
+      </div>
+      <div class="col-span-1">
+        <Sidebar />
+      </div>
+    </div>
+    <div class="py-7">
+      <GarisGaris />
     </div>
   </body>
 </html>
