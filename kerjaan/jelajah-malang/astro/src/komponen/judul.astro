@@ -3,8 +3,8 @@ import logo from "../gambar/Logo Jelajah Malang.png";
 import { Image } from "astro:assets";
 ---
 
-<div class="justify-center sm:flex">
-    <div class="sm:flex items-center gap-5" hx-boost="true">
+<div class="justify-center sm:flex py-10 sm:py-0">
+    <div class="sm:flex items-center sm:gap-5" hx-boost="true">
         <a href="/">
             <Image
                 src={logo}
@@ -13,11 +13,13 @@ import { Image } from "astro:assets";
                 width={300}
             />
         </a>
-        <div>
-            <h1 class="text-[20px] sm:text-[80px] judul caveat">
+        <div class="text-center sm:text-left">
+            <h1 class="text-[40px] sm:text-[80px] judul caveat">
                 <a href="/">Jelajah Malang</a>
             </h1>
-            <p>Seru-seruan jelajahi Malang dengan berjalan kaki</p>
+            <p class="text-sm sm:text-base">
+                Seru-seruan jelajahi Malang dengan berjalan kaki
+            </p>
         </div>
     </div>
 </div>

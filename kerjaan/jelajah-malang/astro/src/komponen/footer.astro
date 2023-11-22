@@ -8,18 +8,22 @@ import YouTube from "../icon/youtube.astro";
 import Logo from "../gambar/logo.png";
 ---
 
-<h2 class="caveat text-center text-[100px] mt-5">Our Teams</h2>
-<div class="mx-auto w-fit p-10">
-    {
-        [1, 2, 3, 4, 5].map((x) => (
-            <Image
-                src={naruto}
-                class="w-[100px] mr-5 last:mr-0 object-cover aspect-square rounded-[50%]  ring-4 ring-orange-500 inline-block"
-                alt=""
-            />
-        ))
-    }
-</div>
+<h2 class="caveat text-center text-[70px] sm:text-[100px] mt-5">Our Teams</h2>
+<center>
+    <div class="mx-auto w-fit p-10 pt-0">
+        {
+            [1, 2, 3, 4, 5].map((x) => (
+                <div class="p-2 inline-block">
+                    <Image
+                        src={naruto}
+                        class="sm:w-[100px] w-[70px] object-cover aspect-square rounded-[50%]  ring-4 ring-orange-500 inline-block"
+                        alt=""
+                    />
+                </div>
+            ))
+        }
+    </div>
+</center>
 <h2 class="caveat text-center text-[70px]">Follow Us</h2>
 <div
     hx-boost="true"
