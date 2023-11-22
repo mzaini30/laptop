@@ -16,6 +16,18 @@ import Footer from "../komponen/footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Jelajah Malang</title>
     <script src="/js/htmx.min.js" is:inline></script>
+    <style is:global>
+      .caveat {
+        font-family: "Caveat", cursive;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap&text=JelajahMalangOurTeamsFollowUs"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <MenuAtas />
@@ -29,8 +41,9 @@ import Footer from "../komponen/footer.astro";
         <Sidebar />
       </div>
     </div>
-    <div class="py-7">
+    <div class="pt-7 -mb-[120px]">
       <GarisGaris />
     </div>
+    <Footer />
   </body>
 </html>

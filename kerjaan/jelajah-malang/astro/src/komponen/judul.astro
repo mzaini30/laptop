@@ -3,26 +3,20 @@ import logo from "../gambar/Logo Jelajah Malang.png";
 import { Image } from "astro:assets";
 ---
 
-<style>
-    .judul {
-        font-family: "Caveat", cursive;
-    }
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    href="https://fonts.googleapis.com/css2?family=Caveat&display=swap&text=JelajahMalang"
-    rel="stylesheet"
-/>
-
-<div class="justify-center flex">
-    <div class="flex items-center gap-5" hx-boost="true">
+<div class="justify-center sm:flex">
+    <div class="sm:flex items-center gap-5" hx-boost="true">
         <a href="/">
-            <Image src={logo} alt={""} width={300} />
+            <Image
+                src={logo}
+                alt={""}
+                class="w-[100px] sm:w-[300px] mx-auto"
+                width={300}
+            />
         </a>
         <div>
-            <h1 class="text-[80px] judul"><a href="/">Jelajah Malang</a></h1>
+            <h1 class="text-[20px] sm:text-[80px] judul caveat">
+                <a href="/">Jelajah Malang</a>
+            </h1>
             <p>Seru-seruan jelajahi Malang dengan berjalan kaki</p>
         </div>
     </div>
