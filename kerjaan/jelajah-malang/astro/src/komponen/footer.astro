@@ -1,0 +1,41 @@
+---
+import naruto from "../gambar/naruto.jpg";
+import { Image } from "astro:assets";
+import Facebook from "../icon/facebook.astro";
+import X from "../icon/x.astro";
+import Instagram from "../icon/instagram.astro";
+import YouTube from "../icon/youtube.astro";
+import Logo from "../gambar/logo.png";
+---
+
+<h2 class="caveat text-center text-[70px] sm:text-[100px] mt-5">Our Teams</h2>
+<center>
+    <div class="mx-auto w-fit p-10 pt-0">
+        {
+            [1, 2, 3, 4, 5].map((x) => (
+                <div class="p-2 inline-block">
+                    <Image
+                        src={naruto}
+                        class="sm:w-[100px] w-[70px] object-cover aspect-square rounded-[50%]  ring-4 ring-orange-500 inline-block"
+                        alt=""
+                    />
+                </div>
+            ))
+        }
+    </div>
+</center>
+<h2 class="caveat text-center text-[70px]">Follow Us</h2>
+<div
+    hx-boost="true"
+    class="[&_a]:inline-block [&_a]:mr-3 w-fit mx-auto last:[&_a]:mr-0 mb-[100px]"
+>
+    <a href="/"><Facebook /></a>
+    <a href="/"><X /></a>
+    <a href="/"><Instagram /></a>
+    <a href="/"><YouTube /></a>
+</div>
+<div class="mx-auto w-fit mb-3">
+    <a href="https://selalu-zen.my.id/" target="_blank">
+        <Image src={Logo} alt="" width={150} />
+    </a>
+</div>
