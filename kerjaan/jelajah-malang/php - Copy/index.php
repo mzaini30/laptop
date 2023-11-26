@@ -8,12 +8,21 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="Menjelajahi Malang">
     <title>Jelajah Malang</title>
-    <script src="/js/htmx.min.js"></script>
-    <link rel="stylesheet" href="./css/output.css">
+    <script src="//unpkg.com/htmx.org"></script>
     <style>
+        /* <![CDATA[ */
+        <?php include "./css/output.css.php" ?>
+        /* ]]> */
+    </style>
+    <style>
+        /* <![CDATA[ */
+
+
         .caveat {
             font-family: "Caveat", cursive;
         }
+
+        /* ]]> */
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

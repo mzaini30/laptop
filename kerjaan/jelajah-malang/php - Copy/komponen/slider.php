@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 <style>
+    /* <![CDATA[ */
+
+
     .slick-arrow {
         display: none !important;
     }
@@ -21,6 +24,8 @@
     .slick-slide {
         height: auto;
     }
+
+    /* ]]> */
 </style>
 <?php foreach ([1, 2] as $x): ?>
     <div class="<?= $x == 1 ? 'slider-for' : 'slider-nav' ?>">
@@ -35,6 +40,7 @@
 <script src="/js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
+    // <![CDATA[
     htmx.onLoad(() => {
         $(".slider-for").slick({
             slidesToShow: 1,
@@ -51,5 +57,6 @@
             centerMode: true,
             focusOnSelect: true,
         });
-    }) 
+    })
+    // ]]>
 </script>

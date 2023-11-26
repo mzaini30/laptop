@@ -1,7 +1,12 @@
 <style>
+  /* <![CDATA[ */
+
+
   .gadget {
     box-shadow: 10px 10px 0 0 rgb(249 115 22);
   }
+
+  /* ]]> */
 </style>
 
 

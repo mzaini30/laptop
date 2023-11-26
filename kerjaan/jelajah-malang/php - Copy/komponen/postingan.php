@@ -1,7 +1,12 @@
 <style>
+  /* <![CDATA[ */
+
+
   .kotak-list-konten {
     box-shadow: 10px 10px 0 0 rgb(249 115 22);
   }
+
+  /* ]]> */
 </style>
 
 <div hx-boost="true" class="gap-5 grid grid-cols-1">
