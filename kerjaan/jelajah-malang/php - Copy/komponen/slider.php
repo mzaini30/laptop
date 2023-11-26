@@ -27,11 +27,12 @@
 
     /* ]]> */
 </style>
+<?php include "../link-gambar.php" ?>
 <?php foreach ([1, 2] as $x): ?>
     <div class="<?= $x == 1 ? 'slider-for' : 'slider-nav' ?>">
         <?php foreach ([1, 2, 3, 4, 5, 6, 7] as $y): ?>
             <div>
-                <img src="/gambar-lainnya/<?= $y ?>.jpg" alt="" />
+                <img src="<?= $gambar_2 ?>.jpg" alt="" />
             </div>
         <?php endforeach ?>
     </div>
