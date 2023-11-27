@@ -29,13 +29,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&amp;display=swap&amp;text=JelajahMalangOurTeamsFollowUs"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&amp;display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <b:section id="dummy"></b:section>
-    <div class="prose max-w-full"></div>
+    <div class="prose max-w-full hidden"></div>
     <?php include "./komponen/menu-atas.php" ?>
     <?php include "./komponen/judul.php" ?>
     <?php include "./komponen/slider.php" ?>

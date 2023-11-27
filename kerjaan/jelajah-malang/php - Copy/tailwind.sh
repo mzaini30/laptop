@@ -1,1 +1,1 @@
-tailwindcss -i ./css/input.css -o ./css/output.css --watch -p
+tailwindcss -i ./css/input.css -o ./css/output.css -m && cp css/output.css css/output.css.php
