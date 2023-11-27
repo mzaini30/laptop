@@ -11,6 +11,10 @@
 
 <?php include dirname(__FILE__) . "/" . "../link-gambar.php" ?>
 
+<b:section id="konten">
+  <b:widget type="Blog" id="Blog1"></b:widget>
+</b:section>
+
 <div hx-boost="true" class="gap-5 grid grid-cols-1">
   <?php foreach ([1, 2, 3, 4, 5] as $x): ?>
     <a href="/" class="kotak-list-konten flex  border overflow-hidden rounded-xl border-orange-500">
