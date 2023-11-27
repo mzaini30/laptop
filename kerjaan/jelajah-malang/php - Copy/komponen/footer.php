@@ -12,8 +12,45 @@
     </div>
 </center>
 <h2 class="caveat text-center text-[70px]">Follow Us</h2>
-<div hx-boost="true" class="[&_a]:inline-block [&_a]:mr-3 w-fit mx-auto last:[&_a]:mr-0 mb-[100px]">
-    <a href="/">
+<div hx-boost="true" class="[&amp;_a]:inline-block [&amp;_a]:mr-3 w-fit mx-auto last:[&amp;_a]:mr-0 mb-[100px]">
+    <b:section id="media_sosial">
+        <?php $data_media_sosial = [
+            [
+                "urutan" => "1",
+                "title" => "Facebook",
+                "link" => "https://facebook.com",
+                "include" => "facebook"
+            ],
+            [
+                "urutan" => "2",
+                "title" => "X",
+                "link" => "https://x.com",
+                "include" => "x"
+            ]
+        ] ?>
+        <?php foreach ($data_media_sosial as $x): ?>
+            <?php $urutan = $x["urutan"];
+            $title = $x["title"];
+            $link = $x["link"];
+            $include = $x["include"] ?>
+            <b:widget id='Text<?= $urutan ?>' locked='false' title='<?= $title ?>' type='Text'>
+                <b:widget-settings>
+                    <b:widget-setting name='content'>
+                        <?= $link ?>
+                    </b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                    <a expr:href="data:content">
+                        <?php include "./icon/$include.php" ?>
+                    </a>
+
+                    <b:include name='quickedit' />
+                </b:includable>
+            </b:widget>
+        <?php endforeach ?>
+
+    </b:section>
+    <!-- <a href="/">
         <?php include "./icon/facebook.php" ?>
     </a>
     <a href="/">
@@ -24,10 +61,11 @@
     </a>
     <a href="/">
         <?php include "./icon/youtube.php" ?>
-    </a>
+    </a> -->
 </div>
 <div class="mx-auto w-fit mb-3">
     <a href="https://selalu-zen.my.id/" target="_blank">
-        <img src="../gambar/logo.png" alt="" width="150" />
+        <img src="https://github.com/mzaini30/svelte/assets/7939342/17e41dc5-f0ad-4435-9ad2-5ff9b9bea44a" alt=""
+            width="150" />
     </a>
 </div>

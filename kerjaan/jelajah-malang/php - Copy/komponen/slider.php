@@ -27,18 +27,18 @@
 
     /* ]]> */
 </style>
-<?php include "../link-gambar.php" ?>
+<?php include dirname(__FILE__) . "/" . "../link-gambar.php" ?>
 <?php foreach ([1, 2] as $x): ?>
     <div class="<?= $x == 1 ? 'slider-for' : 'slider-nav' ?>">
         <?php foreach ([1, 2, 3, 4, 5, 6, 7] as $y): ?>
             <div>
-                <img src="<?= $gambar_2 ?>.jpg" alt="" />
+                <img src="<?= $gambar_2 ?>" alt="" />
             </div>
         <?php endforeach ?>
     </div>
 <?php endforeach ?>
 
-<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="//unpkg.com/jquery"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
     // <![CDATA[

@@ -1,12 +1,14 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
+    <b:skin></b:skin>
+
     <meta charset="utf-8" />
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Menjelajahi Malang">
+    <meta name="description" content="Menjelajahi Malang" />
     <title>Jelajah Malang</title>
     <script src="//unpkg.com/htmx.org"></script>
     <style>
@@ -26,12 +28,14 @@
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap&text=JelajahMalangOurTeamsFollowUs"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&amp;display=swap&amp;text=JelajahMalangOurTeamsFollowUs"
         rel="stylesheet" />
 </head>
 
 <body>
+    <b:section id="dummy"></b:section>
+    <div class="prose max-w-full"></div>
     <?php include "./komponen/menu-atas.php" ?>
     <?php include "./komponen/judul.php" ?>
     <?php include "./komponen/slider.php" ?>

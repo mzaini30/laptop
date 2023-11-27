@@ -9,7 +9,7 @@
   /* ]]> */
 </style>
 
-<?php include "../link-gambar.php" ?>
+<?php include dirname(__FILE__) . "/" . "../link-gambar.php" ?>
 
 <div hx-boost="true" class="gap-5 grid grid-cols-1">
   <?php foreach ([1, 2, 3, 4, 5] as $x): ?>
