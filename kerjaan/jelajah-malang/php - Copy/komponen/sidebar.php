@@ -9,7 +9,7 @@
   /* ]]> */
 </style>
 
-
+<b:section id="sidebarnya"></b:section>
 <div class="gadget rounded-xl border border-orange-500 overflow-hidden">
   <div class="judul p-2 bg-orange-500 text-white">Ini adalah judul</div>
   <div class="isi p-2">Ini adalah isinya</div>
