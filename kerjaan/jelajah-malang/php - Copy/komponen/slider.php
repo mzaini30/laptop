@@ -51,16 +51,30 @@
         <b:includable id='main'>
 
             <?php include dirname(__FILE__) . "/" . "../link-gambar.php" ?>
-            <?php foreach ([1, 2] as $x): ?>
-                <div class="<?= $x == 1 ? 'slider-for' : 'slider-nav' ?>">
-                    <b:loop values='data:links' var='link'>
-                        <div>
-                            <img expr:src="data:link.target" expr:alt="data:link.name" />
-                        </div>
-                    </b:loop>
-                </div>
-            <?php endforeach ?>
-
+            <div class="bagian-slider">
+                <?php foreach ([1, 2] as $x): ?>
+                    <div class="<?= $x == 1 ? 'slider-for' : 'slider-nav' ?>">
+                        <b:loop values='data:links' var='link'>
+                            <div>
+                                <img expr:src="data:link.target" expr:alt="data:link.name" />
+                            </div>
+                        </b:loop>
+                    </div>
+                <?php endforeach ?>
+            </div>
+            <script>
+                // <![CDATA[
+                function tampilan_bagian_slider() {
+                    let bagian_slider = document.querySelector('.bagian-slider');
+                    if (location.pathname == "/") {
+                        bagian_slider.style.display = "block";
+                    } else {
+                        bagian_slider.style.display = 'none';
+                    }
+                }
+                htmx.onLoad(() => tampilan_bagian_slider());
+                // ]]>
+            </script>
 
             <b:include name='quickedit' />
         </b:includable>

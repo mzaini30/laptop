@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="id">
 
 <head>
     <b:skin></b:skin>
@@ -9,11 +9,15 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="Menjelajahi Malang" />
-    <title>Jelajah Malang</title>
+    <title>
+        <data:view.title.escaped />
+    </title>
+    <b:include data='blog' name='all-head-content' />
     <script src="//unpkg.com/htmx.org"></script>
     <style>
         /* <![CDATA[ */
-        <?php include "./css/output.css.php" ?>
+        <?= file_get_contents("./reset.css") ?>
+        <?= file_get_contents("./uno.css") ?>
         /* ]]> */
     </style>
     <style>

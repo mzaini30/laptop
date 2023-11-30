@@ -55,11 +55,21 @@
             </a>
           </b:loop>
         </div>
+        <b:include name="nextprev"></b:include>
 
 
 
         <b:else />
-        <p>Ini bagian konten</p>
+        <b:loop values='data:posts' var='post'>
+          <div class="prose p-5 mb-3 max-w-full kotak-list-konten border overflow-hidden rounded-xl border-orange-500">
+            <h1>
+              <data:post.title />
+            </h1>
+            <data:post.body />
+          </div>
+          <!-- bagian komentar -->
+          <b:include data='post' name='threaded_comments' />
+        </b:loop>
       </b:if>
     </b:includable>
   </b:widget>

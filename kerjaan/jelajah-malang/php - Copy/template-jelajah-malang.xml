@@ -1,0 +1,970 @@
+
+<!DOCTYPE HTML>
+<html lang="id">
+
+<head>
+    <b:skin></b:skin>
+
+    <meta charset="utf-8" />
+    <link rel="canonical" href="/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Menjelajahi Malang" />
+    <title>
+        <data:view.title.escaped />
+    </title>
+    <b:include data='blog' name='all-head-content' />
+    <script src="//unpkg.com/htmx.org"></script>
+    <style>
+        /* <![CDATA[ */
+        /*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+2. [UnoCSS]: allow to override the default border color with css var `--un-default-border-color`
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: var(--un-default-border-color, #e5e7eb); /* 2 */
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+        /* layer: preflights */
+*,::before,::after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgb(0 0 0 / 0);--un-ring-shadow:0 0 rgb(0 0 0 / 0);--un-shadow-inset: ;--un-shadow:0 0 rgb(0 0 0 / 0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgb(147 197 253 / 0.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: ;}::backdrop{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgb(0 0 0 / 0);--un-ring-shadow:0 0 rgb(0 0 0 / 0);--un-shadow-inset: ;--un-shadow:0 0 rgb(0 0 0 / 0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgb(147 197 253 / 0.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: ;}
+/* layer: typography */
+.prose :where(h1,h2,h3,h4,h5,h6):not(:where(.not-prose,.not-prose *)){color:var(--un-prose-headings);font-weight:600;line-height:1.25;}.prose :where(a):not(:where(.not-prose,.not-prose *)){color:var(--un-prose-links);text-decoration:underline;font-weight:500;}.prose :where(a code):not(:where(.not-prose,.not-prose *)){color:var(--un-prose-links);}.prose :where(p,ul,ol,pre):not(:where(.not-prose,.not-prose *)){margin:1em 0;line-height:1.75;}.prose :where(blockquote):not(:where(.not-prose,.not-prose *)){margin:1em 0;padding-left:1em;font-style:italic;border-left:.25em solid var(--un-prose-borders);}.prose :where(h1):not(:where(.not-prose,.not-prose *)){margin:1rem 0;font-size:2.25em;}.prose :where(h2):not(:where(.not-prose,.not-prose *)){margin:1.75em 0 .5em;font-size:1.75em;}.prose :where(h3):not(:where(.not-prose,.not-prose *)){margin:1.5em 0 .5em;font-size:1.375em;}.prose :where(h4):not(:where(.not-prose,.not-prose *)){margin:1em 0;font-size:1.125em;}.prose :where(img,video):not(:where(.not-prose,.not-prose *)){max-width:100%;}.prose :where(figure,picture):not(:where(.not-prose,.not-prose *)){margin:1em 0;}.prose :where(figcaption):not(:where(.not-prose,.not-prose *)){color:var(--un-prose-captions);font-size:.875em;}.prose :where(code):not(:where(.not-prose,.not-prose *)){color:var(--un-prose-code);font-size:.875em;font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;}.prose :where(:not(pre) > code):not(:where(.not-prose,.not-prose *))::before,.prose :where(:not(pre) > code):not(:where(.not-prose,.not-prose *))::after{content:"`";}.prose :where(pre):not(:where(.not-prose,.not-prose *)){padding:1.25rem 1.5rem;overflow-x:auto;border-radius:.375rem;}.prose :where(pre,code):not(:where(.not-prose,.not-prose *)){white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;hyphens:none;background:transparent;}.prose :where(pre code):not(:where(.not-prose,.not-prose *)){font-weight:inherit;}.prose :where(ol,ul):not(:where(.not-prose,.not-prose *)){padding-left:1.25em;}.prose :where(ol):not(:where(.not-prose,.not-prose *)){list-style-type:decimal;}.prose :where(ol[type="A"]):not(:where(.not-prose,.not-prose *)){list-style-type:upper-alpha;}.prose :where(ol[type="a"]):not(:where(.not-prose,.not-prose *)){list-style-type:lower-alpha;}.prose :where(ol[type="A" s]):not(:where(.not-prose,.not-prose *)){list-style-type:upper-alpha;}.prose :where(ol[type="a" s]):not(:where(.not-prose,.not-prose *)){list-style-type:lower-alpha;}.prose :where(ol[type="I"]):not(:where(.not-prose,.not-prose *)){list-style-type:upper-roman;}.prose :where(ol[type="i"]):not(:where(.not-prose,.not-prose *)){list-style-type:lower-roman;}.prose :where(ol[type="I" s]):not(:where(.not-prose,.not-prose *)){list-style-type:upper-roman;}.prose :where(ol[type="i" s]):not(:where(.not-prose,.not-prose *)){list-style-type:lower-roman;}.prose :where(ol[type="1"]):not(:where(.not-prose,.not-prose *)){list-style-type:decimal;}.prose :where(ul):not(:where(.not-prose,.not-prose *)){list-style-type:disc;}.prose :where(ol > li):not(:where(.not-prose,.not-prose *))::marker,.prose :where(ul > li):not(:where(.not-prose,.not-prose *))::marker,.prose :where(summary):not(:where(.not-prose,.not-prose *))::marker{color:var(--un-prose-lists);}.prose :where(hr):not(:where(.not-prose,.not-prose *)){margin:2em 0;border:1px solid var(--un-prose-hr);}.prose :where(table):not(:where(.not-prose,.not-prose *)){display:block;margin:1em 0;border-collapse:collapse;overflow-x:auto;}.prose :where(tr):not(:where(.not-prose,.not-prose *)):nth-child(2n){background:var(--un-prose-bg-soft);}.prose :where(td,th):not(:where(.not-prose,.not-prose *)){border:1px solid var(--un-prose-borders);padding:.625em 1em;}.prose :where(abbr):not(:where(.not-prose,.not-prose *)){cursor:help;}.prose :where(kbd):not(:where(.not-prose,.not-prose *)){color:var(--un-prose-code);border:1px solid;padding:.25rem .5rem;font-size:.875em;border-radius:.25rem;}.prose :where(details):not(:where(.not-prose,.not-prose *)){margin:1em 0;padding:1.25rem 1.5rem;background:var(--un-prose-bg-soft);}.prose :where(summary):not(:where(.not-prose,.not-prose *)){cursor:pointer;font-weight:600;}
+.prose{color:var(--un-prose-body);max-width:65ch;}
+/* layer: default */
+.sticky{position:sticky;}
+.top-0{top:0;}
+.z-50{z-index:50;}
+.grid{display:grid;}
+.col-span-4{grid-column:span 4/span 4;}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
+.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.m10{margin:2.5rem;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.-mb-\[70px\]{margin-bottom:-70px;}
+.\[\&\>\*\]\:mr-3>*{margin-right:0.75rem;}
+.mb-\[100px\]{margin-bottom:100px;}
+.mb-3{margin-bottom:0.75rem;}
+.mt-5{margin-top:1.25rem;}
+.last\:\[\&\>\*\]\:mr-0>*:last-child{margin-right:0;}
+.block{display:block;}
+.\[\&\>\*\]\:inline-block>*,
+.inline-block{display:inline-block;}
+.hidden,
+[hidden=""]{display:none;}
+.aspect-square{aspect-ratio:1/1;}
+.max-w-full{max-width:100%;}
+.w-\[100px\]{width:100px;}
+.w-\[150px\]{width:150px;}
+.w-\[70px\]{width:70px;}
+.w-fit{width:fit-content;}
+.w-full{width:100%;}
+.flex{display:flex;}
+.table{display:table;}
+.items-center{align-items:center;}
+.justify-center{justify-content:center;}
+.gap-5{gap:1.25rem;}
+.overflow-hidden{overflow:hidden;}
+.border{border-width:1px;}
+.border-orange-500{--un-border-opacity:1;border-color:rgb(249 115 22 / var(--un-border-opacity));}
+.rounded-\[50\%\]{border-radius:50%;}
+.rounded-xl{border-radius:0.75rem;}
+.bg-orange-300{--un-bg-opacity:1;background-color:rgb(253 186 116 / var(--un-bg-opacity));}
+.bg-orange-500{--un-bg-opacity:1;background-color:rgb(249 115 22 / var(--un-bg-opacity));}
+.hover\:bg-orange-500:hover{--un-bg-opacity:1;background-color:rgb(249 115 22 / var(--un-bg-opacity));}
+[stroke-width~="\31 "]{stroke-width:1px;}
+[stroke~="\31 15"]{stroke-width:115px;}
+.object-cover{object-fit:cover;}
+.p-10{padding:2.5rem;}
+.p-2{padding:0.5rem;}
+.p-5{padding:1.25rem;}
+.px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
+.py-3{padding-top:0.75rem;padding-bottom:0.75rem;}
+[px=""]{padding-left:1rem;padding-right:1rem;}
+.pt-0{padding-top:0;}
+.pt-7{padding-top:1.75rem;}
+.text-center{text-align:center;}
+.text-\[40px\]{font-size:40px;}
+.text-\[70px\]{font-size:70px;}
+.text-0{font-size:0;}
+.text-1{font-size:0.25rem;}
+.text-2{font-size:0.5rem;}
+.text-3{font-size:0.75rem;}
+.text-4{font-size:1rem;}
+.text-lg{font-size:1.125rem;line-height:1.75rem;}
+.text-sm{font-size:0.875rem;line-height:1.25rem;}
+.font-bold{font-weight:700;}
+.text-white{--un-text-opacity:1;color:rgb(255 255 255 / var(--un-text-opacity));}
+.hover\:text-white:hover{--un-text-opacity:1;color:rgb(255 255 255 / var(--un-text-opacity));}
+.ring-4{--un-ring-width:4px;--un-ring-offset-shadow:var(--un-ring-inset) 0 0 0 var(--un-ring-offset-width) var(--un-ring-offset-color);--un-ring-shadow:var(--un-ring-inset) 0 0 0 calc(var(--un-ring-width) + var(--un-ring-offset-width)) var(--un-ring-color);box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
+.ring-orange-500{--un-ring-opacity:1;--un-ring-color:rgb(249 115 22 / var(--un-ring-opacity));}
+@media (min-width: 640px){
+.sm\:col-span-1{grid-column:span 1/span 1;}
+.sm\:col-span-3{grid-column:span 3/span 3;}
+.sm\:block{display:block;}
+.sm\:hidden{display:none;}
+.sm\:w-\[100px\]{width:100px;}
+.sm\:w-\[300px\]{width:300px;}
+.sm\:flex{display:flex;}
+.sm\:gap-5{gap:1.25rem;}
+.sm\:py-0{padding-top:0;padding-bottom:0;}
+.sm\:text-left{text-align:left;}
+.sm\:text-\[100px\]{font-size:100px;}
+.sm\:text-\[80px\]{font-size:80px;}
+.sm\:text-base{font-size:1rem;line-height:1.5rem;}
+}        /* ]]> */
+    </style>
+    <style>
+        /* <![CDATA[ */
+
+
+        .caveat {
+            font-family: "Caveat", cursive;
+        }
+
+        /* ]]> */
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="prose max-w-full hidden"></div>
+    <b:section id="bagian_label">
+    <b:widget id='Label1' locked='false' title='Label' type='Label'>
+        <b:widget-settings>
+            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+            <b:widget-setting name='display'>LIST</b:widget-setting>
+            <b:widget-setting name='selectedLabelsList' />
+            <b:widget-setting name='showType'>ALL</b:widget-setting>
+            <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+
+            <div class="bg-orange-300 top-0 sticky z-50">
+                <div class="block px-5 py-3 sm:hidden">
+                    <select onchange="
+            location.href = `/search/label/${this.value}`
+            " class="w-full p-2">
+                        <b:loop values='data:labels' var='label'>
+                            <option>
+                                <data:label.name />
+                            </option>
+                        </b:loop>
+                    </select>
+                </div>
+                <div class="hidden sm:block" hx-boost="true">
+                    <b:loop values='data:labels' var='label'>
+                        <a class="px-5 py-3 hover:bg-orange-500 hover:text-white inline-block"
+                            expr:href='data:label.url'>
+                            <data:label.name />
+                        </a>
+                    </b:loop>
+                </div>
+            </div>
+
+
+
+            <b:include name='quickedit' />
+        </b:includable>
+    </b:widget>
+</b:section>    <div class="justify-center sm:flex py-10 sm:py-0">
+    <div class="sm:flex items-center sm:gap-5" hx-boost="true">
+        <a href="/">
+            <img src="https://github.com/mzaini30/svelte/assets/7939342/8d1c7ba6-4ba0-4bec-ba17-c629613543dd" class="w-[100px] sm:w-[300px] mx-auto" width="300" />
+        </a>
+        <b:section id="bagian_header" class="text-center sm:text-left">
+            <b:widget id='Header1' locked='false' title='Judul' type='Header'>
+                <b:widget-settings>
+                    <b:widget-setting name='displayUrl' />
+                    <b:widget-setting name='displayHeight'>0</b:widget-setting>
+                    <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+                    <b:widget-setting name='useImage'>false</b:widget-setting>
+                    <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                    <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+                    <b:widget-setting name='displayWidth'>0</b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+
+                    <h1 class="text-[40px] sm:text-[80px] judul caveat">
+                        <a href="/">
+                            <data:title />
+                        </a>
+                    </h1>
+                    <p class="text-sm sm:text-base">
+                        <data:description />
+                    </p>
+
+                </b:includable>
+            </b:widget>
+        </b:section>
+
+    </div>
+</div>    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+<style>
+    /* <![CDATA[ */
+
+
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .slider-for img {
+        width: 100%;
+        aspect-ratio: 10 / 7;
+        object-fit: cover;
+    }
+
+    .slider-nav img {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
+
+    /* ]]> */
+</style>
+
+<b:section id="bagian_slider">
+    <b:widget id='LinkList2' locked='false' title='Slider (link gambar)' type='LinkList'>
+        <b:widget-settings>
+            <b:widget-setting
+                name='link-3'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzKDwl2WcAS5sPAoD3j7Oy6ONH0hss8tnY9kE6SPeOJ8x4t0bROO2a59RFnlXaS5ejHlD68QxPjLDmMraRsfSStQe-gbEfz7hR4XyL5kmYx-VEmIaLPZdfvaAVsdTAyN1MlTItlX_CXmcD7kdps2LrU0adLmHbwN2vCnONeEZfAX2qIo1bFwn3zJssoQOk/w1440/wisma%20tumapel.jpg</b:widget-setting>
+            <b:widget-setting name='sorting'>NONE</b:widget-setting>
+            <b:widget-setting
+                name='link-4'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmSAPNfDimnZeLoBUXq0Sl8UIuHJe7X7Wh1YRBvLhBftH1c6aIVJaJV-fPULglk5oBxWAildpExEafx6oMpVWdJsPZ8Uwrv0tovUnM49mxXWD_1onVrrl1zeRlQWIi5SqlgyNWPEB3AG9VGDBEq6reevv7y4kSNnpRbkikOWDr50AON0hVCNFnsfLXcNwH/w1440/petirtaan%20watu%20gedhe.jpg</b:widget-setting>
+            <b:widget-setting name='text-1'>Gambar</b:widget-setting>
+            <b:widget-setting
+                name='link-1'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjf1UjZNFEtnAEVgAZ0Z6g4OJRlKO93G_PyMbJTohqxdMTS0ViotC_Ni8DX2fVYyM88aqPMXraAVOlca2__tg5OIgirNnvChA4jeB8BD2wYUDdgVhb7XXrNYt85-G0nDeUN_WwpC5vMcBI4SllPVN8nqfwZn47OW22c2UEcGKLF_tfZUvvY8HW8B9OpB6MP/w1440/onsen.webp</b:widget-setting>
+            <b:widget-setting name='text-0'>Gambar</b:widget-setting>
+            <b:widget-setting
+                name='link-2'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibc58uLwlYvi99pOKprd6m6JZVnJSn9BNT7Pcnikl0cMPlNieh7GLWxoMhrwi2CIFi9ExVLgSiuxMXFiV-bwUD4G1ms8lGCQWy2gbBKDdczAU7w3FddzZoVxwJObM1aLIVlpZ-TxRGdQlifp7JwHsP6oxcmeGrcoHmwoMciJtYuVGFIKGEyhuSzy95xMRx/w1440/IMG_20231023_130154.jpg</b:widget-setting>
+            <b:widget-setting name='text-3'>Gambar</b:widget-setting>
+            <b:widget-setting
+                name='link-0'>https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZStO3YiAll6GSUbbc79LNNsFW4L9b5E9ppVYTYA4GDArjC0JHgBjRaCgqLxlRNbF2jBXImGIS-RM5BbpYgC5QT4cGL2OFjGFhDTxkAokiF_DjdrFR5H-v8ySkq-g-IoPRYpo5V1uwa__7IpKoee-3KAXhm7Ye-4K_MAMI6NDANPtGB7oce4o6bJv8utOc/w1440/IMG_20220810_085800.jpg</b:widget-setting>
+            <b:widget-setting name='text-2'>Gambar</b:widget-setting>
+            <b:widget-setting name='text-4'>Gambar</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+
+                        <div class="bagian-slider">
+                                    <div class="slider-for">
+                        <b:loop values='data:links' var='link'>
+                            <div>
+                                <img expr:src="data:link.target" expr:alt="data:link.name" />
+                            </div>
+                        </b:loop>
+                    </div>
+                                    <div class="slider-nav">
+                        <b:loop values='data:links' var='link'>
+                            <div>
+                                <img expr:src="data:link.target" expr:alt="data:link.name" />
+                            </div>
+                        </b:loop>
+                    </div>
+                            </div>
+            <script>
+                // <![CDATA[
+                function tampilan_bagian_slider() {
+                    let bagian_slider = document.querySelector('.bagian-slider');
+                    if (location.pathname == "/") {
+                        bagian_slider.style.display = "block";
+                    } else {
+                        bagian_slider.style.display = 'none';
+                    }
+                }
+                htmx.onLoad(() => tampilan_bagian_slider());
+                // ]]>
+            </script>
+
+            <b:include name='quickedit' />
+        </b:includable>
+    </b:widget>
+</b:section>
+
+
+
+<script src="//unpkg.com/jquery"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    // <![CDATA[
+    htmx.onLoad(() => {
+        $(".slider-for").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: ".slider-nav",
+        });
+        $(".slider-nav").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: ".slider-for",
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true,
+        });
+    })
+    // ]]>
+</script>    <div class="grid grid-cols-4 gap-5 p-5">
+        <div class="sm:col-span-3 col-span-4">
+            <style>
+  /* <![CDATA[ */
+
+
+  .kotak-list-konten {
+    box-shadow: 10px 10px 0 0 rgb(249 115 22);
+  }
+
+  /* ]]> */
+</style>
+
+
+<b:section id="konten">
+  <b:widget id='Blog1' locked='false' title='Postingan Blog' type='Blog'>
+    <b:widget-settings>
+      <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+      <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='showAuthor'>true</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='reactionsLabel' />
+      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='showLabels'>true</b:widget-setting>
+      <b:widget-setting name='showLocation'>true</b:widget-setting>
+      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+      <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+      <b:widget-setting name='showReactions'>false</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main' var='top'>
+      <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
+        <!-- bagian beranda -->
+        <div hx-boost="true" class="gap-5 grid grid-cols-1">
+          <b:loop values='data:posts' var='post'>
+            <a expr:href="data:post.url"
+              class="kotak-list-konten flex  border overflow-hidden rounded-xl border-orange-500">
+              <img class="w-[150px] aspect-square object-cover" expr:src="resizeImage(data:post.thumbnailUrl, 150)"
+                alt="" />
+              <div class="ringkasan-konten p-5">
+                <h2 class="font-bold text-lg">
+                  <data:post.title />
+                </h2>
+                <p>
+                  <data:post.snippet />
+                </p>
+              </div>
+            </a>
+          </b:loop>
+        </div>
+        <b:include name="nextprev"></b:include>
+
+
+
+        <b:else />
+        <b:loop values='data:posts' var='post'>
+          <div class="prose p-5 mb-3 max-w-full kotak-list-konten border overflow-hidden rounded-xl border-orange-500">
+            <h1>
+              <data:post.title />
+            </h1>
+            <data:post.body />
+          </div>
+          <!-- bagian komentar -->
+          <b:include data='post' name='threaded_comments' />
+        </b:loop>
+      </b:if>
+    </b:includable>
+  </b:widget>
+</b:section>        </div>
+        <div class="sm:col-span-1 col-span-4">
+            <style>
+  /* <![CDATA[ */
+
+
+  .gadget {
+    box-shadow: 10px 10px 0 0 rgb(249 115 22);
+  }
+
+  /* ]]> */
+</style>
+
+<b:section id="sidebarnya">
+  <b:widget id='Profile1' locked='false' title='Mengenai Saya' type='Profile'></b:widget>
+  <b:widget id='Followers1' locked='false' title='Pengikut' type='Followers'></b:widget>
+  <b:widget id='BlogArchive1' locked='false' title='Arsip Blog' type='BlogArchive'></b:widget>
+</b:section>
+<div class="gadget hidden rounded-xl border border-orange-500 overflow-hidden">
+  <div class="judul p-2 bg-orange-500 text-white">Ini adalah judul</div>
+  <div class="isi p-2">Ini adalah isinya</div>
+</div>
+<script>
+  // <![CDATA[
+
+
+  htmx.onLoad(() => {
+    let semua_gadget = document.querySelectorAll('#sidebarnya .widget');
+    semua_gadget.forEach(x => {
+      x.classList.add('gadget', 'rounded-xl', 'border', 'border-orange-500', 'overflow-hidden', 'mb-3');
+      x.querySelector('h2').classList.add('judul', 'p-2', 'bg-orange-500', 'text-white');
+      x.querySelector('.widget-content').classList.add('isi', 'p-2', 'prose', 'max-w-full');
+    });
+  });
+  // ]]>
+</script>        </div>
+    </div>
+    <div class="pt-7 -mb-[70px]">
+        <svg id="patternId" width="100%" height="100px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="a" patternUnits="userSpaceOnUse" width="120" height="80" patternTransform="scale(2) rotate(0)">
+      <rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)"></rect>
+      <path
+        d="M-50.129 12.685C-33.346 12.358-16.786 4.918 0 5c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685"
+        stroke-width="1" stroke="rgb(249,115,22)" fill="none"></path>
+    </pattern>
+  </defs>
+  <!-- <rect width="800%" height="800%" transform="translate(0,0)" fill="url(#a)"></rect> -->
+  <rect width="800%" height="100px" transform="translate(0,0)" fill="url(#a)"></rect>
+</svg>    </div>
+    <h2 class="caveat text-center text-[70px] sm:text-[100px] mt-5">Our Teams</h2>
+<b:section id="our_teams">
+    <b:widget id='LinkList1' locked='false' title='Our Teams (link gambar)' type='LinkList'>
+        <b:widget-settings>
+            <b:widget-setting name='sorting'>NONE</b:widget-setting>
+            <b:widget-setting name='text-1'>Gambar Naruto</b:widget-setting>
+            <b:widget-setting
+                name='link-1'>https://github.com/mzaini30/svelte/assets/7939342/e3735a8e-a8e7-4c4f-869e-51d585da0713</b:widget-setting>
+            <b:widget-setting name='text-0'>Gambar Naruto</b:widget-setting>
+            <b:widget-setting
+                name='link-2'>https://github.com/mzaini30/svelte/assets/7939342/e3735a8e-a8e7-4c4f-869e-51d585da0713</b:widget-setting>
+            <b:widget-setting
+                name='link-0'>https://github.com/mzaini30/svelte/assets/7939342/e3735a8e-a8e7-4c4f-869e-51d585da0713</b:widget-setting>
+            <b:widget-setting name='text-2'>Gambar Naruto</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+
+            <center>
+                <div class="mx-auto w-fit p-10 pt-0">
+                    <b:loop values='data:links' var='link'>
+                        <div class="p-2 inline-block">
+                            <img expr:src="data:link.target"
+                                class="sm:w-[100px] w-[70px] object-cover aspect-square rounded-[50%]  ring-4 ring-orange-500 inline-block"
+                                expr:alt="data:link.name" />
+                        </div>
+                    </b:loop>
+                </div>
+            </center>
+
+            <b:include name='quickedit' />
+        </b:includable>
+    </b:widget>
+</b:section>
+
+<h2 class="caveat text-center text-[70px]">Follow Us</h2>
+<div>
+    <b:section id="media_sosial"
+        class="[&amp;&gt;*]:inline-block [&amp;&gt;*]:mr-3 w-fit mx-auto last:[&amp;&gt;*]:mr-0 mb-[100px]">
+                                        <b:widget id='Text1' locked='false' title='Facebook' type='Text'>
+                <b:widget-settings>
+                    <b:widget-setting name='content'>
+                        https://facebook.com                    </b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                    <a expr:href="data:content">
+                        <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 512 512"
+    ><path
+        fill="currentColor"
+        fill-rule="evenodd"
+        d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16c24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31Z"
+    ></path></svg
+>
+                    </a>
+
+                    <b:include name='quickedit' />
+                </b:includable>
+            </b:widget>
+                                <b:widget id='Text2' locked='false' title='X' type='Text'>
+                <b:widget-settings>
+                    <b:widget-setting name='content'>
+                        https://x.com                    </b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                    <a expr:href="data:content">
+                        <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 24 24"
+    ><g fill="currentColor"
+        ><path d="M1 2h2.5L3.5 2h-2.5z"
+            ><animate
+                fill="freeze"
+                attributeName="d"
+                dur="0.4s"
+                values="M1 2h2.5L3.5 2h-2.5z;M1 2h2.5L18.5 22h-2.5z"
+            ></animate></path
+        ><path d="M5.5 2h2.5L7.2 2h-2.5z"
+            ><animate
+                fill="freeze"
+                attributeName="d"
+                dur="0.4s"
+                values="M5.5 2h2.5L7.2 2h-2.5z;M5.5 2h2.5L23 22h-2.5z"
+            ></animate></path
+        ><path d="M3 2h5v0h-5z" opacity="0"
+            ><set attributeName="opacity" begin="0.4s" to="1"></set><animate
+                fill="freeze"
+                attributeName="d"
+                begin="0.4s"
+                dur="0.4s"
+                values="M3 2h5v0h-5z;M3 2h5v2h-5z"></animate></path
+        ><path d="M16 22h5v0h-5z" opacity="0"
+            ><set attributeName="opacity" begin="0.4s" to="1"></set><animate
+                fill="freeze"
+                attributeName="d"
+                begin="0.4s"
+                dur="0.4s"
+                values="M16 22h5v0h-5z;M16 22h5v-2h-5z"></animate></path
+        ><path d="M18.5 2h3.5L22 2h-3.5z" opacity="0"
+            ><set attributeName="opacity" begin="0.5s" to="1"></set><animate
+                fill="freeze"
+                attributeName="d"
+                begin="0.5s"
+                dur="0.4s"
+                values="M18.5 2h3.5L22 2h-3.5z;M18.5 2h3.5L5 22h-3.5z"
+            ></animate></path
+        ></g
+    ></svg
+>
+                    </a>
+
+                    <b:include name='quickedit' />
+                </b:includable>
+            </b:widget>
+                                <b:widget id='Text3' locked='false' title='Instagram' type='Text'>
+                <b:widget-settings>
+                    <b:widget-setting name='content'>
+                        https://instagram.com                    </b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                    <a expr:href="data:content">
+                        <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 256 256"
+    ><path
+        fill="currentColor"
+        d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 72a24 24 0 1 1 24-24a24 24 0 0 1-24 24Zm48-132H80a60.07 60.07 0 0 0-60 60v96a60.07 60.07 0 0 0 60 60h96a60.07 60.07 0 0 0 60-60V80a60.07 60.07 0 0 0-60-60Zm36 156a36 36 0 0 1-36 36H80a36 36 0 0 1-36-36V80a36 36 0 0 1 36-36h96a36 36 0 0 1 36 36ZM196 76a16 16 0 1 1-16-16a16 16 0 0 1 16 16Z"
+    ></path></svg
+>
+                    </a>
+
+                    <b:include name='quickedit' />
+                </b:includable>
+            </b:widget>
+                                <b:widget id='Text4' locked='false' title='YouTube' type='Text'>
+                <b:widget-settings>
+                    <b:widget-setting name='content'>
+                        https://youtube.com                    </b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                    <a expr:href="data:content">
+                        <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 24 24"
+    ><path
+        fill="currentColor"
+        d="m10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73Z"
+    ></path></svg
+>
+                    </a>
+
+                    <b:include name='quickedit' />
+                </b:includable>
+            </b:widget>
+        
+    </b:section>
+</div>
+<div class="mx-auto w-fit mb-3">
+    <a href="https://selalu-zen.my.id/" target="_blank">
+        <img src="https://github.com/mzaini30/svelte/assets/7939342/17e41dc5-f0ad-4435-9ad2-5ff9b9bea44a" alt=""
+            width="150" />
+    </a>
+</div></body>
+
+</html>
