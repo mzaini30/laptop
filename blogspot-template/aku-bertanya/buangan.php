@@ -1,0 +1,1 @@
+<div class="[&_img]:!w-auto"></div>

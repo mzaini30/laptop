@@ -28,6 +28,24 @@
 
         /* ]]> */
     </style>
+    <style>
+        /* <![CDATA[ */
+        .blog-pager a {
+            --un-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--un-bg-opacity));
+            /* px-3 */
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            /* py-2 */
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-radius: 0.25rem;
+            --un-shadow: var(--un-shadow-inset) 0 1px 3px 0 var(--un-shadow-color, rgb(0 0 0 / 0.1)), var(--un-shadow-inset) 0 1px 2px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1));
+            box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);
+        }
+
+        /* ]]> */
+    </style>
     <?php include "./script.php" ?>
 </head>
 
@@ -101,6 +119,9 @@
                                         </div>
                                     </a>
                                 </b:loop>
+                            </div>
+                            <div hx-boost="true">
+                                <b:include name="nextprev"></b:include>
                             </div>
                             <b:else></b:else>
                             <b:loop values='data:posts' var='post'>
