@@ -10,6 +10,6 @@
     "128": "./Desain_tanpa_judul-removebg-preview.png"
   },
   "content_security_policy": {
-    "extension_pages": "script-src 'self' 'nonce-aplikasi'; object-src 'self'; eval 'unsafe-eval';"
+    "extension_pages": "script-src 'self' 'unsafe-inline'; object-src 'self';"
   }
 }
