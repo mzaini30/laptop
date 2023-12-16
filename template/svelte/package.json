@@ -4,16 +4,16 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite ",
     "build": "vite build",
     "build:android": "vite build --mode android --base /assets/ && node script/after-build.js",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.4.1",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@unocss/transformer-directives": "^0.55.7",
     "@unocss/transformer-variant-group": "^0.53.3",
-    "svelte": "5.0.0-next.4",
+    "svelte": "5.0.0-next.25",
     "vite": "^4.5.0"
   },
   "dependencies": {

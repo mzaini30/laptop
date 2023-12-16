@@ -1,8 +1,7 @@
+import { createRoot } from 'svelte';
 import App from "./App.svelte";
-import "./tailwind.css";
+// import "./tailwind.css";
 
-const app = new App({
-  target: document.getElementById("app"),
-});
+const app = createRoot(App, { target: document.getElementById("app") });
 
 export default app;

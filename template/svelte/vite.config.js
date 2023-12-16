@@ -10,11 +10,11 @@ import { presetWind } from "unocss";
 let plugins = [
   svelte(),
   pages(),
-  // uno_css({
-  //   // ...
-  //   transformers: [transformerVariantGroup(), transformer_directives()],
-  //   // presets: [presetWind()],
-  // }),
+  uno_css({
+    // ...
+    transformers: [transformerVariantGroup(), transformer_directives()],
+    // presets: [presetWind()],
+  }),
 ];
 
 // https://vitejs.dev/config/
