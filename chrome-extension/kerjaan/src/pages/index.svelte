@@ -1,5 +1,5 @@
 <script>
-let data =  $state([])
+let data =  []
 
 if (localStorage.data) {
             data = JSON.parse(localStorage.data);
