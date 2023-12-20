@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Orang</title>
+    <link rel="stylesheet" href="./gpm/mzaini30/library-yang-sering-digunakan/css/reset.css">
+    <link rel="stylesheet" href="./uno.css">
+    <script src="./gpm/mzaini30/library-yang-sering-digunakan/js/htmx.min.js"></script>
+    <script src="./gpm/mzaini30/library-yang-sering-digunakan/js/petite-vue.iife.js"></script>
+    <link rel="icon" href="./Desain_tanpa_judul-removebg-preview.png">
+</head>
+
+<body hx-boost="true">
+    <div class="app p-5" @vue:mounted="mounted">
+        <button @click="tambah" class="bg-green-500 px-5 py-2 rounded text-white">Tambah</button>
+        {{kerjaan}}
+    </div>
+    <script>
+        PetiteVue.createApp({
+            kerjaan: [],
+            mounted() {
+                if (localStorage.kerjaan) {
+                    this.kerjaan = JSON.parse(localStorage.kerjaan);
+                }
+            },
+            tambah() {
+                let tanya = prompt("Masukkan nama kerjaannya:");
+                if (tanya) {
+                    this.kerjaan = [...this.kerjaan, tanya];
+                    localStorage.kerjaan = JSON.stringify(this.kerjaan);
+                }
+            }
+        }).mount('.app')
+    </script>
+</body>
+
+</html>
