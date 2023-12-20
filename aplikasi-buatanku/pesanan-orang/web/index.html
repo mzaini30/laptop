@@ -10,20 +10,36 @@
     <script src="./gpm/mzaini30/library-yang-sering-digunakan/js/htmx.min.js"></script>
     <script src="./gpm/mzaini30/library-yang-sering-digunakan/js/petite-vue.iife.js"></script>
     <link rel="icon" href="./Desain_tanpa_judul-removebg-preview.png">
+    <style>
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body hx-boost="true">
-    <div class="app p-5" @vue:mounted="mounted">
-        <button @click="tambah" class="bg-green-500 px-5 py-2 rounded text-white">Tambah</button>
-        <div class="grid grid-cols-4 gap-4 mt-4">
-            <div v-for="(x, n) in kerjaan" class="p-4 rounded border shadow">
-                <div class="mb-3">
-                    {{x}}
-                    <span v-if="n == 0">🔥</span>
-                </div>
-                <div v-if="n == 0" class="flex justify-between text-gray-600">
-                    <button>Tunda</button>
-                    <button>Selesai</button>
+    <div class="app " @vue:mounted="mounted">
+        <div class="bg-red-100">
+            <div class="w-full p-2 text-center  uppercase blink">Pantang Istirahat Sebelum Tuntas 🔥🔥🔥</div>
+        </div>
+        <div class="p-5">
+            <button @click="tambah" class="bg-green-500 px-5 py-2 rounded text-white">Tambah</button>
+            <div class="grid grid-cols-4 gap-4 mt-4">
+                <div v-for="(x, n) in kerjaan" class="p-4 rounded border shadow">
+                    <div class="mb-3">
+                        {{x}}
+                        <span v-if="n == 0">🔥</span>
+                    </div>
+                    <div v-if="n == 0" class="flex justify-between text-gray-600 [&_button]:uppercase text-sm">
+                        <button @click="tunda">Tunda</button>
+                        <button @click="selesai">Selesai</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,6 +58,14 @@
                     this.kerjaan = [...this.kerjaan, tanya];
                     localStorage.kerjaan = JSON.stringify(this.kerjaan);
                 }
+            },
+            selesai() {
+                this.kerjaan = [...this.kerjaan.slice(1)];
+                localStorage.kerjaan = JSON.stringify(this.kerjaan);
+            },
+            tunda() {
+                this.kerjaan = [...this.kerjaan.slice(1), this.kerjaan[0]];
+                localStorage.kerjaan = JSON.stringify(this.kerjaan);
             }
         }).mount('.app')
     </script>
