@@ -15,7 +15,18 @@
 <body hx-boost="true">
     <div class="app p-5" @vue:mounted="mounted">
         <button @click="tambah" class="bg-green-500 px-5 py-2 rounded text-white">Tambah</button>
-        {{kerjaan}}
+        <div class="grid grid-cols-4 gap-4 mt-4">
+            <div v-for="(x, n) in kerjaan" class="p-4 rounded border shadow">
+                <div class="mb-3">
+                    {{x}}
+                    <span v-if="n == 0">🔥</span>
+                </div>
+                <div v-if="n == 0" class="flex justify-between text-gray-600">
+                    <button>Tunda</button>
+                    <button>Selesai</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         PetiteVue.createApp({
