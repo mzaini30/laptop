@@ -5,9 +5,9 @@
         <img src="/gambar/mabaiz.png" class="w-[60px] h-auto" alt="">
         <div>
             <h2>Pilihan Menu</h2>
-            <?php $linknya = [['nama' => 'Login', 'link' => '/login']]; ?>
+            <?php $linknya = [['nama' => 'Dashboard', 'link' => '/dashboard']]; ?>
             <?php foreach($linknya as $x): ?>
-            <p><a class="hover:text-black hover:pl-3 duration-100" wire:navigate hx-boost="true" href="<?= $x['link'] ?>">
+            <p><a class="hover:text-black hover:pl-3 duration-100" hx-boost="true" href="<?= $x['link'] ?>">
                     >
                     <?= $x['nama'] ?>
                 </a></p>
