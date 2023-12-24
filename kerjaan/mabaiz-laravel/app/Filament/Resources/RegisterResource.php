@@ -95,7 +95,7 @@ class RegisterResource extends Resource
         return $table
             ->columns([
                 //
-                TextColumn::make("nama_lengkap"),
+                TextColumn::make("nama_lengkap")->sortable()->searchable(),
                 ImageColumn::make("foto_formal")
             ])
             ->filters([
