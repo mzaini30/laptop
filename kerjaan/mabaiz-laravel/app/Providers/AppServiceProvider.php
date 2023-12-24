@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Filament\Http\Responses\Auth\Contracts\LoginResponse as LoginResponseContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+        // $this->app->singleton(\LoginResponse::class);
     }
 
     /**
@@ -22,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Model::unguard();
+        // $this->app->bind(LoginResponseContract::class, \LoginResponse::class);
     }
 }

@@ -28,6 +28,8 @@ class UserResource extends Resource
             ->schema([
                 //
                 TextInput::make("name")->required(),
+                TextInput::make("email")->email()->required()->unique(ignoreRecord: true),
+                TextInput::make("password")->password()->required()->visibleOn("create"),
                 Select::make("roles")->relationship("roles", "name")->multiple()->preload()->searchable()
             ]);
     }
