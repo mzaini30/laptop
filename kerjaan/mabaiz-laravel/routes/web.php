@@ -21,3 +21,7 @@ Route::get('/program', Program::class);
 Route::get('/lokasi', Lokasi::class);
 Route::get('/pendaftaran', Index::class);
 Route::get('/login', Index::class);
+// Route::get('/foo', function () {
+//     \Illuminate\Support\Facades\Artisan::call('storage:link');
+//     echo 'ok';
+// });
