@@ -20,10 +20,10 @@ return new class extends Migration {
             $table->string("jenis_kelamin");
             $table->string("tempat_lahir");
             $table->date("tanggal_lahir");
-            $table->string("email");
+            $table->string("email")->nullable();
             $table->string("nomor_whatsapp");
             $table->string("nama_ayah");
-            $table->string("tempat_ibu");
+            $table->string("nama_ibu");
             $table->string("anak_ke");
             $table->string("dari");
             $table->string("nomor_whatsapp_wali");
@@ -31,10 +31,10 @@ return new class extends Migration {
             $table->string("provinsi");
             $table->string("kota");
             $table->string("kecamatan");
-            $table->string("rt");
-            $table->string("rw");
+            $table->string("rt")->nullable();
+            $table->string("rw")->nullable();
             $table->text("alamat");
-            $table->string("kode_pos");
+            $table->string("kode_pos")->nullable();
             // data pendidikan terakhir
             $table->string("pendidikan_terakhir");
             $table->string("asal_sekolah");
@@ -42,7 +42,10 @@ return new class extends Migration {
             $table->string("foto_formal");
             $table->string("ijazah_terakhir");
             // tes baca quran
-            $table->string("tes_baca_quran");
+            $table->string("tes_baca_quran")->nullable();
+            // kesepakatan
+            $table->boolean("data_sesuai");
+            $table->boolean("bersedia_dihubungi");
             $table->timestamps();
         });
     }
