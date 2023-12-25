@@ -1,2 +1,2 @@
-php artisan migrate
-php artisan storage:link
+/usr/local/bin/php artisan migrate
+/usr/local/bin/php artisan storage:link
