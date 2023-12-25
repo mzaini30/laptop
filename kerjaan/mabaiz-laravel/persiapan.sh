@@ -1,2 +1,3 @@
-/usr/local/bin/php artisan migrate
-/usr/local/bin/php artisan storage:link
+rm -rf ./public/storage/
+ln -s ./storage/app/public/ ./public/
+mv ./public/public/ ./public/storage/
