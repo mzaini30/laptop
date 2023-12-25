@@ -2,7 +2,6 @@
 
 namespace App\Providers\Filament;
 
-use App\Filament\Guest\Widgets\Redirect;
 use App\Filament\Pages\Auth\Login;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
@@ -38,9 +37,9 @@ class GuestPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Guest/Widgets'), for: 'App\\Filament\\Guest\\Widgets')
             ->widgets([
-                    // Widgets\AccountWidget::class,
-                    // Widgets\FilamentInfoWidget::class,
-                Redirect::class
+                Widgets\AccountWidget::class,
+                Widgets\FilamentInfoWidget::class,
+
             ])
             ->middleware([
                 EncryptCookies::class,
