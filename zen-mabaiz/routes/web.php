@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailDatabaseCreate;
 use App\Livewire\Beranda;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get("/", Beranda::class);
+Route::post("/add-email", EmailDatabaseCreate::class);
