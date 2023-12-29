@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get("/", Beranda::class);
-Route::post("/add-email", EmailDatabaseCreate::class);
+Route::post("/add-email", [EmailDatabaseCreate::class, "index"]);
