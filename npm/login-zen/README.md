@@ -19,4 +19,4 @@ export default {
 
 ## TODO
 
-- [ ] z-index paling atas
+- [x] z-index paling atas
