@@ -27,7 +27,7 @@
 </script>
 
 {#if !sudah_login}
-  <div class="w-full h-full fixed top-0 p-5 left-0 bg-gray-200">
+  <div class="w-full h-full fixed top-0 p-5 left-0 bg-gray-200 z-[9999]">
     <div class="card bg-base-100 shadow-xl w-full">
       <div class="card-body">
         <form on:submit|preventDefault={login} action="">
