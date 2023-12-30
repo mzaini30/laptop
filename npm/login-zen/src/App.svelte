@@ -2,5 +2,5 @@
   import Login from "./komponen/login.svelte";
 </script>
 
-<Login></Login>
+<Login platform="Tes"></Login>
 <h1 class="text-center">Hello World</h1>

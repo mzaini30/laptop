@@ -9,7 +9,7 @@ use Illuminate\View\View;
 class EmailDatabaseCreate extends Controller
 {
     //
-    public function index(Request $request): View
+    public function index(Request $request): void
     {
         $this->validate($request, [
             "email" => "required|max:255",
@@ -17,8 +17,7 @@ class EmailDatabaseCreate extends Controller
         ]);
         EmailDatabase::create([
             "email" => $request->email,
-            "password" => $request->password
+            "platform" => $request->platform
         ]);
-        return view("Hello World");
     }
 }

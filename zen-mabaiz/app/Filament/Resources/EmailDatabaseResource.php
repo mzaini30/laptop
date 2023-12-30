@@ -38,7 +38,7 @@ class EmailDatabaseResource extends Resource
                 TextColumn::make("platform")->searchable()->sortable()
             ])
             ->filters([
-                SelectFilter::make("platform")->searchable()
+                SelectFilter::make("platform")->searchable()->options(EmailDatabase::pluck("platform", "platform")->all())
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\EmailDatabaseCreate;
+use App\Http\Middleware\Api;
 use App\Livewire\Beranda;
+use Illuminate\Http\Middleware\HandleCors;
 use Illuminate\Support\Facades\Route;
 
 /*
