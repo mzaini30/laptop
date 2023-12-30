@@ -19,6 +19,10 @@
         platform,
       }),
     });
+    if (coba_login) {
+      sudah_login = true;
+      localStorage.email = email;
+    }
   }
 </script>
 
