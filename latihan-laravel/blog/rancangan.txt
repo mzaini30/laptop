@@ -1,0 +1,15 @@
+POSTS
+title
+content
+
+CATEGORIES
+category
+
+POST_CATEGORY
+post_id
+category_id
+
+COMMENTS
+name
+comment
+post_id
